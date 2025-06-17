@@ -1,0 +1,145 @@
+@use "../utils/abstracts" as *;
+
+.header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	font-size: rem(13);
+	font-weight: $fw-medium;
+	color: $c-FFFFFF;
+	padding: rem(16);
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border: rem(1.25) solid rgba($c-999999, 0.5);
+		border-radius: $border-radius;
+		background-color: rgba($c-999999, 0.2);
+		backdrop-filter: blur(10px);
+		padding-top: rem(12);
+		padding-bottom: rem(12);
+		@include content-width();
+	}
+	&__logo-container {
+		width: rem(144);
+		&--contrast {
+			display: none;
+		}
+	}
+	&__logo {
+		width: 100%;
+		object-fit: cover;
+	}
+	&__nav {
+		display: flex;
+		align-items: center;
+		gap: rem(24);
+		&-item {
+			cursor: pointer;
+			position: relative;
+			display: flex;
+			align-items: center;
+			gap: 0.25rem;
+			&--icon {
+				translate: 0 -25%;
+			}
+			&--more {
+				position: relative;
+				&-list {
+					.active & {
+						opacity: 1;
+						translate: 0 0;
+						pointer-events: auto;
+					}
+					position: absolute;
+					top: 3rem;
+					left: -1rem;
+					width: rem(180);
+					display: flex;
+					flex-direction: column;
+					border: rem(1.25) solid rgba($c-999999, 0.5);
+					border-radius: calc($border-radius / 2);
+					background-color: rgba($c-999999, 0.5);
+					backdrop-filter: blur(15px);
+					translate: 0 -100%;
+					opacity: 0;
+					overflow: hidden;
+					pointer-events: none;
+					transition: $duration;
+					&-item {
+						padding: rem(8) rem(16);
+						&:hover {
+							background-color: $c-A1C85C;
+						}
+					}
+				}
+			}
+		}
+	}
+	&__connection {
+		display: flex;
+		align-items: center;
+		gap: rem(16);
+		&-item {
+			&--tel {
+			}
+			&--button {
+				cursor: pointer;
+				position: relative;
+				font-size: rem(14);
+				color: $c-3C3C3B;
+				padding: rem(10) rem(24);
+				background-color: $c-FFFFFF;
+				border-radius: $border-radius;
+				transition: $duration;
+				&::before {
+					content: "";
+					width: 100%;
+					height: 100%;
+					aspect-ratio: 1/1;
+					pointer-events: none;
+					position: absolute;
+					z-index: -1;
+					top: 50%;
+					left: 50%;
+					translate: -50% -50%;
+					border-radius: $border-radius;
+					transition: $duration;
+				}
+				&:hover {
+					background-color: $c-12C146;
+					color: $c-FFFFFF;
+					&::before {
+						animation: calc($duration * 2) scale linear;
+					}
+				}
+
+				@keyframes scale {
+					0% {
+						scale: 1;
+						background: radial-gradient(rgba($c-12C146, 0) 0%, rgba($c-12C146, 0) 50%, rgba($c-12C146, 0.6) 50%, rgba($c-12C146, 0.6) 100%);
+					}
+					50% {
+						scale: 1.2;
+						opacity: 0;
+					}
+					100% {
+						scale: 1.4;
+					}
+				}
+			}
+		}
+	}
+	&.fill,
+	&.sticky {
+		color: $c-3C3C3B;
+		.header__logo-container {
+			&--main {
+				display: none;
+			}
+			&--contrast {
+				display: block;
+			}
+		}
+	}
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('../components/head.html', { "title": "Rodnik - Эко отель" })
+	<body>
+		@@include('../components/header.html')
+		<main>
+			<section class="index-hero">
+				<video class="index-hero__background" muted autoplay playsinline loop>
+					<source src="assets/videos/main-background.mp4" />
+				</video>
+				<div class="index-hero__container">
+					<ul class="index-hero__advant">
+						<li class="index-hero__advant-item"><i class="index-hero__advant-item--icon icon-flag"></i>3 рыболовных пруда</li>
+						<li class="index-hero__advant-item"><i class="index-hero__advant-item--icon icon-mark"></i>20 км до Волги</li>
+						<li class="index-hero__advant-item"><i class="index-hero__advant-item--icon icon-compass"></i>На 2&deg; южнее Самары</li>
+					</ul>
+					<ul class="index-hero__label">
+						<li class="index-hero__label--logobox">
+							<picture class="index-hero__label--logo-container">
+								<img class="index-hero__label--logo" src="assets/icons/logo/logo-main.svg" alt="#Логотип" />
+							</picture>
+						</li>
+						<li class="index-hero__label--text">Отдыхайте там, где вас любят!</li>
+					</ul>
+					<form class="index-hero__form">
+						<label class="index-hero__inputbox" for="check-in">
+							<span class="index-hero__input-name">Заезд</span>
+							<input id="check-in" class="index-hero__input index-hero__input--checkin" type="date" />
+							<i class="index-hero__input-icon icon-check-mark"></i>
+						</label>
+						<label class="index-hero__inputbox" for="check-out">
+							<span class="index-hero__input-name">Выезд</span>
+							<input id="check-out" class="index-hero__input index-hero__input--checkuot" type="date" />
+							<i class="index-hero__input-icon icon-check-mark"></i>
+						</label>
+						<div class="index-hero__inputbox index-hero__input-preson select" tabindex="0" role="combobox">
+							<span class="index-hero__input-name index-hero__input-preson-name">Персоны</span>
+							<input id="input-person" class="index-hero__input index-hero__input-preson-input select__input" type="text" placeholder="2+1" tabindex="-1" readonly />
+							<i class="index-hero__input-icon index-hero__input-preson-icon select__icon icon-check-mark"></i>
+							<ul class="index-hero__input-preson-dropdown select__dropdown" role="listbox">
+								<li class="index-hero__input-preson-item select__item" role="option" tabindex="0">2+1</li>
+								<li class="index-hero__input-preson-item select__item" role="option" tabindex="0">2+2</li>
+								<li class="index-hero__input-preson-item select__item" role="option" tabindex="0">1+1</li>
+							</ul>
+						</div>
+						<div class="index-hero__inputbox index-hero__input-house select" tabindex="0" role="combobox">
+							<span class="index-hero__input-name index-hero__input-preson-name">Домик</span>
+							<input id="input-house" class="index-hero__input index-hero__input-house-input select__input" type="text" placeholder="Не выбрано" tabindex="-1" readonly />
+							<i class="index-hero__input-icon index-hero__input-house-icon select__icon icon-check-mark"></i>
+							<ul class="index-hero__input-house-dropdown select__dropdown" role="listbox">
+								<li class="index-hero__input-house-item select__item" role="option" tabindex="0">Не выбрано</li>
+								<li class="index-hero__input-house-item select__item" role="option" tabindex="0">Цветной домик</li>
+								<li class="index-hero__input-house-item select__item" role="option" tabindex="0">Хозяйский домик</li>
+								<li class="index-hero__input-house-item select__item" role="option" tabindex="0">Боярская палата</li>
+							</ul>
+						</div>
+						<button class="index-hero__button" type="submit">Подобрать<i class="index-hero__button--icon icon-arrow-long"></i></button>
+					</form>
+				</div>
+			</section>
+			<section class="index-stocks">
+				<div class="index-stocks__container">
+
+				</div>
+			</section>
+		</main>
+		@@include("../components/footer.html")
+	</body>
+</html>

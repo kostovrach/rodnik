@@ -1,0 +1,37 @@
+<header class="header @@if (typeof type !== 'undefined' && type === 'fill') {fill} js-sticky">
+	<div class="header__container">
+		<picture class="header__logo-container header__logo-container--main">
+			<img class="header__logo" src="assets/icons/logo/logo-main.svg" alt="#Логотип" />
+		</picture>
+		<picture class="header__logo-container header__logo-container--contrast">
+			<img class="header__logo" src="assets/icons/logo/logo-contrast.svg" alt="#Логотип" />
+		</picture>
+		<ul class="header__nav" role="navigation">
+			<li class="header__nav-item"><button data-services-open>Услуги</button><i class="header__nav-item--icon icon-check-mark"></i></li>
+			<li class="header__nav-item @@if (typeof page !== 'undefined' && page === 'about') {current}"><a href="about.html">Про отель</a></li>
+			<li class="header__nav-item @@if (typeof page !== 'undefined' && page === 'habitation') {current}"><a href="habitation.html">Проживание</a></li>
+			<li class="header__nav-item @@if (typeof page !== 'undefined' && page === 'price') {current}"><a href="price.html">Цены</a></li>
+			<li class="header__nav-item @@if (typeof page !== 'undefined' && page === 'contacts') {current}"><a href="contacts.html">Контакты</a></li>
+			<li class="header__nav-item header__nav-item--more">
+				Ещё
+				<i class="header__nav-item--icon icon-check-mark"></i>
+				<ul class="header__nav-item--more-list">
+					<li class="header__nav-item--more-list-item"><a href="stocks.html">Акции</a></li>
+					<li class="header__nav-item--more-list-item"><a href="faq.html">Вопросы</a></li>
+					<li class="header__nav-item--more-list-item"><button data-feedback-open>Оставить отзыв</button></li>
+					<li class="header__nav-item--more-list-item"><a href="certificates.html">Подарочные сертификаты</a></li>
+				</ul>
+			</li>
+		</ul>
+		<ul class="header__connection">
+			<li class="header__connection-item header__connection-item--tel"><a href="tel:+7 (999) 846-17-09">+7 (999) 846-17-09</a></li>
+			<li class="header__connection-item header__connection-item--button"><button data-booking-open>Забронировать</button></li>
+		</ul>
+		@@include('../components/burger.html')
+	</div>
+</header>
+<dialog id="menu" class="menu">
+	<div class="menu__container">
+		<div class="menu__button-close icon-cross" data-menu-close></div>
+	</div>
+</dialog>
