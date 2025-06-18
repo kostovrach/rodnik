@@ -4,8 +4,8 @@
 @mixin content-width() {
 	max-width: 1440px;
 	margin: 0 auto;
-	padding-left: rem(128);
-	padding-right: rem(128);
+	padding-left: rem(64);
+	padding-right: rem(64);
 	@media (max-width: 768px) {
 		padding-left: rem(32);
 		padding-right: rem(32);
@@ -47,6 +47,142 @@
 @mixin drop-shadow() {
 	filter: drop-shadow(0 0 10px rgba(black, 0.3));
 }
-@mixin button() {
-	
+@mixin button-main($background-color: $c-FFFFFF, $background-color-hover: $c-12C146, $font-size: rem(14), $padding: rem(8) rem(48), $color: $c-12C146, $color-hover: $c-FFFFFF, $border-color: $c-12C146) {
+	cursor: pointer;
+	position: relative;
+	font-size: $font-size;
+	color: $color;
+	padding: $padding;
+	background-color: $background-color;
+	border: rem(1.5) solid $border-color;
+	border-radius: $border-radius;
+	transition: $duration;
+	&::before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		position: absolute;
+		z-index: -1;
+		top: 50%;
+		left: 50%;
+		translate: -50% -50%;
+		border-radius: $border-radius;
+		transition: $duration;
+	}
+	&:hover {
+		background-color: $background-color-hover;
+		color: $color-hover;
+		&::before {
+			animation: calc($duration * 2) scale linear;
+		}
+	}
+	@keyframes scale {
+		0% {
+			scale: 1;
+			background: radial-gradient(rgba($c-12C146, 0) 0%, rgba($c-12C146, 0) 60%, rgba($c-12C146, 0.6) 50%, rgba($c-12C146, 0.6) 100%);
+		}
+		50% {
+			scale: 1.2;
+			opacity: 0;
+		}
+		100% {
+			scale: 1.4;
+		}
+	}
+}
+@mixin button-blur($color: $c-3C3C3B, $font-size: rem(18), $font-weight: $fw-medium, $padding: rem(20) rem(60), $background-color: $c-FFFFFF) {
+	cursor: pointer;
+	color: $color;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	padding: $padding;
+	background-color: $background-color;
+	border-radius: $border-radius;
+	&:hover {
+		color: $c-FFFFFF;
+		background-color: rgba($c-999999, 0.2);
+		backdrop-filter: blur(10px);
+	}
+}
+@mixin bottom-circle-hover {
+	position: relative;
+	transition: translate $duration;
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: rem(6);
+		aspect-ratio: 1/1;
+		background-color: $c-12C146;
+		border-radius: 50%;
+		translate: 0 1rem;
+		opacity: 0;
+		transition: $duration ease;
+	}
+	&:hover::before {
+		translate: 0 0.5rem;
+		opacity: 1;
+	}
+	&:hover {
+		translate: 0 -0.2rem;
+	}
+}
+@mixin right-circle-hover {
+	position: relative;
+	transition: translate $duration;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: rem(6);
+		aspect-ratio: 1/1;
+		background-color: $c-12C146;
+		border-radius: 50%;
+		translate: -1rem -50%;
+		scale: 0;
+		opacity: 0;
+		transition: $duration ease;
+	}
+	&:hover::before {
+		scale: 1;
+		opacity: 1;
+	}
+	&:hover {
+		translate: 1rem 0;
+	}
+}
+@mixin left-circle-hover {
+	position: relative;
+	transition: translate $duration;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: 0;
+		width: rem(6);
+		aspect-ratio: 1/1;
+		background-color: $c-12C146;
+		border-radius: 50%;
+		translate: 1rem -50%;
+		opacity: 0;
+		transition: $duration ease;
+	}
+	&:hover::before {
+		opacity: 1;
+	}
+	&:hover {
+		translate: -1.5rem 0;
+	}
+}
+@mixin block-title() {
+	font-size: lineScale(48, 24, 480, 1440);
+	line-height: 100%;
+	font-weight: $fw-bold;
+	color: $c-1C1C1E;
+	&--accent {
+		color: $c-12C146;
+	}
 }

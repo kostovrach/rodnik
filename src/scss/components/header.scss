@@ -3,11 +3,13 @@
 .header {
 	width: 100%;
 	position: fixed;
+	z-index: 5;
 	top: 0;
 	font-size: rem(13);
 	font-weight: $fw-medium;
 	color: $c-FFFFFF;
 	padding: rem(16);
+	transition: $duration;
 	&__container {
 		display: flex;
 		align-items: center;
@@ -18,6 +20,7 @@
 		backdrop-filter: blur(10px);
 		padding-top: rem(12);
 		padding-bottom: rem(12);
+		transition: all $duration, color 0s;
 		@include content-width();
 	}
 	&__logo-container {
@@ -40,6 +43,9 @@
 			display: flex;
 			align-items: center;
 			gap: 0.25rem;
+			& > a {
+				@include bottom-circle-hover();
+			}
 			&--icon {
 				translate: 0 -25%;
 			}
@@ -82,57 +88,30 @@
 		gap: rem(16);
 		&-item {
 			&--tel {
+				@include left-circle-hover();
 			}
 			&--button {
-				cursor: pointer;
-				position: relative;
-				font-size: rem(14);
-				color: $c-3C3C3B;
-				padding: rem(10) rem(24);
-				background-color: $c-FFFFFF;
-				border-radius: $border-radius;
-				transition: $duration;
-				&::before {
-					content: "";
-					width: 100%;
-					height: 100%;
-					aspect-ratio: 1/1;
-					pointer-events: none;
-					position: absolute;
-					z-index: -1;
-					top: 50%;
-					left: 50%;
-					translate: -50% -50%;
-					border-radius: $border-radius;
-					transition: $duration;
-				}
-				&:hover {
-					background-color: $c-12C146;
-					color: $c-FFFFFF;
-					&::before {
-						animation: calc($duration * 2) scale linear;
-					}
-				}
-
-				@keyframes scale {
-					0% {
-						scale: 1;
-						background: radial-gradient(rgba($c-12C146, 0) 0%, rgba($c-12C146, 0) 50%, rgba($c-12C146, 0.6) 50%, rgba($c-12C146, 0.6) 100%);
-					}
-					50% {
-						scale: 1.2;
-						opacity: 0;
-					}
-					100% {
-						scale: 1.4;
-					}
-				}
+				@include button-main($c-FFFFFF, $c-12C146, rem(14), rem(10) rem(24), $c-3C3C3B, $c-FFFFFF, transparent);
 			}
 		}
 	}
 	&.fill,
 	&.sticky {
 		color: $c-3C3C3B;
+		background-color: $c-FFFFFF;
+		.header__container {
+			background: none;
+			border: none;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+		.header__nav-item--more-list {
+			background-color: $c-FFFFFF;
+			backdrop-filter: none;
+		}
+		.header__connection-item--button {
+			border: rem(1) solid rgba($c-999999, 0.5);
+		}
 		.header__logo-container {
 			&--main {
 				display: none;

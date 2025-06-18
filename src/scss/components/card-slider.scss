@@ -1,0 +1,22 @@
+@use "../utils/abstracts" as *;
+
+.card-slider {
+    &-button {
+        position: static;
+        z-index: 0 !important;
+        width: fit-content;
+        color: inherit;
+        margin: 0;
+        &::after{
+            display: none;
+        }
+    }
+    &-scrollbar {
+        position: static !important;
+        z-index: 0 !important;
+        width: 100% !important;
+        .swiper-scrollbar-drag {
+            background-color: $c-12C146;
+        }
+    }
+}

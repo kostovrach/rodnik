@@ -1,7 +1,7 @@
 // Colors
-$c-12C146: #12C146;
+$c-12C146: #1F8E31;
 $c-A1C85C: #A1C85C;
-$c-D13800: #D13800;
+$c-FE823A: #FE823A;
 $c-EFF0F1: #EFF0F1;
 $c-C1C2C3: #C1C2C3;
 $c-3C3C3B: #3C3C3B;
@@ -15,10 +15,12 @@ $main-color: $c-FFFFFF;
 $accent-color: $c-1C1C1E;
 
 // Other
-$duration: 0.7s;
+$duration: 0.6s;
 $spring: cubic-bezier(0.36, 1.5, 0.64, 1);
 
 $fw-medium: 500;
 $fw-bold: 700;
+$fw-black: 900;
 
 $border-radius: 2rem;
+$block-border-radius: 5vw;
