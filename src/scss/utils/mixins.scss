@@ -50,6 +50,7 @@
 @mixin button-main($background-color: $c-FFFFFF, $background-color-hover: $c-12C146, $font-size: rem(14), $padding: rem(8) rem(48), $color: $c-12C146, $color-hover: $c-FFFFFF, $border-color: $c-12C146) {
 	cursor: pointer;
 	position: relative;
+	width: fit-content;
 	font-size: $font-size;
 	color: $color;
 	padding: $padding;
@@ -63,7 +64,7 @@
 		height: 100%;
 		pointer-events: none;
 		position: absolute;
-		z-index: -1;
+		z-index: -2;
 		top: 50%;
 		left: 50%;
 		translate: -50% -50%;
@@ -73,6 +74,7 @@
 	&:hover {
 		background-color: $background-color-hover;
 		color: $color-hover;
+		border-color: transparent;
 		&::before {
 			animation: calc($duration * 2) scale linear;
 		}
@@ -129,7 +131,7 @@
 		translate: 0 -0.2rem;
 	}
 }
-@mixin right-circle-hover {
+@mixin right-circle-hover($size: rem(6)) {
 	position: relative;
 	transition: translate $duration;
 	&::before {
@@ -137,7 +139,7 @@
 		position: absolute;
 		top: 50%;
 		left: 0;
-		width: rem(6);
+		width: $size;
 		aspect-ratio: 1/1;
 		background-color: $c-12C146;
 		border-radius: 50%;

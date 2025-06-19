@@ -13,6 +13,7 @@
 		const sliderParams = {
 			slidesPerView: "auto",
 			spaceBetween: 16,
+			freeMode: true,
 		};
 
 		if (buttonPrev && buttonNext) {

@@ -8,7 +8,7 @@
 	font-size: rem(13);
 	font-weight: $fw-medium;
 	color: $c-FFFFFF;
-	padding: rem(16);
+	padding: rem(16) 0;
 	transition: $duration;
 	&__container {
 		display: flex;
@@ -97,8 +97,10 @@
 	}
 	&.fill,
 	&.sticky {
+		padding: rem(8) 0;
 		color: $c-3C3C3B;
 		background-color: $c-FFFFFF;
+		border-bottom: rem(1) solid rgba($c-999999, 0.2);
 		.header__container {
 			background: none;
 			border: none;
