@@ -123,12 +123,14 @@
 		opacity: 0;
 		transition: $duration ease;
 	}
-	&:hover::before {
-		translate: 0 0.5rem;
-		opacity: 1;
-	}
-	&:hover {
-		translate: 0 -0.2rem;
+	@media (pointer: fine) {
+		&:hover::before {
+			translate: 0 0.5rem;
+			opacity: 1;
+		}
+		&:hover {
+			translate: 0 -0.2rem;
+		}
 	}
 }
 @mixin right-circle-hover($size: rem(6)) {
@@ -148,12 +150,14 @@
 		opacity: 0;
 		transition: $duration ease;
 	}
-	&:hover::before {
-		scale: 1;
-		opacity: 1;
-	}
-	&:hover {
-		translate: 1rem 0;
+	@media (pointer: fine) {
+		&:hover::before {
+			scale: 1;
+			opacity: 1;
+		}
+		&:hover {
+			translate: 1rem 0;
+		}
 	}
 }
 @mixin left-circle-hover {
@@ -172,11 +176,13 @@
 		opacity: 0;
 		transition: $duration ease;
 	}
-	&:hover::before {
-		opacity: 1;
-	}
-	&:hover {
-		translate: -1.5rem 0;
+	@media (pointer: fine) {
+		&:hover::before {
+			opacity: 1;
+		}
+		&:hover {
+			translate: -1.5rem 0;
+		}
 	}
 }
 @mixin block-title() {
@@ -186,5 +192,41 @@
 	color: $c-1C1C1E;
 	&--accent {
 		color: $c-12C146;
+	}
+}
+@mixin tg-hover {
+	transition: scale $duration;
+	will-change: scale;
+	border-radius: 50%;
+	@include flex-center();
+	@media (pointer: fine) {
+		&:hover {
+			background-color: #229ed9;
+			scale: 1.1;
+		}
+	}
+}
+@mixin vk-hover {
+	transition: scale $duration;
+	will-change: scale;
+	border-radius: 50%;
+	@include flex-center();
+	@media (pointer: fine) {
+		&:hover {
+			background-color: #0e7cff;
+			scale: 1.1;
+		}
+	}
+}
+@mixin insta-hover {
+	transition: scale $duration;
+	will-change: scale;
+	border-radius: 50%;
+	@include flex-center();
+	@media (pointer: fine) {
+		&:hover {
+			background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+			scale: 1.1;
+		}
 	}
 }
