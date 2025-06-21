@@ -1,0 +1,70 @@
+<dialog id="modal-booking" class="modal-form">
+	<div class="modal-form__container">
+		<div class="modal-form__button-close icon-cross"></div>
+		<div class="modal-form__titlebox">
+			<p class="modal-form__title">Бронирование</p>
+			<p class="modal-form__subtitle">Менеджеры компании с радостью ответят на ваши вопросы и&nbsp;произведут расчет стоимости услуг и подготовят индивидуальное коммерческое предложение.</p>
+		</div>
+		<form class="modal-form__form modal-form__form--booking" action="" method="post">
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-booking-name">Имя</label>
+				<input id="modal-booking-name" class="modal-form__form-input" type="text" placeholder="Как к вам обращаться?" required />
+			</div>
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-booking-tel">Телефон</label>
+				<input id="modal-booking-tel" class="modal-form__form-input" data-input-tel type="tel" required />
+			</div>
+			<div class="modal-form__form-inputbox modal-form__form-inputbox--date">
+				<div class="modal-form__form-input--date-icon icon-check-mark"></div>
+				<label class="modal-form__form-label" for="modal-booking-checkin">Дата заезда</label>
+				<input id="modal-booking-checkin" class="modal-form__form-input" type="date" required />
+			</div>
+			<div class="modal-form__form-inputbox modal-form__form-inputbox--date">
+				<div class="modal-form__form-input--date-icon icon-check-mark"></div>
+				<label class="modal-form__form-label" for="modal-booking-checkout">Дата выезда</label>
+				<input id="modal-booking-checkout" class="modal-form__form-input" type="date" required />
+			</div>
+
+			<div class="modal-form__form-inputbox--select modal-form__form-inputbox--select--person select" tabindex="0" role="combobox">
+				<input id="modal-booking-person" class="modal-form__form-input--select modal-form__form-input--select-person-input select__input" type="text" placeholder="1 человек" tabindex="-1" readonly />
+				<i class="modal-form__form-input--select-icon modal-form__form-input--select-preson-icon select__icon icon-check-mark"></i>
+				<ul class="modal-form__form-input--select-preson-dropdown select__dropdown" role="listbox">
+					<li class="modal-form__form-input--select-preson-item select__item" role="option" tabindex="0">1 человек</li>
+					<li class="modal-form__form-input--select-preson-item select__item" role="option" tabindex="0">2 человека</li>
+					<li class="modal-form__form-input--select-preson-item select__item" role="option" tabindex="0">3 человека</li>
+				</ul>
+			</div>
+			<div class="modal-form__form-inputbox--select modal-form__form-inputbox--select--house select" tabindex="0" role="combobox">
+				<input id="modal-booking-house" class="modal-form__form-input--select modal-form__form-input--select-house-input select__input" type="text" placeholder="Выберите домик" tabindex="-1" readonly />
+				<i class="modal-form__form-input--select-icon modal-form__form-input--select-house-icon select__icon icon-check-mark"></i>
+				<ul class="modal-form__form-input--select-house-dropdown select__dropdown" role="listbox">
+					<li class="modal-form__form-input--select-house-item select__item" role="option" tabindex="0">Не выбрано</li>
+					<li class="modal-form__form-input--select-house-item select__item" role="option" tabindex="0">Цветной домик</li>
+					<li class="modal-form__form-input--select-house-item select__item" role="option" tabindex="0">Хозяйский домик</li>
+					<li class="modal-form__form-input--select-house-item select__item" role="option" tabindex="0">Боярская палата</li>
+				</ul>
+			</div>
+			<ul class="modal-form__form-services"></ul>
+			<div class="modal-form__form-services-select select">
+				<input class="modal-form__form-services-input select__input" type="text" placeholder="Дополнительные услуги" readonly tabindex="-1" />
+				<i class="modal-form__form-services-icon icon-check-mark"></i>
+				<label for="booking-selected-services" class="modal-form__form-services-label">Дополнительные услуги</label>
+				<ul class="modal-form__form-services-dropdown select__dropdown">
+					<li class="modal-form__form-services-dropdown-item select__item readonly" data-value="food" data-label="Питание" data-price="500">Питание - 500&#8381;</li>
+					<li class="modal-form__form-services-dropdown-item select__item readonly" data-value="cleaning" data-label="Уборка номера" data-price="1500">Уборка номера - 1500&#8381;</li>
+					<li class="modal-form__form-services-dropdown-item select__item readonly" data-value="bed" data-label="Доп. спальное место" data-price="500">Доп. спальное место - 500&#8381;</li>
+					<li class="modal-form__form-services-dropdown-item select__item readonly" data-value="transfer" data-label="Трансфер до отеля" data-price="2000">Трансфер до отеля - 2000&#8381;</li>
+				</ul>
+				<input id="booking-selected-services" type="hidden" name="booking-services" value="" />
+			</div>
+
+			<div class="modal-form__form-inputbox modal-form__form-inputbox--custom">
+				<label class="modal-form__form-label" for="modal-booking-comment">Комментарий</label>
+				<textarea id="modal-booking-comment" class="modal-form__form-input modal-form__form-input--custom" placeholder="Дополнительная информация (опционально)"></textarea>
+			</div>
+            <button class="modal-form__form-button" type="submit">Забронировать</button>
+			<div class="modal-form__form-privacy">Отправляя сообщение, вы соглашаетесь<button class="modal-form__form-privacy-button" data-privacy-open>c политикой конфиденциальности</button></div>
+			
+		</form>
+	</div>
+</dialog>

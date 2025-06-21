@@ -23,19 +23,19 @@
 						<li class="index-hero__label--text"><h1>Отдыхайте там, где вас любят!</h1></li>
 					</ul>
 					<form class="index-hero__form">
-						<label class="index-hero__inputbox" for="check-in">
+						<label class="index-hero__inputbox index-hero__inputbox--date" for="check-in">
 							<span class="index-hero__input-name">Заезд</span>
 							<input id="check-in" class="index-hero__input index-hero__input--checkin" type="date" />
 							<i class="index-hero__input-icon icon-check-mark"></i>
 						</label>
-						<label class="index-hero__inputbox" for="check-out">
+						<label class="index-hero__inputbox index-hero__inputbox--date" for="check-out">
 							<span class="index-hero__input-name">Выезд</span>
 							<input id="check-out" class="index-hero__input index-hero__input--checkuot" type="date" />
 							<i class="index-hero__input-icon icon-check-mark"></i>
 						</label>
-						<div class="index-hero__inputbox index-hero__input-preson select" tabindex="0" role="combobox">
-							<span class="index-hero__input-name index-hero__input-preson-name">Персоны</span>
-							<input id="input-person" class="index-hero__input index-hero__input-preson-input select__input" type="text" placeholder="2+1" tabindex="-1" readonly />
+						<div class="index-hero__inputbox index-hero__inputbox--person select" tabindex="0" role="combobox">
+							<span class="index-hero__input-name index-hero__input-person-name">Персоны</span>
+							<input id="input-person" class="index-hero__input index-hero__input-person-input select__input" type="text" placeholder="2+1" tabindex="-1" readonly />
 							<i class="index-hero__input-icon index-hero__input-preson-icon select__icon icon-check-mark"></i>
 							<ul class="index-hero__input-preson-dropdown select__dropdown" role="listbox">
 								<li class="index-hero__input-preson-item select__item" role="option" tabindex="0">2+1</li>
@@ -43,7 +43,7 @@
 								<li class="index-hero__input-preson-item select__item" role="option" tabindex="0">1+1</li>
 							</ul>
 						</div>
-						<div class="index-hero__inputbox index-hero__input-house select" tabindex="0" role="combobox">
+						<div class="index-hero__inputbox index-hero__inputbox--house select" tabindex="0" role="combobox">
 							<span class="index-hero__input-name index-hero__input-preson-name">Домик</span>
 							<input id="input-house" class="index-hero__input index-hero__input-house-input select__input" type="text" placeholder="Не выбрано" tabindex="-1" readonly />
 							<i class="index-hero__input-icon index-hero__input-house-icon select__icon icon-check-mark"></i>
@@ -452,6 +452,10 @@
 			</section>
 			<section class="index-gallery">
 				<div class="index-gallery__container">
+					<div class="index-gallery__titlebox--mobile">
+						<h2 class="index-gallery__title--mobile">Мы создаем уникальный опыт для увлекательного досуга</h2>
+						<a class="index-gallery__button--mobile" href="events.html">Больше о мероприятиях<i class="index-gallery__button--icon icon-arrow-long"></i></a>
+					</div>
 					<div class="index-gallery__slider swiper">
 						<div class="index-gallery__slider-wrapper swiper-wrapper">
 							<div class="index-gallery__body swiper-slide">
@@ -566,7 +570,7 @@
 				</div>
 			</section>
 			<section class="index-contacts">
-				<img class="index-contacts__cross-bg" src="assets/img/bg-map/cross.svg" alt="">
+				<img class="index-contacts__cross-bg" src="assets/img/bg-map/cross.svg" alt="" />
 				<div class="index-contacts__container">
 					<div class="index-contacts__titlebox">
 						<h2 class="index-contacts__title">Контакты</h2>

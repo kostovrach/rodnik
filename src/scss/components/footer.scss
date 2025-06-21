@@ -19,7 +19,7 @@
 		cursor: pointer;
 		position: absolute;
 		top: -3.5rem;
-		right: 8rem;
+		right: 10%;
 		color: $c-1C1C1E;
 		font-size: rem(64);
 	}
@@ -44,9 +44,9 @@
 			align-items: flex-end;
 			border-bottom: rem(1) solid $c-3C3C3B;
 			transition: $duration;
-			@media (pointer: fine){
+			@media (pointer: fine) {
 				&:hover,
-				&:has(.footer__form-input:focus){
+				&:has(.footer__form-input:focus) {
 					border-color: $c-FFFFFF;
 				}
 			}
@@ -77,7 +77,7 @@
 			transition: $duration;
 		}
 		&-input {
-			width: rem(364);
+			width: rem(320);
 			font-size: rem(20);
 			padding: 1.8rem 0 0.5rem 0;
 			background-color: transparent;
@@ -105,8 +105,8 @@
 			border-radius: 50%;
 			margin-bottom: rem(8);
 			@include flex-center();
-			&::after{
-				content:'';
+			&::after {
+				content: "";
 				position: absolute;
 				z-index: -1;
 				inset: 0;
@@ -116,8 +116,8 @@
 				background-color: inherit;
 				transition: $duration;
 			}
-			@media (pointer: fine){
-				&:hover{
+			@media (pointer: fine) {
+				&:hover {
 					background-color: $c-FE823A;
 					&::after {
 						scale: 1.2;
@@ -178,10 +178,10 @@
 	}
 	&__company {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 		grid-template-areas:
-			"logo . socials"
-			"copy copy copy";
+			"logo logo socials socials"
+			"copy copy copy copy";
 		gap: rem(32);
 		&-logo {
 			grid-area: logo;
@@ -260,6 +260,28 @@
 					color: rgba($c-3C3C3B, 0.5);
 				}
 			}
+		}
+	}
+}
+@media (max-width: 1024px) {
+	.footer {
+		&__links {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: rem(64) rem(32);
+		}
+		&__form {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: rem(16);
+			&-title {
+				max-width: none;
+			}
+		}
+		&__company {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 		}
 	}
 }

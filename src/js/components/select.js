@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+(function () {
 	const selects = document.querySelectorAll(".select");
 
 	selects.forEach((select) => {
@@ -13,19 +13,23 @@ document.addEventListener("DOMContentLoaded", function () {
 		items.forEach((item) => {
 			item.addEventListener("click", function (e) {
 				e.stopPropagation();
-				input.value = this.textContent;
 				select.classList.remove("open");
+				if (!item.classList.contains("readonly")) {
+					input.value = this.textContent;
+				}
 			});
 			item.addEventListener("keydown", function (e) {
 				if (e.key === "Enter" || e.key === " ") {
 					e.preventDefault();
 					e.stopPropagation();
-					input.value = this.textContent;
 					select.classList.remove("open");
+					if (!item.classList.contains("readonly")) {
+						input.value = this.textContent;
+					}
 				}
 			});
 		});
-		
+
 		document.addEventListener("click", function (e) {
 			if (!select.contains(e.target)) {
 				select.classList.remove("open");
@@ -45,4 +49,4 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		});
 	});
-});
+})();

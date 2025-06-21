@@ -124,3 +124,11 @@
 		}
 	}
 }
+@media (max-width: 1240px) {
+	.header {
+		&__nav,
+		&__connection {
+			display: none;
+		}
+	}
+}

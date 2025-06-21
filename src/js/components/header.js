@@ -4,7 +4,7 @@
 	if (!header) return;
 
 	window.addEventListener("scroll", () => {
-		const isStickyMode = window.scrollY > 10 && header.classList.contains("js-sticky");
+		const isStickyMode = window.scrollY > 10 && header.classList.contains("js-sticky") || document.body.classList.contains("lock");
 
 		header.classList.toggle("sticky", isStickyMode);
 	});

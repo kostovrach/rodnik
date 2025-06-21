@@ -24,16 +24,12 @@ html {
 	font-size: 16;
 	box-sizing: border-box;
 }
-@media (prefers-reduced-motion: no-preference) {
-	html {
-		scroll-behavior: smooth;
-	}
-}
 html,
 body {
 	max-width: 100vw;
 	height: 100%;
 	scrollbar-gutter: stable;
+	overflow-x: clip;
 }
 body {
 	-ms-text-size-adjust: 100%;
@@ -41,7 +37,6 @@ body {
 	-webkit-text-size-adjust: 100%;
 	background-color: var.$main-color;
 	color: var.$accent-color;
-	overflow-x: clip;
 }
 input,
 button,
@@ -118,6 +113,10 @@ picture {
 dialog {
 	max-width: initial;
 	max-height: initial;
+    &:focus,
+	& *:focus  {
+        outline: none;
+    }
 }
 dialog::backdrop {
 	all: unset;

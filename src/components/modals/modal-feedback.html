@@ -1,0 +1,36 @@
+<dialog id="modal-feedback" class="modal-form">
+	<button class="modal-form__button-close icon-cross"></button>
+	<div class="modal-form__container">
+		<div class="modal-form__titlebox">
+			<p class="modal-form__title">Оставьте отзыв о&nbsp;нашей работе!</p>
+			<p class="modal-form__subtitle">Если вы уже побывали в нас в гостях, можете рассказать для&nbsp;других посетителей о своем опыте пребывания на базе отдыха «Родник»</p>
+		</div>
+		<form action="" method="post" class="modal-form__form">
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-feedback-name">Имя</label>
+				<input id="modal-feedback-name" class="modal-form__form-input" type="text" placeholder="Как к вам обращаться?" />
+			</div>
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-feedback-email">E-mail</label>
+				<input id="modal-feedback-email" class="modal-form__form-input" type="email" placeholder="Ваш E-mail" required />
+			</div>
+			<div class="modal-form__form-inputbox modal-form__form-inputbox--custom">
+				<label class="modal-form__form-label" for="modal-feedback-comment">Ваш отзыв</label>
+				<textarea id="modal-feedback-comment" class="modal-form__form-input modal-form__form-input--custom" placeholder="Поделитесь впечатлениями"></textarea>
+			</div>
+			<div class="modal-form__form-review">
+				<p class="modal-form__form-review-title">На сколько вы удовлетворены обслуживанием?</p>
+				<div class="modal-form__form-review-rate" data-selected="0">
+					<input type="hidden" name="rating" value="0" />
+					<span class="modal-form__form-review-rate-item icon-rate-star" data-value="1"></span>
+					<span class="modal-form__form-review-rate-item icon-rate-star" data-value="2"></span>
+					<span class="modal-form__form-review-rate-item icon-rate-star" data-value="3"></span>
+					<span class="modal-form__form-review-rate-item icon-rate-star" data-value="4"></span>
+					<span class="modal-form__form-review-rate-item icon-rate-star" data-value="5"></span>
+				</div>
+			</div>
+			<button class="modal-form__form-button" type="submit">Отправить отзыв</button>
+			<div class="modal-form__form-privacy">Отправляя сообщение, вы соглашаетесь<button class="modal-form__form-privacy-button" data-privacy-open>c политикой конфиденциальности</button></div>
+		</form>
+	</div>
+</dialog>
