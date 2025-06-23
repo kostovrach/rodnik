@@ -41,7 +41,7 @@
 		align-items: center;
 		gap: 0.5rem;
 		margin-top: rem(32);
-		@include button-main(inherit, $c-12C146, rem(18), rem(20) rem(48), $c-FFFFFF, $c-FFFFFF, $c-FFFFFF);
+		@include button-main(inherit, $c-12C146, lineScale(18,14,480,1440), rem(20) rem(48), $c-FFFFFF, $c-FFFFFF, $c-FFFFFF);
 		&--icon {
 			rotate: 90deg;
 		}

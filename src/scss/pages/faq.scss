@@ -3,6 +3,7 @@
 .faq-faq {
 	padding: rem(96) 0;
 	background-color: $c-FFFFFF;
+	border-radius: 0 0 $block-border-radius $block-border-radius;
 	&__container {
 		display: grid;
 		grid-template-columns: 40% auto;
@@ -109,6 +110,14 @@
 			font-size: lineScale(18, 16, 480, 1440);
 			line-height: 150%;
 			font-weight: $fw-medium;
+		}
+	}
+}
+@media (max-width: 1024px) {
+	.faq-faq {
+		&__container {
+			display: flex;
+			flex-direction: column;
 		}
 	}
 }

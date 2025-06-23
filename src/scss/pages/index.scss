@@ -1010,8 +1010,9 @@
 		flex-direction: column;
 		gap: rem(32);
 		width: 100%;
-		aspect-ratio: 1/1;
+		max-height: rem(584);
 		padding: rem(32);
+		padding-bottom: rem(128);
 		border-radius: $border-radius;
 		overflow: hidden;
 		background-color: $c-EFF0F1;
@@ -1024,10 +1025,7 @@
 			width: 100%;
 			height: rem(64);
 			background-color: inherit;
-		}
-		&.expand {
-			aspect-ratio: auto;
-			height: auto;
+			box-shadow: 0 -16px 24px 24px rgba($c-EFF0F1, 1);
 		}
 	}
 	&__links {
@@ -1161,6 +1159,7 @@
 		&__map {
 			aspect-ratio: auto;
 			min-height: rem(500);
+			max-height: initial;
 		}
 		&__button {
 			display: none;

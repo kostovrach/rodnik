@@ -79,6 +79,7 @@ button::-moz-focus-inner {
 	all: unset;
 }
 a {
+	cursor: pointer;
 	color: inherit;
 }
 a[href^="http"]:empty::before {

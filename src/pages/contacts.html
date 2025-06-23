@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('../components/head.html', { "title": "Rodnik - Контакты" })
+	<body>
+		@@include('../components/header.html', { "page": "contacts" })
+		<main id="start">
+			<section class="contacts-info">
+				<div id="contacts-map" class="contacts-info__map"></div>
+				<div class="contacts-info__container">
+					<div class="contacts-info__body">
+						<h1 class="contacts-info__title">Контакты</h1>
+						<ul class="contacts-info__links">
+							<li class="contacts-info__links-item"><a href="tel:+7 (999) 846-17-09">+7 (999) 846-17-09</a></li>
+							<li class="contacts-info__links-item"><a href="mailto:info@rodnik.ru">info@rodnik.ru</a></li>
+							<li class="contacts-info__links-item contacts-info__links-item--non-interaction">п. Волжский, ул. Пионерская, 53</li>
+						</ul>
+						<ul class="contacts-info__time">
+							<li class="contacts-info__time-item--title">Часы работы офиса:</li>
+							<li class="contacts-info__time-item">Пн-Пт: 10:00-19:00</li>
+							<li class="contacts-info__time-item">Сб-Вс: 12:00-16:00</li>
+						</ul>
+						<p class="contacts-info__hint">Внимание! Бронирование номеров доступно только <button class="contacts-info__hint--button" data-booking-open>онлайн</button> или&nbsp;по&nbsp;телефону</p>
+						<ul class="contacts-info__socials">
+							<a class="contacts-info__socials-item contacts-info__socials-item--vk icon-vk" href=""></a>
+							<a class="contacts-info__socials-item contacts-info__socials-item--telegram icon-telegram" href=""></a>
+							<a class="contacts-info__socials-item contacts-info__socials-item--instagram icon-instagram" href=""></a>
+						</ul>
+					</div>
+				</div>
+			</section>
+			@@include("../components/route-block.html")
+            @@include("../components/question-block.html", { "title": "Остались вопросы?", "desc": "Менеджеры компании с радостью ответят на ваши вопросы и&nbsp;подготовят индивидуальное предложение", "button": "Задать вопрос", "button-type": "data-question-open" })
+		</main>
+		@@include("../components/footer.html")
+	</body>
+</html>
