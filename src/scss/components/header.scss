@@ -43,6 +43,11 @@
 			display: flex;
 			align-items: center;
 			gap: 0.25rem;
+			&.current {
+				font-weight: $fw-bold;
+				pointer-events: none;
+				@include force-bottom-circle-hover();
+			}
 			& > a {
 				@include bottom-circle-hover();
 			}
@@ -72,7 +77,10 @@
 					overflow: hidden;
 					pointer-events: none;
 					transition: $duration;
-					&-item {
+					&-item > * {
+						display: block;
+						width: 100%;
+						height: 100%;
 						padding: rem(8) rem(16);
 						&:hover {
 							background-color: $c-A1C85C;

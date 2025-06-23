@@ -6,6 +6,7 @@
 		document.body.classList.remove("lock");
 		document.body.style.removeProperty("top");
 		document.body.style.removeProperty("position");
+		document.body.style.removeProperty("width");
 		window.scrollTo(0, scrollPosition);
 	}
 
@@ -13,6 +14,7 @@
 		scrollPosition = window.pageYOffset;
 		document.body.classList.add("lock");
 		document.body.style.position = "fixed";
+		document.body.style.width = "100%";
 		document.body.style.top = `-${scrollPosition}px`;
 	}
 
@@ -56,7 +58,9 @@
 	}
 
 	initModal("#menu", "data-menu-open", ".menu__button-close");
+	initModal("#modal-privacy", "data-privacy-open", ".modal-privacy__button-close");
 	initModal("#modal-services", "data-services-open", ".modal-services__button-close");
 	initModal("#modal-feedback", "data-feedback-open", ".modal-form__button-close");
 	initModal("#modal-booking", "data-booking-open", ".modal-form__button-close");
+	initModal("#modal-question", "data-question-open", ".modal-form__button-close");
 })();

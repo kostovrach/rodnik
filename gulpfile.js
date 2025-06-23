@@ -59,9 +59,9 @@ const paths = {
   }
 };
 
-// Генерация _components.scss и _pages.scss с @forward
+// Генерация _components.scss, _pages.scss и _tech.scss с @forward
 async function generateScssIndex() {
-  const targetDirs = ['src/scss/components', 'src/scss/pages'];
+  const targetDirs = ['src/scss/components', 'src/scss/pages', 'src/scss/tech'];
 
   await Promise.all(targetDirs.map(async (dirPath) => {
     const folderName = basename(dirPath);

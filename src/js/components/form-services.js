@@ -11,7 +11,6 @@
 
 	let selected = [];
 
-	// Обработка выбора услуги
 	serviceItems.forEach((item) => {
 		item.addEventListener("click", (e) => {
 			e.stopPropagation();
@@ -28,7 +27,6 @@
 		});
 	});
 
-	// Функция создания плашки
 	function addTag(label, price, value) {
 		const li = document.createElement("li");
 		li.className = "modal-form__form-services-item";
@@ -46,7 +44,6 @@
 		tagsContainer.appendChild(li);
 	}
 
-	// Функция удаления плашки
 	function removeTag(value) {
 		selected = selected.filter((v) => v !== value);
 
@@ -59,7 +56,6 @@
 		updateHiddenInput();
 	}
 
-	// Обновление значения скрытого инпута
 	function updateHiddenInput() {
 		inputHidden.value = selected.join(",");
 	}

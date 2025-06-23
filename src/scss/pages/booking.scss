@@ -1,0 +1,346 @@
+@use "../utils/abstracts" as *;
+
+.booking-hero {
+	position: relative;
+	min-height: 80vh;
+	width: 100%;
+	border-radius: 0 0 $block-border-radius $block-border-radius;
+	overflow: hidden;
+	&__background {
+		&-image-container {
+			position: absolute;
+			z-index: 0;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+		}
+		&-image {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			filter: brightness(80%);
+		}
+	}
+	&__container {
+		height: 80vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include content-width();
+	}
+	&__titlebox {
+		position: relative;
+		z-index: 1;
+	}
+	&__title {
+		text-transform: uppercase;
+		color: $c-FFFFFF;
+		font-size: lineScale(72, 40, 480, 1440);
+        line-height: 120%;
+		font-weight: $fw-bold;
+        text-align: center;
+	}
+}
+.booking-booking {
+	padding: rem(96) 0;
+	background-color: $c-FFFFFF;
+	border-radius: 0 0 $block-border-radius $block-border-radius;
+	overflow: hidden;
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: rem(64);
+		@include content-width();
+	}
+	&__title {
+		max-width: 50ch;
+		font-size: rem(14);
+		color: $c-3C3C3B;
+	}
+	&__filtering {
+		display: flex;
+		justify-content: space-between;
+		gap: rem(32);
+		flex-wrap: wrap-reverse;
+	}
+	&__filters {
+        &-title {
+            font-size: rem(22);
+            font-weight: $fw-bold;
+        }
+		&-filterbox {
+            max-width: 50ch;
+            display: flex;
+            flex-wrap: wrap;
+			gap: rem(8) rem(64);
+            margin-top: rem(16);
+		}
+		&-filter {
+			cursor: pointer;
+			position: relative;
+			width: rem(250);
+			display: flex;
+			align-items: center;
+			gap: rem(8);
+			font-size: rem(13);
+			font-weight: $fw-medium;
+			&-count {
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+			&-checkbox {
+				cursor: pointer;
+				position: relative;
+				width: rem(24);
+				height: rem(24);
+				border: rem(2) solid $c-1C1C1E;
+				&-input {
+					cursor: pointer;
+					position: absolute;
+					z-index: 1;
+					inset: 0;
+					width: 100%;
+					height: 100%;
+				}
+				&::before,
+				&::after {
+					content: "";
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					translate: -50% -50%;
+					width: 0.9rem;
+					height: rem(2);
+					opacity: 0;
+					transition: rotate calc($duration / 2);
+					pointer-events: none;
+				}
+				@media (pointer: fine) {
+					&:hover {
+						&::before,
+						&::after {
+							background-color: $c-1C1C1E;
+							opacity: 1;
+						}
+						&::before {
+							rotate: 90deg;
+						}
+					}
+				}
+				&:has(input:checked) {
+					background-color: $c-1C1C1E;
+					&::before,
+					&::after {
+						background-color: $c-FFFFFF;
+						opacity: 1;
+					}
+					&::before {
+						left: 60%;
+						width: 0.75rem;
+						rotate: 135deg;
+					}
+					&::after {
+						left: 30%;
+						top: 60%;
+						width: 0.5rem;
+						rotate: -135deg;
+					}
+				}
+			}
+		}
+	}
+	&__price {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: rem(32);
+        &-title {
+            font-size: rem(22);
+            font-weight: $fw-bold;
+        }
+        &-subtitle {
+            font-size: rem(14);
+            margin-top: rem(8);
+            color: $c-3C3C3B;
+        }
+        &-values {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: rem(16);
+            color: $c-C1C2C3;
+            font-size: rem(12);
+            font-weight: $fw-medium;
+        }
+		&-range {
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			&-wrapper {
+				position: relative;
+				width: 100%;
+				height: rem(32);
+			}
+			&-track {
+				position: absolute;
+				z-index: 1;
+				top: 50%;
+				left: 0;
+				height: rem(2);
+				width: 100%;
+				background: $c-EFF0F1;
+                translate: 0 -50%;
+			}
+			input[type="range"] {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background: none;
+				pointer-events: none;
+
+				&::-webkit-slider-thumb {
+					cursor: pointer;
+					position: relative;
+					z-index: 3;
+                    width: rem(16);
+                    aspect-ratio: 1/1;
+					background-color: $c-12C146;
+					border-radius: 50%;
+					pointer-events: auto;
+				}
+
+				&::-moz-range-thumb {
+					cursor: pointer;
+					height: 16px;
+					width: 16px;
+					background-color: $c-12C146;
+					border-radius: 50%;
+					pointer-events: auto;
+				}
+			}
+			&-active {
+				position: absolute;
+				z-index: 2;
+				top: 50%;
+				height: 4px;
+				background: $c-12C146;
+				border-radius: $border-radius;
+                translate: 0 -50%;
+				pointer-events: none;
+			}
+		}
+	}
+	&__body {
+		width: 100%;
+		display: flex;
+		gap: rem(16);
+		flex-wrap: wrap;
+	}
+	&__item {
+		cursor: default;
+		max-width: rem(384);
+		border-radius: $border-radius;
+		@media (pointer: fine) {
+			max-height: rem(527);
+			overflow: hidden;
+			&:hover,
+			&:focus {
+				background-color: $c-FFFFFF;
+				box-shadow: (0 5px 20px 0 rgba($c-1C1C1E, 0.2));
+				.booking-booking__item-image-container {
+					aspect-ratio: 2/1.35;
+				}
+				.booking-booking__item-buttonbox {
+					opacity: 1;
+					flex: 1 1 0%;
+				}
+			}
+		}
+		&-wrapper {
+			width: 100%;
+			height: 100%;
+		}
+		&-content {
+			display: flex;
+			flex-direction: column;
+			gap: rem(16);
+			padding: rem(16);
+		}
+		&-image-container {
+			width: 100%;
+			aspect-ratio: 2/2;
+			overflow: hidden;
+			border-radius: $border-radius;
+			transition: $duration;
+		}
+		&-image {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&-price {
+			font-size: rem(13);
+			font-weight: $fw-medium;
+			&--number {
+				font-size: rem(16);
+			}
+		}
+		&-title {
+			font-size: rem(18);
+			font-weight: $fw-medium;
+		}
+		&-tagbox {
+			display: flex;
+			flex-wrap: wrap;
+			gap: rem(4);
+		}
+		&-tag {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			font-size: rem(12);
+			font-weight: $fw-medium;
+			padding: rem(8) rem(12);
+			border: rem(1.5) solid $c-EFF0F1;
+			border-radius: $border-radius;
+		}
+		&-buttonbox {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: rem(16);
+			flex: 0 1 0;
+			transition: all $duration;
+			@media (pointer: fine) {
+				opacity: 0;
+			}
+		}
+		&-button {
+			font-weight: $fw-medium;
+			border-radius: $border-radius;
+			&--booking {
+				@include button-main($c-1C1C1E, $c-12C146, rem(12), rem(10) rem(35), $c-FFFFFF, $c-FFFFFF, transparent);
+			}
+			&--more {
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+				font-size: rem(13);
+				color: $c-3C3C3B;
+				padding: rem(12) rem(18);
+				transition: color $duration;
+				& i {
+					rotate: 90deg;
+				}
+				&:hover {
+					color: $c-12C146;
+				}
+			}
+		}
+	}
+}

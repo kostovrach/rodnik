@@ -134,6 +134,22 @@
 		}
 	}
 }
+@mixin force-bottom-circle-hover {
+	position: relative;
+	translate: 0 -0.2rem;
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: rem(6);
+		aspect-ratio: 1/1;
+		background-color: $c-12C146;
+		border-radius: 50%;
+		translate: 0 0.5rem;
+		transition: $duration ease;
+	}
+}
 @mixin right-circle-hover($size: rem(6)) {
 	position: relative;
 	transition: translate $duration;

@@ -1,0 +1,141 @@
+@use "../../utils/abstracts" as *;
+
+.modal-privacy {
+	min-height: 100vh;
+	max-height: 100vh;
+	max-width: 50ch;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: auto;
+	overflow-y: auto;
+	pointer-events: none;
+	translate: 100% 0;
+	transition: translate $duration;
+	&[open] {
+		pointer-events: auto;
+	}
+	&::backdrop {
+		background-color: rgba($c-000000, 0);
+		transition: $duration;
+	}
+	&.anim {
+		translate: 0 0;
+		&::backdrop {
+			background-color: rgba($c-000000, 0.5);
+			backdrop-filter: blur(5px);
+		}
+	}
+	&__button-close {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		font-size: rem(24);
+		transition: $duration;
+		@media (pointer: fine) {
+			cursor: pointer;
+			&:hover {
+				rotate: 90deg;
+			}
+		}
+	}
+	&__container {
+		color: $c-1C1C1E;
+		font-size: rem(18);
+		font-weight: $fw-medium;
+		padding: rem(32);
+	}
+	&__titlebox {
+		display: flex;
+		flex-direction: column;
+		gap: rem(24);
+	}
+	&__title {
+		font-size: rem(32);
+		line-height: 1;
+		font-weight: $fw-bold;
+	}
+	&__date {
+		align-self: flex-end;
+		color: $c-12C146;
+		opacity: 0.5;
+	}
+	&__subtitle {
+		display: flex;
+		flex-direction: column;
+		gap: rem(16);
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: rem(32);
+		margin-top: rem(32);
+	}
+	&__item {
+		counter-reset: subitem-counter;
+		counter-increment: item-counter;
+		display: flex;
+		flex-direction: column;
+		gap: rem(16);
+		&-title {
+			position: relative;
+            font-size: rem(22);
+            font-weight: $fw-bold;
+			padding-left: rem(48);
+			&::before {
+				content: counter(item-counter) ".";
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+		&-text {
+			padding-left: rem(48);
+		}
+	}
+	&__subitem {
+		counter-reset: subsubitem-counter;
+		counter-increment: subitem-counter;
+		display: flex;
+		flex-direction: column;
+		gap: rem(16);
+		&-title {
+			position: relative;
+            font-size: rem(20);
+            font-weight: $fw-bold;
+			padding-left: rem(48);
+			&::before {
+				content: counter(item-counter) "." counter(subitem-counter);
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+		&-text {
+			padding-left: rem(48);
+		}
+	}
+	&__subsubitem {
+		counter-increment: subsubitem-counter;
+		display: flex;
+		flex-direction: column;
+		gap: rem(16);
+		&-title {
+			position: relative;
+            font-size: rem(20);
+            font-weight: $fw-bold;
+			padding-left: rem(64);
+			&::before {
+				content: counter(item-counter) "." counter(subitem-counter) "." counter(subsubitem-counter);
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+		&-text {
+			padding-left: rem(64);
+		}
+	}
+}

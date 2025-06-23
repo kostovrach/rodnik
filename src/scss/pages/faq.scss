@@ -1,0 +1,114 @@
+@use "../utils/abstracts" as *;
+
+.faq-faq {
+	padding: rem(96) 0;
+	background-color: $c-FFFFFF;
+	&__container {
+		display: grid;
+		grid-template-columns: 40% auto;
+		gap: rem(32);
+		@include content-width();
+	}
+	&__titlebox {
+		position: relative;
+		height: 100%;
+		&-wrapper {
+			position: sticky;
+			top: 6rem;
+			display: flex;
+			flex-direction: column;
+			gap: rem(32);
+		}
+	}
+	&__title {
+		font-size: lineScale(48, 24, 480, 1440);
+		line-height: 1;
+		font-weight: $fw-bold;
+		max-width: 10ch;
+	}
+	&__subtitle {
+		display: flex;
+		flex-direction: column;
+		font-size: rem(14);
+		color: $c-3C3C3B;
+		&--link {
+			display: flex;
+			align-items: center;
+			gap: rem(8);
+			color: $c-12C146;
+			@include hover-underline($c-12C146);
+			&-icon {
+				font-size: rem(12);
+				rotate: 180deg;
+			}
+		}
+	}
+	&__image-container {
+		width: 100%;
+		height: rem(156);
+		border-radius: $border-radius;
+		overflow: hidden;
+	}
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: top;
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: rem(16);
+		margin-top: rem(16);
+	}
+	&__item {
+		cursor: pointer;
+		position: relative;
+		padding: rem(32);
+		border: rem(2) solid $c-EFF0F1;
+		border-radius: $border-radius;
+		overflow: hidden;
+		transition: $duration;
+		@media (pointer: fine) {
+			&:hover {
+				border-color: transparent;
+				box-shadow: 0 15px 30px rgba($c-1C1C1E, 0.1);
+			}
+		}
+		&.active {
+			border-color: transparent;
+			box-shadow: 0 15px 30px rgba($c-1C1C1E, 0.1);
+			.faq-faq__item-button {
+				rotate: 180deg;
+			}
+			.faq-faq__item-title {
+                margin-bottom: rem(16);
+			}
+		}
+		&-button {
+			position: absolute;
+			top: 2rem;
+			right: 2rem;
+			color: $c-C1C2C3;
+			rotate: 45deg;
+			transition: rotate $duration;
+			@media (pointer: fine) {
+				&:hover {
+					rotate: 135deg;
+				}
+			}
+		}
+		&-title {
+			font-size: lineScale(22, 18, 480, 1440);
+			line-height: 1;
+			font-weight: $fw-bold;
+            transition: $duration;
+            padding-right: rem(32);
+		}
+		&-text {
+			font-size: lineScale(18, 16, 480, 1440);
+			line-height: 150%;
+			font-weight: $fw-medium;
+		}
+	}
+}

@@ -610,13 +610,12 @@
 					</div>
 				</div>
 			</section>
-			<section class="index-question">
-				<div class="index-question__container">
-					<h2 class="index-question__title">Остались вопросы?</h2>
-					<p class="index-question__desc">Менеджеры компании с радостью ответят на ваши вопросы и&nbsp;подготовят индивидуальное предложение</p>
-					<button class="index-question__button" data-question-open>Задать вопрос<i class="index-question__button--icon icon-arrow-long"></i></button>
-				</div>
-			</section>
+			@@include("../components/question-block.html", {
+				"title": "Остались вопросы?",
+				"desc": "Менеджеры компании с радостью ответят на ваши вопросы и&nbsp;подготовят индивидуальное предложение",
+				"button": "Задать вопрос",
+				"button-type": "data-question-open"
+			})
 		</main>
 		<script src="https://api-maps.yandex.ru/2.1/?apikey=466c57d0-00c9-424e-9e19-9ba284de093e&lang=ru_RU" type="text/javascript"></script>
 		@@include("../components/footer.html")

@@ -1,6 +1,7 @@
 @use "../utils/abstracts" as *;
 
 .index-hero {
+	position: relative;
 	color: $c-FFFFFF;
 	min-height: 100lvh;
 	overflow-x: clip;
@@ -9,7 +10,7 @@
 		inset: 0;
 		z-index: -1;
 		width: 100%;
-		min-height: 100%;
+		min-height: 100lvh;
 		object-fit: cover;
 		object-position: center;
 		filter: brightness(80%);
@@ -975,12 +976,9 @@
 			}
 		}
 	}
-	&__image-container {
-		height: rem(86);
-	}
 	&__image {
-		width: 100%;
-		height: 100%;
+		max-width: 100%;
+		max-height: rem(86);
 		object-fit: cover;
 	}
 }
@@ -1109,52 +1107,6 @@
 		aspect-ratio: 1/1;
 		border-radius: $border-radius;
 		overflow: hidden;
-	}
-}
-.index-question {
-	position: relative;
-	padding: rem(96) 0;
-	color: $c-FFFFFF;
-	background-color: $c-A1C85C;
-	border-radius: 0 0 $block-border-radius $block-border-radius;
-	&::before {
-		content: "";
-		position: absolute;
-		z-index: -1;
-		top: -8rem;
-		left: 0;
-		width: 100%;
-		height: 8rem;
-		background-color: inherit;
-	}
-	&__container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		@include content-width();
-	}
-	&__title {
-		font-size: lineScale(72, 32, 480, 1440);
-		line-height: 1;
-		font-weight: $fw-bold;
-	}
-	&__desc {
-		max-width: 50ch;
-		font-size: rem(18);
-		font-size: lineScale(18, 16, 480, 1440);
-		font-weight: $fw-medium;
-		margin-top: rem(16);
-	}
-	&__button {
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-		margin-top: rem(32);
-		@include button-main(inherit, $c-12C146, rem(18), rem(20) rem(48), $c-FFFFFF, $c-FFFFFF, $c-FFFFFF);
-		&--icon {
-			rotate: 90deg;
-		}
 	}
 }
 @media (max-width: 1240px) {

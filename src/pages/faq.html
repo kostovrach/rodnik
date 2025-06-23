@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('../components/head.html', { "title": "Rodnik - Часты вопросы" })
+	<body>
+		@@include('../components/header.html', { "type": "fill" })
+		<main id="start">
+            <section class="faq-faq">
+                <div class="faq-faq__container">
+                    <div class="faq-faq__titlebox">
+                        <div class="faq-faq__titlebox-wrapper">
+                            <h1 class="faq-faq__title">Часто Задаваемые Вопросы</h1>
+                            <p class="faq-faq__subtitle">Не смогли найти ответ на свой вопрос?<a class="faq-faq__subtitle--link" href="#question">Задайте его нам <i class="faq-faq__subtitle--link-icon icon-arrow-long"></i></a></p>
+                        </div>
+                    </div>
+                    <div class="faq-faq__body">
+                        <picture class="faq-faq__image-container">
+                            <img class="faq-faq__image" src="assets/img/content/about/example1.jpg" alt="#">
+                        </picture>
+                        <ul class="faq-faq__list js-spoiler-container">
+                            <li class="faq-faq__item js-spoiler-item">
+                                <i class="faq-faq__item-button icon-cross"></i>
+                                <h2 class="faq-faq__item-title">Какая стоимость услуг на турбазе?</h2>
+                                <p class="faq-faq__item-text js-spoiler-content">Описание – краткая расшифровка часто задаваемого вопроса. Описывайте информацию, на которую не нашлось ответа на сайта или которую стоит уточнить. Помогите пользователю решить его проблему и снять нагрузку с центра поддержки; также можно добавить ссылки на другие страницы сайта.</p>
+                            </li>
+                            <li class="faq-faq__item js-spoiler-item">
+                                <i class="faq-faq__item-button icon-cross"></i>
+                                <h2 class="faq-faq__item-title">Каким образом я могу отменить или поменять бронь?</h2>
+                                <p class="faq-faq__item-text js-spoiler-content">Описание – краткая расшифровка часто задаваемого вопроса. Описывайте информацию, на которую не нашлось ответа на сайта или которую стоит уточнить. Помогите пользователю решить его проблему и снять нагрузку с центра поддержки; также можно добавить ссылки на другие страницы сайта.</p>
+                            </li>
+                            <li class="faq-faq__item js-spoiler-item">
+                                <i class="faq-faq__item-button icon-cross"></i>
+                                <h2 class="faq-faq__item-title">Какие документы и информацию мне нужно предоставить при заселении?</h2>
+                                <p class="faq-faq__item-text js-spoiler-content">Описание – краткая расшифровка часто задаваемого вопроса. Описывайте информацию, на которую не нашлось ответа на сайта или которую стоит уточнить. Помогите пользователю решить его проблему и снять нагрузку с центра поддержки; также можно добавить ссылки на другие страницы сайта.</p>
+                            </li>
+                            <li class="faq-faq__item js-spoiler-item">
+                                <i class="faq-faq__item-button icon-cross"></i>
+                                <h2 class="faq-faq__item-title">Что делать, если в гостевом домике произошло ЧП?</h2>
+                                <p class="faq-faq__item-text js-spoiler-content">Описание – краткая расшифровка часто задаваемого вопроса. Описывайте информацию, на которую не нашлось ответа на сайта или которую стоит уточнить. Помогите пользователю решить его проблему и снять нагрузку с центра поддержки; также можно добавить ссылки на другие страницы сайта.</p>
+                            </li>
+                            <li class="faq-faq__item js-spoiler-item">
+                                <i class="faq-faq__item-button icon-cross"></i>
+                                <h2 class="faq-faq__item-title">Какую роль я буду играть в процессе решения моего вопроса?</h2>
+                                <p class="faq-faq__item-text js-spoiler-content">Описание – краткая расшифровка часто задаваемого вопроса. Описывайте информацию, на которую не нашлось ответа на сайта или которую стоит уточнить. Помогите пользователю решить его проблему и снять нагрузку с центра поддержки; также можно добавить ссылки на другие страницы сайта.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+			@@include("../components/question-block.html", { "title": "Остались вопросы?", "desc": "Менеджеры компании с радостью ответят на ваши вопросы и&nbsp;подготовят индивидуальное предложение", "button": "Задать вопрос", "button-type": "data-question-open" })
+		</main>
+		@@include("../components/footer.html")
+	</body>
+</html>
