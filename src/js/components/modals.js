@@ -1,5 +1,5 @@
 (function () {
-	let scrollPosition = 11;
+	let scrollPosition = 0;
 	const ANIM_CLASS = 'anim';
 
 	function handleScrollReturn() {
@@ -14,7 +14,7 @@
 		scrollPosition = window.pageYOffset;
 		document.body.classList.add("lock");
 		document.body.style.position = "fixed";
-		document.body.style.width = "100%";
+		document.body.style.width = "100vw";
 		document.body.style.top = `-${scrollPosition}px`;
 	}
 
