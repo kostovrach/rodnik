@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('../components/head.html', { "title": "Rodnik - Подарочные сертификаты" })
+	<body>
+		@@include('../components/header.html', { "type": "fill" })
+		<main id="start">
+			<section class="certificates-certificates">
+				<div class="certificates-certificates__container">
+					<div class="certificates-certificates__titlebox">
+						<h1 class="certificates-certificates__title">Подарочные сертификаты</h1>
+						<p class="certificates-certificates__subtitle">Подарите своим близким сертификат на рыбалку, баню и т.п. Описание – основной смысл. Используйте 1-2 предложения в 1-3 строчки</p>
+					</div>
+					<ul class="certificates-certificates__body">
+						<li class="certificates-certificates__item">
+							<div class="certificates-certificates__item-content">
+								<h2 class="certificates-certificates__item-title">1 день рыбалки на озере <span class="certificates-certificates__title--accent">с&nbsp;карпами</span></h2>
+								<time class="certificates-certificates__item-period" datetime="P1Y">Действует <span class="certificates-certificates__item-period-date">1 год</span></time>
+								<p class="certificates-certificates__desc">Отдых и рыбалка в Клявлинском Форелевом Хозяйстве — это незабываемый отдых на природе. Наш передовой и отлично оборудованный питомник выращивает лучшую рыбу, которая доступна для ловли.</p>
+                                <ul class="certificates-certificates__price">
+                                    <li class="certificates-certificates__price--irrelevant">17 900 &#8381;</li>
+                                    <li class="certificates-certificates__price--current">5 000 &#8381;</li>
+                                </ul>
+								<button class="certificates-certificates__button" data-order-open>Купить<i class="certificates-certificates__button--icon icon-arrow-long"></i></button>
+							</div>
+                            <picture class="certificates-certificates__item-image-container">
+                                <img class="certificates-certificates__item-image" src="assets/img/content/certificates/certificate.png" alt="#">
+                            </picture>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+		@@include("../components/footer.html")
+	</body>
+</html>

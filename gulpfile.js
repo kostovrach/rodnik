@@ -34,6 +34,7 @@ const paths = {
       'src/scss/**/*.scss',
       'src/components/**/*.scss',
       'src/pages/**/*.scss',
+      'src/tech/**/*.scss',
     ],
     dest: 'src/css/',
   },
