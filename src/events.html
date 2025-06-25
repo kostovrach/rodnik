@@ -6,7 +6,7 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.min.css">
 	<link rel="stylesheet" href="./assets/fonts/icon-font/style.css">
-	<title>Rodnik - Аренда номеров</title>
+	<title>Rodnik - Часты вопросы</title>
 </head>
 
 	<body>
@@ -23,7 +23,7 @@
 		<ul class="header__nav" role="navigation">
 			<li class="header__nav-item" data-services-open tabindex="0"><button>Услуги</button><i class="header__nav-item--icon icon-check-mark"></i></li>
 			<li class="header__nav-item "><a href="about.html">Про отель</a></li>
-			<li class="header__nav-item current"><a href="booking.html">Проживание</a></li>
+			<li class="header__nav-item "><a href="booking.html">Проживание</a></li>
 			<li class="header__nav-item "><a href="price.html">Цены</a></li>
 			<li class="header__nav-item "><a href="contacts.html">Контакты</a></li>
 			<li class="header__nav-item header__nav-item--more" tabindex="0">
@@ -292,294 +292,160 @@
 
 
 		<main id="start">
-			<section class="booking-hero">
-				<picture class="booking-hero__background-image-container">
-					<img class="booking-hero__background-image" src="assets/img/backgrounds/houses.jpg" alt="" />
+			<section class="events-hero">
+				<picture class="events-hero__image-container">
+					<img class="events-hero__image" src="assets/img/content/events/heroscreen.jpg" alt="#" />
 				</picture>
-				<div class="booking-hero__container">
-					<div class="booking-hero__titlebox">
-						<h1 class="booking-hero__title">Аренда номеров</h1>
+				<div class="events-hero__container">
+					<div class="events-hero__titlebox">
+						<h1 class="events-hero__title">ПРОВЕДЕНИЕ МЕРОПРИЯТИЙ</h1>
+						<button class="events-hero__button">Забронировать локацию<i class="events-hero__button--icon icon-arrow-long"></i></button>
 					</div>
 				</div>
 			</section>
-			<section class="booking-booking">
-				<div class="booking-booking__container">
-					<div class="booking-booking__titlebox">
-						<h2 class="booking-booking__title">Отдых и рыбалка в Клявлинском Форелевом Хозяйстве — это незабываемый отдых на природе. Наш передовой и отлично оборудованный питомник выращивает лучшую рыбу, которая доступна для ловли.</h2>
+			<section class="events-venues card-slider-block">
+				<div class="events-venues__container">
+					<div class="events-venues__titlebox">
+						<h2 class="events-venues__title"><span class="events-venues__title--accent">7 площадок</span> вместимостью до&nbsp;500 человек</h2>
+						<p class="events-venues__subtitle">Вы можете забронировать общие залы не только для&nbsp;проведения спортивных мероприятий, но&nbsp;и&nbsp;для&nbsp;проведения банкетов, конференций и&nbsp;других собраний</p>
+						<ul class="events-venues__nav">
+							<li class="events-venues__nav-button events-venues__nav-button--prev swiper-button-prev card-slider-button card-slider-button--prev"><i class="icon-arrow-long"></i></li>
+							<li class="events-venues__nav-button events-venues__nav-button--next swiper-button-next card-slider-button card-slider-button--next"><i class="icon-arrow-long"></i></li>
+						</ul>
 					</div>
-					<div class="booking-booking__filtering">
-						<div class="booking-booking__filters">
-							<p class="booking-booking__filters-title">Фильтры</p>
-							<ul class="booking-booking__filters-filterbox">
-								<li>
-									<label class="booking-booking__filters-filter">
-										<div class="booking-booking__filters-filter-checkbox">
-											<input class="booking-booking__filters-filter-checkbox-input" type="checkbox" value="Бильярдный зал" />
-										</div>
-										<span class="booking-booking__filters-filter-name">Бильярдный зал</span>
-										<span class="booking-booking__filters-filter-count"></span>
-									</label>
-								</li>
-								<li>
-									<label class="booking-booking__filters-filter">
-										<div class="booking-booking__filters-filter-checkbox">
-											<input class="booking-booking__filters-filter-checkbox-input" type="checkbox" value="Телевизор" />
-										</div>
-										<span class="booking-booking__filters-filter-name">Телевизор</span>
-										<span class="booking-booking__filters-filter-count"></span>
-									</label>
-								</li>
-								<li>
-									<label class="booking-booking__filters-filter">
-										<div class="booking-booking__filters-filter-checkbox">
-											<input class="booking-booking__filters-filter-checkbox-input" type="checkbox" value="WI-FI" />
-										</div>
-										<span class="booking-booking__filters-filter-name">WI-FI</span>
-										<span class="booking-booking__filters-filter-count"></span>
-									</label>
-								</li>
-								<li>
-									<label class="booking-booking__filters-filter">
-										<div class="booking-booking__filters-filter-checkbox">
-											<input class="booking-booking__filters-filter-checkbox-input" type="checkbox" value="Банкетный зал" />
-										</div>
-										<span class="booking-booking__filters-filter-name">Банкетный зал</span>
-										<span class="booking-booking__filters-filter-count"></span>
-									</label>
-								</li>
-								<li>
-									<label class="booking-booking__filters-filter">
-										<div class="booking-booking__filters-filter-checkbox">
-											<input class="booking-booking__filters-filter-checkbox-input" type="checkbox" value="Раздельный санузел" />
-										</div>
-										<span class="booking-booking__filters-filter-name">Раздельный санузел</span>
-										<span class="booking-booking__filters-filter-count"></span>
-									</label>
-								</li>
-								<li>
-									<label class="booking-booking__filters-filter">
-										<div class="booking-booking__filters-filter-checkbox">
-											<input class="booking-booking__filters-filter-checkbox-input" type="checkbox" value="Панорамные окна" />
-										</div>
-										<span class="booking-booking__filters-filter-name">Панорамные окна</span>
-										<span class="booking-booking__filters-filter-count"></span>
-									</label>
-								</li>
-								<li>
-									<label class="booking-booking__filters-filter">
-										<div class="booking-booking__filters-filter-checkbox">
-											<input class="booking-booking__filters-filter-checkbox-input" type="checkbox" value="Мангал" />
-										</div>
-										<span class="booking-booking__filters-filter-name">Мангал</span>
-										<span class="booking-booking__filters-filter-count"></span>
-									</label>
-								</li>
+					<div class="events-venues__body">
+						<div class="events-venues__slider card-slider swiper">
+							<div class="events-venues__slider-wrapper card-slider-wrapper swiper-wrapper">
+								<div class="events-venues__slide swiper-slide">
+									<picture class="events-venues__slide-image-container">
+										<img class="events-venues__slide-image" src="assets/img/content/events/venues.jpg" alt="#" />
+									</picture>
+									<h3 class="events-venues__slide-title">Актовый зал в блоке №1</h3>
+								</div>
+								<div class="events-venues__slide swiper-slide">
+									<picture class="events-venues__slide-image-container">
+										<img class="events-venues__slide-image" src="assets/img/content/events/venues1.jpg" alt="#" />
+									</picture>
+									<h3 class="events-venues__slide-title">Мини-зал в блоке №2</h3>
+								</div>
+								<div class="events-venues__slide swiper-slide">
+									<picture class="events-venues__slide-image-container">
+										<img class="events-venues__slide-image" src="assets/img/content/events/venues2.jpg" alt="#" />
+									</picture>
+									<h3 class="events-venues__slide-title">Спортивный зал в блоке №3</h3>
+								</div>
+								<div class="events-venues__slide swiper-slide">
+									<picture class="events-venues__slide-image-container">
+										<img class="events-venues__slide-image" src="assets/img/content/events/venues.jpg" alt="#" />
+									</picture>
+									<h3 class="events-venues__slide-title">Актовый зал в блоке №1</h3>
+								</div>
+								<div class="events-venues__slide swiper-slide">
+									<picture class="events-venues__slide-image-container">
+										<img class="events-venues__slide-image" src="assets/img/content/events/venues1.jpg" alt="#" />
+									</picture>
+									<h3 class="events-venues__slide-title">Мини-зал в блоке №2</h3>
+								</div>
+								<div class="events-venues__slide swiper-slide">
+									<picture class="events-venues__slide-image-container">
+										<img class="events-venues__slide-image" src="assets/img/content/events/venues2.jpg" alt="#" />
+									</picture>
+									<h3 class="events-venues__slide-title">Спортивный зал в блоке №3</h3>
+								</div>
+							</div>
+						</div>
+						<div class="events-venues__slider-scrollbar card-slider-scrollbar swiper-scrollbar"></div>
+					</div>
+				</div>
+			</section>
+			<section class="events-conditions">
+				<div class="events-conditions__container">
+					<ul class="events-conditions__content">
+						<li class="events-conditions__item events-conditions__item--hero">
+							<div class="events-conditions__item-titlebox">
+								<h2 class="events-conditions__item-title">Условия проведения мероприятий</h2>
+								<p class="events-conditions__item-text">Блок про возможности аренды помещений и площадок спортивного комплекса – основной смысл. Используйте 1-2 предложения в 1-3 строчки, если выравнивание по центру. При большем количестве текста используйте другой тип выравнивания контента</p>
+							</div>
+							<picture class="events-conditions__item-image-circle-container">
+								<img class="events-conditions__item-image-circle" src="assets/img/content/stocks/cover1.jpg" alt="#" />
+							</picture>
+						</li>
+						<li class="events-conditions__item">
+							<picture class="events-conditions__item-image-container">
+								<img class="events-conditions__item-image" src="assets/img/content/events/example1.jpg" alt="#" />
+							</picture>
+						</li>
+						<li class="events-conditions__item">
+							<h3 class="events-conditions__item-title--accent">Что предоставляет аренда</h3>
+							<p class="events-conditions__item-text">Это многофункциональный спортивный комплекс, в&nbsp;котором созданы прекрасные условия для занятий различными видами спорта. Деятельность Комплекса осуществляется по двум направлениям: Государственное Задание (бесплатные) и Оказание платных услуг.</p>
+							<ul class="events-conditions__item-list">
+								<li class="events-conditions__item-list-item--title">Конференц-зал — 3500 ₽/ч</li>
+								<li class="events-conditions__item-list-item">Площадь: 250 квадратных метров</li>
+								<li class="events-conditions__item-list-item">Подходит для командных тренировок и турниров</li>
+								<li class="events-conditions__item-list-item">Оснащение: профессиональные тренажеры, специальное покрытие, звуковая система</li>
 							</ul>
-						</div>
-						<div class="booking-booking__price">
-							<div class="booking-booking__price-titlebox">
-								<div class="booking-booking__price-title">Выбор по цене</div>
-								<p class="booking-booking__price-subtitle">Стоимость аренды за сутки, &#8381;</p>
-							</div>
-							<div class="booking-booking__price-filterbox">
-								<div class="booking-booking__price-range-wrapper">
-									<div class="booking-booking__price-range-track"></div>
-									<div class="booking-booking__price-range">
-										<input class="booking-booking__price-range" type="range" id="booking-price-min" min="0" max="100000" value="0" />
-										<input class="booking-booking__price-range" type="range" id="booking-price-max" min="0" max="100000" value="100000" />
-									</div>
-								</div>
-								<div class="booking-booking__price-values">
-									<span id="booking-price-min-val">0</span>
-									<span id="booking-price-max-val">100000</span>
-								</div>
-							</div>
-						</div>
+							<ul class="events-conditions__item-list">
+								<li class="events-conditions__item-list-item--title">Залы для групповых тренировок — 1200 ₽/ч</li>
+								<li class="events-conditions__item-list-item">Площадь: 80 квадратных метров</li>
+								<li class="events-conditions__item-list-item">Занятия: йога, пилатес, аэробика</li>
+								<li class="events-conditions__item-list-item">Оснащение: отопление, кондиционер</li>
+							</ul>
+							<ul class="events-conditions__item-list">
+								<li class="events-conditions__item-list-item--title">Бассейн — 5800 ₽/ч</li>
+								<li class="events-conditions__item-list-item">Размеры: 100 метров х 6 дорожек</li>
+								<li class="events-conditions__item-list-item">Идеален для личных тренировок и небольших семинаров</li>
+							</ul>
+						</li>
+						<li class="events-conditions__item">
+							<h3 class="events-conditions__item-title--accent">Условия</h3>
+							<p class="events-conditions__item-text">Арендаторы могут воспользоваться гибкими условиями аренды, которые подойдут как для короткосрочных, так и для долгосрочных объектов. Мы предлагаем возможность аренды залов как по индивидуальному графику, так и по стандартному расписанию.</p>
+							<ul class="events-conditions__item-list">
+								<li class="events-conditions__item-list-item">Короткосрочные и долгосрочные договора</li>
+								<li class="events-conditions__item-list-item">Возможность аренды на выходные и праздники</li>
+								<li class="events-conditions__item-list-item">Минимальная аренда: 1 час</li>
+								<li class="events-conditions__item-list-item">Пакеты на 5, 10 и более часов</li>
+							</ul>
+						</li>
+						<li class="events-conditions__item">
+							<h3 class="events-conditions__item-title--accent">Ответственность</h3>
+							<p class="events-conditions__item-text">
+								Мы несем ответственность за&nbsp;техническое состояние залов и оборудования, однако арендаторы обязуются следить за сохранностью имущества и соблюдать правила поведения на территории спорткомплекса. При повреждениях или утрате оборудования арендатор несет ответственность за возмещение убытков в соответствии с&nbsp;установленными тарифами.
+							</p>
+							<p class="events-conditions__item-text">Спорткомплекс не отвечает за личные вещи участников мероприятий, поэтому арендаторам следует позаботиться о их безопасности.</p>
+						</li>
+						<li class="events-conditions__item">
+							<picture class="events-conditions__item-image-container">
+								<img class="events-conditions__item-image" src="assets/img/content/events/example2.jpg" alt="#" />
+							</picture>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="events-about">
+				<div class="events-about__container">
+					<h2 class="events-about__title">философия нашего отдыха</h2>
+					<p class="events-about__desc">
+						Эко-отель «RRodnik» — это база
+						<img class="events-about__desc--image" src="assets/img/emojis/emoji-fishing.png" alt="#Emoji" />
+						отдыха, созданная комфортного пребывания для вашего на природе.
+						<img class="events-about__desc--image" src="assets/img/emojis/emoji-bamboo.png" alt="#Emoji" />
+						У&nbsp;нас доступны атмосферные локации с обилием зелени и света,
+						<img class="events-about__desc--image" src="assets/img/emojis/emoji-jacket.png" alt="#Emoji" />
+						уютные беседки, и места для рыбалки.
+					</p>
+				</div>
+			</section>
+			<section class="events-schedule">
+				<div class="events-schedule__container">
+					<div class="events-schedule__calendar-wrapper">
+						<div id="events-schedule" class="events-schedule__calendar"></div>
 					</div>
-					<div class="booking-booking__body">
-						<div class="booking-booking__item">
-							<div class="booking-booking__item-wrapper">
-								<picture class="booking-booking__item-image-container">
-									<img class="booking-booking__item-image" src="assets/img/content/booking/example.jpg" alt="#" />
-								</picture>
-								<div class="booking-booking__item-content">
-									<div class="booking-booking__item-price">от <span class="booking-booking__item-price--number">1500</span> &#8381;/день</div>
-									<h3 class="booking-booking__item-title">Цветные домики</h3>
-									<ul class="booking-booking__item-tagbox">
-										<li class="booking-booking__item-tag" data-tag="Wi-Fi"><i class="booking-booking__item-tag--icon icon-wifi"></i>Wi-Fi</li>
-										<li class="booking-booking__item-tag" data-tag="Банкетный зал"><i class="booking-booking__item-tag--icon icon-table"></i>Банкетный зал</li>
-										<li class="booking-booking__item-tag" data-tag="Раздельный санузел"><i class="booking-booking__item-tag--icon icon-shower"></i>Раздельный санузел</li>
-										<li class="booking-booking__item-tag"><i class="booking-booking__item-tag--icon icon-toilet"></i>5 санузлов</li>
-									</ul>
-									<ul class="booking-booking__item-buttonbox">
-										<li class="booking-booking__item-button booking-booking__item-button--booking" data-booking-open><button>Забронировать</button></li>
-										<li class="booking-booking__item-button booking-booking__item-button--more"><a href="booking.html">Подробнее</a><i class="icon-arrow-long"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="booking-booking__item">
-							<div class="booking-booking__item-wrapper">
-								<picture class="booking-booking__item-image-container">
-									<img class="booking-booking__item-image" src="assets/img/content/booking/example1.jpg" alt="#" />
-								</picture>
-								<div class="booking-booking__item-content">
-									<div class="booking-booking__item-price">от <span class="booking-booking__item-price--number">3800</span> &#8381;/день</div>
-									<h3 class="booking-booking__item-title">Боярские палаты</h3>
-									<ul class="booking-booking__item-tagbox">
-										<li class="booking-booking__item-tag" data-tag="Бильярдный зал"><i class="booking-booking__item-tag--icon icon-billiard"></i>Бильярдный зал</li>
-										<li class="booking-booking__item-tag" data-tag="Телевизор"><i class="booking-booking__item-tag--icon icon-screen-play"></i>Телевизор</li>
-										<li class="booking-booking__item-tag" data-tag="Wi-Fi"><i class="booking-booking__item-tag--icon icon-wifi"></i>Wi-Fi</li>
-										<li class="booking-booking__item-tag" data-tag="Банкетный зал"><i class="booking-booking__item-tag--icon icon-table"></i>Банкетный зал</li>
-										<li class="booking-booking__item-tag"><i class="booking-booking__item-tag--icon icon-toilet"></i>5 санузлов</li>
-									</ul>
-									<ul class="booking-booking__item-buttonbox">
-										<li class="booking-booking__item-button booking-booking__item-button--booking" data-booking-open><button>Забронировать</button></li>
-										<li class="booking-booking__item-button booking-booking__item-button--more"><a href="booking.html">Подробнее</a><i class="icon-arrow-long"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="booking-booking__item">
-							<div class="booking-booking__item-wrapper">
-								<picture class="booking-booking__item-image-container">
-									<img class="booking-booking__item-image" src="assets/img/content/booking/example2.jpg" alt="#" />
-								</picture>
-								<div class="booking-booking__item-content">
-									<div class="booking-booking__item-price">от <span class="booking-booking__item-price--number">10 950</span> &#8381;/день</div>
-									<h3 class="booking-booking__item-title">Хозяйский домик</h3>
-									<ul class="booking-booking__item-tagbox">
-										<li class="booking-booking__item-tag" data-tag="Телевизор"><i class="booking-booking__item-tag--icon icon-screen-play"></i>Телевизор</li>
-										<li class="booking-booking__item-tag" data-tag="Wi-Fi"><i class="booking-booking__item-tag--icon icon-wifi"></i>Wi-Fi</li>
-										<li class="booking-booking__item-tag" data-tag="Банкетный зал"><i class="booking-booking__item-tag--icon icon-table"></i>Банкетный зал</li>
-										<li class="booking-booking__item-tag" data-tag="Сауна"><i class="booking-booking__item-tag--icon icon-table"></i>Сауна</li>
-										<li class="booking-booking__item-tag"><i class="booking-booking__item-tag--icon icon-toilet"></i>5 санузлов</li>
-									</ul>
-									<ul class="booking-booking__item-buttonbox">
-										<li class="booking-booking__item-button booking-booking__item-button--booking" data-booking-open><button>Забронировать</button></li>
-										<li class="booking-booking__item-button booking-booking__item-button--more"><a href="booking.html">Подробнее</a><i class="icon-arrow-long"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="booking-booking__item">
-							<div class="booking-booking__item-wrapper">
-								<picture class="booking-booking__item-image-container">
-									<img class="booking-booking__item-image" src="assets/img/content/booking/example1.jpg" alt="#" />
-								</picture>
-								<div class="booking-booking__item-content">
-									<div class="booking-booking__item-price">от <span class="booking-booking__item-price--number">3800</span> &#8381;/день</div>
-									<h3 class="booking-booking__item-title">Боярские палаты</h3>
-									<ul class="booking-booking__item-tagbox">
-										<li class="booking-booking__item-tag" data-tag="Телевизор"><i class="booking-booking__item-tag--icon icon-screen-play"></i>Телевизор</li>
-										<li class="booking-booking__item-tag" data-tag="Wi-Fi"><i class="booking-booking__item-tag--icon icon-wifi"></i>Wi-Fi</li>
-										<li class="booking-booking__item-tag" data-tag="Мангал"><i class="booking-booking__item-tag--icon icon-table"></i>Мангал</li>
-										<li class="booking-booking__item-tag"><i class="booking-booking__item-tag--icon icon-toilet"></i>5 санузлов</li>
-									</ul>
-									<ul class="booking-booking__item-buttonbox">
-										<li class="booking-booking__item-button booking-booking__item-button--booking" data-booking-open><button>Забронировать</button></li>
-										<li class="booking-booking__item-button booking-booking__item-button--more"><a href="booking.html">Подробнее</a><i class="icon-arrow-long"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="booking-booking__item">
-							<div class="booking-booking__item-wrapper">
-								<picture class="booking-booking__item-image-container">
-									<img class="booking-booking__item-image" src="assets/img/content/booking/example.jpg" alt="#" />
-								</picture>
-								<div class="booking-booking__item-content">
-									<div class="booking-booking__item-price">от <span class="booking-booking__item-price--number">1500</span> &#8381;/день</div>
-									<h3 class="booking-booking__item-title">Цветные домики</h3>
-									<ul class="booking-booking__item-tagbox">
-										<li class="booking-booking__item-tag" data-tag="Wi-Fi"><i class="booking-booking__item-tag--icon icon-wifi"></i>Wi-Fi</li>
-										<li class="booking-booking__item-tag" data-tag="Мангал"><i class="booking-booking__item-tag--icon icon-table"></i>Мангал</li>
-										<li class="booking-booking__item-tag" data-tag="Раздельный санузел"><i class="booking-booking__item-tag--icon icon-shower"></i>Раздельный санузел</li>
-										<li class="booking-booking__item-tag"><i class="booking-booking__item-tag--icon icon-toilet"></i>5 санузлов</li>
-									</ul>
-									<ul class="booking-booking__item-buttonbox">
-										<li class="booking-booking__item-button booking-booking__item-button--booking" data-booking-open><button>Забронировать</button></li>
-										<li class="booking-booking__item-button booking-booking__item-button--more"><a href="booking.html">Подробнее</a><i class="icon-arrow-long"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="booking-booking__item">
-							<div class="booking-booking__item-wrapper">
-								<picture class="booking-booking__item-image-container">
-									<img class="booking-booking__item-image" src="assets/img/content/booking/example2.jpg" alt="#" />
-								</picture>
-								<div class="booking-booking__item-content">
-									<div class="booking-booking__item-price">от <span class="booking-booking__item-price--number">10 950</span> &#8381;/день</div>
-									<h3 class="booking-booking__item-title">Хозяйский домик</h3>
-									<ul class="booking-booking__item-tagbox">
-										<li class="booking-booking__item-tag" data-tag="Панорамные окна"><i class="booking-booking__item-tag--icon icon-screen-play"></i>Панорамные окна</li>
-										<li class="booking-booking__item-tag" data-tag="Wi-Fi"><i class="booking-booking__item-tag--icon icon-wifi"></i>Wi-Fi</li>
-										<li class="booking-booking__item-tag" data-tag="Банкетный зал"><i class="booking-booking__item-tag--icon icon-table"></i>Банкетный зал</li>
-										<li class="booking-booking__item-tag" data-tag="Сауна"><i class="booking-booking__item-tag--icon icon-table"></i>Сауна</li>
-										<li class="booking-booking__item-tag"><i class="booking-booking__item-tag--icon icon-toilet"></i>5 санузлов</li>
-									</ul>
-									<ul class="booking-booking__item-buttonbox">
-										<li class="booking-booking__item-button booking-booking__item-button--booking" data-booking-open><button>Забронировать</button></li>
-										<li class="booking-booking__item-button booking-booking__item-button--more"><a href="booking.html">Подробнее</a><i class="icon-arrow-long"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="booking-booking__item">
-							<div class="booking-booking__item-wrapper">
-								<picture class="booking-booking__item-image-container">
-									<img class="booking-booking__item-image" src="assets/img/content/booking/example.jpg" alt="#" />
-								</picture>
-								<div class="booking-booking__item-content">
-									<div class="booking-booking__item-price">от <span class="booking-booking__item-price--number">1500</span> &#8381;/день</div>
-									<h3 class="booking-booking__item-title">Цветные домики</h3>
-									<ul class="booking-booking__item-tagbox">
-										<li class="booking-booking__item-tag" data-tag="Wi-Fi"><i class="booking-booking__item-tag--icon icon-wifi"></i>Wi-Fi</li>
-										<li class="booking-booking__item-tag" data-tag="Банкетный зал"><i class="booking-booking__item-tag--icon icon-table"></i>Банкетный зал</li>
-										<li class="booking-booking__item-tag" data-tag="Раздельный санузел"><i class="booking-booking__item-tag--icon icon-shower"></i>Раздельный санузел</li>
-										<li class="booking-booking__item-tag"><i class="booking-booking__item-tag--icon icon-toilet"></i>5 санузлов</li>
-									</ul>
-									<ul class="booking-booking__item-buttonbox">
-										<li class="booking-booking__item-button booking-booking__item-button--booking" data-booking-open><button>Забронировать</button></li>
-										<li class="booking-booking__item-button booking-booking__item-button--more"><a href="booking.html">Подробнее</a><i class="icon-arrow-long"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="booking-booking__item">
-							<div class="booking-booking__item-wrapper">
-								<picture class="booking-booking__item-image-container">
-									<img class="booking-booking__item-image" src="assets/img/content/booking/example1.jpg" alt="#" />
-								</picture>
-								<div class="booking-booking__item-content">
-									<div class="booking-booking__item-price">от <span class="booking-booking__item-price--number">3800</span> &#8381;/день</div>
-									<h3 class="booking-booking__item-title">Боярские палаты</h3>
-									<ul class="booking-booking__item-tagbox">
-										<li class="booking-booking__item-tag" data-tag="Бильярдный зал"><i class="booking-booking__item-tag--icon icon-billiard"></i>Бильярдный зал</li>
-										<li class="booking-booking__item-tag" data-tag="Телевизор"><i class="booking-booking__item-tag--icon icon-screen-play"></i>Телевизор</li>
-										<li class="booking-booking__item-tag" data-tag="Wi-Fi"><i class="booking-booking__item-tag--icon icon-wifi"></i>Wi-Fi</li>
-										<li class="booking-booking__item-tag" data-tag="Банкетный зал"><i class="booking-booking__item-tag--icon icon-table"></i>Банкетный зал</li>
-										<li class="booking-booking__item-tag"><i class="booking-booking__item-tag--icon icon-toilet"></i>5 санузлов</li>
-									</ul>
-									<ul class="booking-booking__item-buttonbox">
-										<li class="booking-booking__item-button booking-booking__item-button--booking" data-booking-open><button>Забронировать</button></li>
-										<li class="booking-booking__item-button booking-booking__item-button--more"><a href="booking.html">Подробнее</a><i class="icon-arrow-long"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
+					<div class="events-schedule__titlebox">
+						<h2 class="events-schedule__title">Календарь мероприятий</h2>
+						<p class="events-schedule__subtitle">Вы приехали отдохнуть вдвоем? Отмечаете праздник в компании? У вас корпоративное мероприятие? Мы&nbsp;обеспечим комфортное размещение любой компании! У нас есть удобные коттеджи, рассчитанные на&nbsp;различное количество гостей.</p>
 					</div>
 				</div>
 			</section>
-			<section id="question" class="question-block">
-	<div class="question-block__container">
-		<h2 class="question-block__title">Остались вопросы?</h2>
-		<p class="question-block__desc">Менеджеры компании с радостью ответят на ваши вопросы и&nbsp;подготовят индивидуальное предложение</p>
-		<button class="question-block__button" data-question-open>Задать вопрос<i class="question-block__button--icon icon-arrow-long"></i></button>
-	</div>
-</section>
-
 		</main>
 		<footer class="footer">
 	<a class="footer__button-top icon-pine-double" href="#start"></a>

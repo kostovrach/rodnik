@@ -7,9 +7,13 @@
 	padding-left: rem(128);
 	padding-right: rem(128);
 	@media (max-width: 768px) {
-		padding-left: rem(32);
-		padding-right: rem(32);
+		padding-left: rem(16);
+		padding-right: rem(16);
 	}
+	// @media (max-width: 480px) {
+	// 	padding-left: rem(32);
+	// 	padding-right: rem(32);
+	// }
 }
 @mixin flex-center() {
 	display: flex;
@@ -47,7 +51,7 @@
 @mixin drop-shadow() {
 	filter: drop-shadow(0 0 10px rgba(black, 0.3));
 }
-@mixin button-main($background-color: $c-FFFFFF, $background-color-hover: $c-12C146, $font-size: rem(14), $padding: rem(8) rem(48), $color: $c-12C146, $color-hover: $c-FFFFFF, $border-color: $c-12C146, $width: fit-content) {
+@mixin button-main($background-color: $c-FFFFFF, $background-color-hover: $c-12C146, $font-size: rem(14), $padding: rem(8) rem(48), $color: $c-12C146, $color-hover: $c-FFFFFF, $border-color: $c-12C146, $width: fit-content, $before-bg: $c-12C146) {
 	cursor: pointer;
 	position: relative;
 	width: $width;
@@ -65,7 +69,7 @@
 		height: 100%;
 		pointer-events: none;
 		position: absolute;
-		z-index: -2;
+		z-index: -1;
 		top: 50%;
 		left: 50%;
 		translate: -50% -50%;
@@ -78,12 +82,12 @@
 		border-color: transparent;
 		&::before {
 			animation: calc($duration * 2) scale linear;
+			background: radial-gradient(rgba($before-bg, 0) 0%, rgba($before-bg, 0) 60%, rgba($before-bg, 0.6) 50%, rgba($before-bg, 0.6) 100%);
 		}
 	}
 	@keyframes scale {
 		0% {
 			scale: 1;
-			background: radial-gradient(rgba($c-12C146, 0) 0%, rgba($c-12C146, 0) 60%, rgba($c-12C146, 0.6) 50%, rgba($c-12C146, 0.6) 100%);
 		}
 		50% {
 			scale: 1.2;
@@ -91,6 +95,7 @@
 		}
 		100% {
 			scale: 1.4;
+			opacity: 0;
 		}
 	}
 }

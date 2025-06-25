@@ -32,7 +32,8 @@
 			top: auto;
 			bottom: 0;
 		}
-		.sticky & {
+		.sticky &,
+		.fill & {
 			background-color: $c-12C146;
 		}
 	}

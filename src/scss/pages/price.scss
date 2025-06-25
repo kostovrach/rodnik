@@ -1,6 +1,6 @@
 @use "../utils/abstracts" as *;
 
-.faq-faq {
+.price-price {
 	padding: rem(96) 0;
 	background-color: $c-FFFFFF;
 	border-radius: 0 0 $block-border-radius $block-border-radius;
@@ -28,20 +28,29 @@
 		max-width: 10ch;
 	}
 	&__subtitle {
-		display: flex;
-		flex-direction: column;
 		font-size: rem(14);
 		color: $c-3C3C3B;
 		&--link {
-			display: flex;
-			align-items: center;
-			gap: rem(8);
-			color: $c-12C146;
-			@include hover-underline($c-12C146);
-			&-icon {
-				font-size: rem(12);
-				rotate: 180deg;
+			transition: color $duration;
+			@media (pointer: fine) {
+				&:hover {
+					color: $c-12C146;
+				}
 			}
+		}
+	}
+	&__hint {
+		color: $c-FE823A;
+		font-size: rem(14);
+	}
+	&__button {
+		display: flex;
+		align-items: center;
+		gap: rem(8);
+		font-weight: $fw-medium;
+		@include button-main($font-size: lineScale(18, 14, 480, 1440), $color: $c-1C1C1E, $padding: rem(12) rem(24));
+		&--icon {
+			rotate: 90deg;
 		}
 	}
 	&__image-container {
@@ -74,7 +83,7 @@
 			&:hover {
 				border-color: transparent;
 				box-shadow: 0 15px 30px rgba($c-1C1C1E, 0.1);
-				.faq-faq__item-button {
+				.price-price__item-button {
 					color: $c-1C1C1E;
 				}
 			}
@@ -82,12 +91,12 @@
 		&.active {
 			border-color: transparent;
 			box-shadow: 0 15px 30px rgba($c-1C1C1E, 0.1);
-			.faq-faq__item-button {
+			.price-price__item-button {
 				color: $c-1C1C1E;
 				rotate: 180deg;
 			}
-			.faq-faq__item-title {
-                margin-bottom: rem(16);
+			.price-price__item-title {
+				margin-bottom: rem(16);
 			}
 		}
 		&-button {
@@ -107,18 +116,46 @@
 			font-size: lineScale(22, 16, 480, 1440);
 			line-height: 1;
 			font-weight: $fw-bold;
-            transition: $duration;
-            padding-right: rem(32);
+			transition: $duration;
+			padding-right: rem(32);
 		}
 		&-text {
-			font-size: lineScale(18, 14, 480, 1440);
+			font-size: rem(14);
 			line-height: 150%;
 			font-weight: $fw-medium;
+		}
+		&-table {
+			width: 100%;
+			overflow: hidden;
+			margin-top: rem(16);
+			&-wrapper {
+				overflow-x: auto;
+				-webkit-overflow-scrolling: touch;
+				scroll-behavior: smooth;
+			}
+			&-table {
+				width: 100%;
+				border-collapse: collapse;
+			}
+			&-cell {
+				width: rem(170);
+				padding: rem(10) rem(12);
+				font-size: rem(13);
+				line-height: 1;
+				border: rem(1) solid $c-E6E6E6;
+				white-space: nowrap;
+				&--head {
+					font-size: rem(14);
+					color: $c-FFFFFF;
+					font-weight: $fw-medium;
+					background-color: $c-12C146;
+				}
+			}
 		}
 	}
 }
 @media (max-width: 1024px) {
-	.faq-faq {
+	.price-price {
 		&__container {
 			display: flex;
 			flex-direction: column;
