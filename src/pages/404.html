@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('../components/head.html', { "title": "Rodnik - Часты вопросы" })
+	<body>
+		@@include('../components/header.html', { "sticky": "no-sticky" })
+		<main class="not-found">
+			<div class="flashlight-overlay"></div>
+			<div class="flashlight-spot"></div>
+			<picture class="not-found__background-image-container">
+				<img class="not-found__background-image" src="assets/img/content/404.jpg" alt="" />
+			</picture>
+			<div class="not-found__container">
+				<h1 class="not-found__title">ВЫ ЗАБЛУДИЛИСЬ :(</h1>
+				<p class="not-found__subtitle">Страница, на которую вы хотели перейти — не найдена. Вернитесь назад или позовите <button class="not-found__subtitle--button" data-question-open>помощь</button>.</p>
+				<ul class="not-found__links">
+					<li class="not-found__links-item"><a href="index.html">На главную</a></li>
+					<li class="not-found__links-item"><a href="about.html">О турбазе</a></li>
+					<li class="not-found__links-item"><a href="booking.html">Аренда</a></li>
+				</ul>
+			</div>
+		</main>
+		@@include("../components/footer.html", { "border": "smooth" })
+	</body>
+</html>

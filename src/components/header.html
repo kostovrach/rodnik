@@ -1,4 +1,4 @@
-<header class="header @@if (typeof type !== 'undefined' && type === 'fill') {fill} js-sticky">
+<header class="header @@if (typeof type !== 'undefined' && type === 'fill') {fill} @@if (typeof sticky == 'undefined') {js-sticky}">
 	<div class="header__container">
 		<a href="index.html">
 			<picture class="header__logo-container header__logo-container--main">
@@ -33,4 +33,9 @@
 	</div>
 	@@include('../components/modals/touch-menu.html')
 </header>
-@@include('../components/modals/modal-privacy.html') @@include('../components/modals/modal-services.html') @@include('../components/modals/modal-feedback.html') @@include('../components/modals/modal-booking.html') @@include('../components/modals/modal-question.html')
+@@include('../components/modals/modal-privacy.html') 
+@@include('../components/modals/modal-services.html') 
+@@include('../components/modals/modal-feedback.html') 
+@@include('../components/modals/modal-booking.html') 
+@@include('../components/modals/modal-question.html')
+@@include('../components/modals/modal-location.html')

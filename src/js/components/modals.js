@@ -39,6 +39,7 @@
 				modal.showModal();
 				requestAnimationFrame(() => {
 					modal.classList.add(ANIM_CLASS);
+					document.activeElement?.blur();
 				});
 			});
 		});
@@ -63,4 +64,5 @@
 	initModal("#modal-feedback", "data-feedback-open", ".modal-form__button-close");
 	initModal("#modal-booking", "data-booking-open", ".modal-form__button-close");
 	initModal("#modal-question", "data-question-open", ".modal-form__button-close");
+	initModal("#modal-location", "data-location-open", ".modal-form__button-close");
 })();

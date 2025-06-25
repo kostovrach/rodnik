@@ -120,7 +120,8 @@
 		</ul>
 	</div>
 </dialog>
- <dialog id="modal-services" class="modal-services">
+ 
+<dialog id="modal-services" class="modal-services">
 	<div class="modal-services__container">
 		<button class="modal-services__button-close icon-cross"></button>
 		<div class="modal-services__title">Услуги</div>
@@ -158,7 +159,8 @@
 		</ul>
 	</div>
 </dialog>
- <dialog id="modal-feedback" class="modal-form">
+ 
+<dialog id="modal-feedback" class="modal-form">
 	<button class="modal-form__button-close icon-cross"></button>
 	<div class="modal-form__container">
 		<div class="modal-form__titlebox">
@@ -194,7 +196,8 @@
 		</form>
 	</div>
 </dialog>
- <dialog id="modal-booking" class="modal-form">
+ 
+<dialog id="modal-booking" class="modal-form">
 	<div class="modal-form__container">
 		<div class="modal-form__button-close icon-cross"></div>
 		<div class="modal-form__titlebox">
@@ -264,7 +267,8 @@
 		</form>
 	</div>
 </dialog>
- <dialog id="modal-question" class="modal-form">
+ 
+<dialog id="modal-question" class="modal-form">
 	<button class="modal-form__button-close icon-cross"></button>
 	<div class="modal-form__container">
 		<div class="modal-form__titlebox">
@@ -285,6 +289,80 @@
 				<textarea id="modal-question-comment" class="modal-form__form-input modal-form__form-input--custom" placeholder="Опишите какие трудности у вас возникли" required></textarea>
 			</div>
 			<button class="modal-form__form-button" type="submit">Отправить вопрос</button>
+			<div class="modal-form__form-privacy">Отправляя сообщение, вы соглашаетесь<button class="modal-form__form-privacy-button" data-privacy-open>c политикой конфиденциальности</button></div>
+		</form>
+	</div>
+</dialog>
+
+<dialog id="modal-location" class="modal-form">
+	<div class="modal-form__container">
+		<div class="modal-form__button-close icon-cross"></div>
+		<div class="modal-form__titlebox">
+			<p class="modal-form__title">Аренда площадки</p>
+			<p class="modal-form__subtitle">Наша цель&nbsp;— предложить посетителям беспрецедентный клиентский опыт и&nbsp;самые яркие впечатления.</p>
+			<p class="modal-form__subtitle">Поэтому уже&nbsp;сейчас мы начинаем формировать пул стратегических партнеров, которые станут гармоничной частью новой точки притяжения на карте Москвы.</p>
+		</div>
+		<form class="modal-form__form modal-form__form--location" action="" method="post">
+			<div class="modal-form__form-inputbox modal-form__form-inputbox--full-name">
+				<label class="modal-form__form-label" for="modal-location-name">ФИО</label>
+				<input id="modal-location-name" class="modal-form__form-input" type="text" placeholder="Как к вам обращаться?" required />
+			</div>
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-location-tel">Телефон</label>
+				<input id="modal-location-tel" class="modal-form__form-input" data-input-tel type="tel" required />
+			</div>
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-location-mail">E-mail</label>
+				<input id="modal-location-mail" class="modal-form__form-input" type="mail" required />
+			</div>
+			<div class="modal-form__form-inputbox modal-form__form-inputbox--date">
+				<div class="modal-form__form-input--date-icon icon-check-mark"></div>
+				<label class="modal-form__form-label" for="modal-location-checkin">Дата начала</label>
+				<input id="modal-location-checkin" class="modal-form__form-input" type="date" required />
+			</div>
+			<div class="modal-form__form-inputbox modal-form__form-inputbox--date">
+				<div class="modal-form__form-input--date-icon icon-check-mark"></div>
+				<label class="modal-form__form-label" for="modal-location-checkout">Дата окончания</label>
+				<input id="modal-location-checkout" class="modal-form__form-input" type="date" required />
+			</div>
+			<div class="modal-form__form-inputbox--select modal-form__form-inputbox--select--house select" tabindex="0" role="combobox">
+				<input id="modal-location-house" class="modal-form__form-input--select modal-form__form-input--select-house-input select__input" type="text" placeholder="Площадка" tabindex="-1" readonly />
+				<i class="modal-form__form-input--select-icon modal-form__form-input--select-house-icon select__icon icon-check-mark"></i>
+				<ul class="modal-form__form-input--select-house-dropdown select__dropdown" role="listbox">
+					<li class="modal-form__form-input--select-house-item select__item" role="option" tabindex="0">Актовый зал в блоке №1</li>
+					<li class="modal-form__form-input--select-house-item select__item" role="option" tabindex="0">Мини-зал в блоке №2</li>
+					<li class="modal-form__form-input--select-house-item select__item" role="option" tabindex="0">Большой зал в блоке №1</li>
+					<li class="modal-form__form-input--select-house-item select__item" role="option" tabindex="0">Спортивный зал в блоке №4</li>
+				</ul>
+			</div>
+			<div class="modal-form__form-inputbox--select modal-form__form-inputbox--select--person select" tabindex="0" role="combobox">
+				<input id="modal-location-person" class="modal-form__form-input--select modal-form__form-input--select-person-input select__input" type="text" placeholder="Количество человек" tabindex="-1" readonly />
+				<i class="modal-form__form-input--select-icon modal-form__form-input--select-preson-icon select__icon icon-check-mark"></i>
+				<ul class="modal-form__form-input--select-preson-dropdown select__dropdown" role="listbox">
+					<li class="modal-form__form-input--select-preson-item select__item" role="option" tabindex="0">1 человек</li>
+					<li class="modal-form__form-input--select-preson-item select__item" role="option" tabindex="0">2 человека</li>
+					<li class="modal-form__form-input--select-preson-item select__item" role="option" tabindex="0">3 человека</li>
+				</ul>
+			</div>
+			<ul class="modal-form__form-services"></ul>
+			<div class="modal-form__form-services-select select" tabindex="0" role="combobox">
+				<input class="modal-form__form-services-input select__input" type="text" placeholder="Дополнительные услуги" readonly tabindex="-1" />
+				<i class="modal-form__form-services-icon icon-check-mark"></i>
+				<label for="location-selected-services" class="modal-form__form-services-label">Дополнительные услуги</label>
+				<ul class="modal-form__form-services-dropdown select__dropdown">
+					<li class="modal-form__form-services-dropdown-item select__item readonly" role="option" tabindex="0" data-value="food" data-label="Питание" data-price="500">Питание - 500&#8381;</li>
+					<li class="modal-form__form-services-dropdown-item select__item readonly" role="option" tabindex="0" data-value="cleaning" data-label="Уборка номера" data-price="1500">Уборка номера - 1500&#8381;</li>
+					<li class="modal-form__form-services-dropdown-item select__item readonly" role="option" tabindex="0" data-value="bed" data-label="Доп. спальное место" data-price="500">Доп. спальное место - 500&#8381;</li>
+					<li class="modal-form__form-services-dropdown-item select__item readonly" role="option" tabindex="0" data-value="transfer" data-label="Трансфер до отеля" data-price="2000">Трансфер до отеля - 2000&#8381;</li>
+				</ul>
+				<input id="location-selected-services" type="hidden" name="location-services" value="" />
+			</div>
+
+			<div class="modal-form__form-inputbox modal-form__form-inputbox--custom">
+				<label class="modal-form__form-label" for="modal-location-comment">Цели мероприятия</label>
+				<textarea id="modal-location-comment" class="modal-form__form-input modal-form__form-input--custom" placeholder="Дополнительная информация (опционально)"></textarea>
+			</div>
+			<button class="modal-form__form-button" type="submit">Забронировать</button>
 			<div class="modal-form__form-privacy">Отправляя сообщение, вы соглашаетесь<button class="modal-form__form-privacy-button" data-privacy-open>c политикой конфиденциальности</button></div>
 		</form>
 	</div>
@@ -507,7 +585,7 @@
 </section>
 
 		</main>
-		<footer class="footer">
+		<footer class="footer ">
 	<a class="footer__button-top icon-pine-double" href="#start"></a>
 	<div class="footer__container">
 		<div class="footer__body">

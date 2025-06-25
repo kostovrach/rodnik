@@ -1,0 +1,94 @@
+@use "../utils/abstracts" as *;
+
+.not-found {
+	cursor: none;
+	position: relative;
+	min-height: 100lvh;
+	padding: rem(96);
+    overflow: hidden;
+	.flashlight-overlay {
+		position: absolute;
+		inset: 0;
+		background: rgba(0, 0, 0, .95);
+		z-index: 1;
+		pointer-events: none;
+	}
+	.flashlight-spot {
+		width: 500px;
+        aspect-ratio: 1/1;
+		position: absolute;
+		z-index: 1;
+		border-radius: 50%;
+        mix-blend-mode: color-dodge;
+        background: radial-gradient(
+              circle,
+              rgba(238, 240, 218, .8) 0%,
+              rgba(222, 225, 199, .8) 70%,
+              rgba(135, 137, 121, .7) 100%
+            ),
+            radial-gradient(
+              circle,
+              rgba(255, 255, 255, 0.5) 45%,
+              rgba(255, 252, 240, 0.6) 85%
+            );
+        translate: -50% -50%;
+        filter: blur(30px);
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.3s ease;
+	}
+
+	&.has-flashlight .flashlight-spot {
+		opacity: 1;
+	}
+	&__background {
+		&-image-container {
+			position: absolute;
+			inset: 0;
+			z-index: -1;
+		}
+		&-image {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__container {
+		width: 100%;
+		min-height: calc(100lvh - (rem(96) * 2));
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: rem(32);
+		text-align: center;
+		color: $c-FFFFFF;
+		@include content-width();
+	}
+	&__title {
+		color: #b1fff2;
+		font-size: lineScale(72, 32, 480, 1440);
+		font-weight: $fw-black;
+		opacity: 0.8;
+	}
+	&__subtitle {
+		max-width: 50ch;
+		font-size: lineScale(18, 16, 480, 1440);
+		font-weight: $fw-medium;
+		&--button {
+			cursor: pointer;
+			text-decoration: underline;
+		}
+	}
+	&__links {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(16);
+		&-item {
+			width: fit-content;
+			font-size: lineScale(22, 18, 480, 1440);
+			@include right-circle-hover();
+		}
+	}
+}

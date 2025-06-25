@@ -10,16 +10,12 @@
 			initCalendar();
 		})
 		.catch((error) => {
-			console.error("Ошибка загрузки событий:", error);
 			initCalendar();
 		});
 
 	function initCalendar() {
 		const calendarElement = document.getElementById("events-schedule");
-		if (!calendarElement) {
-			console.error("Элемент календаря не найден");
-			return;
-		}
+		if (!calendarElement) return;
 
 		picker = new Litepicker({
 			element: calendarElement,
@@ -109,24 +105,12 @@
 
 		// Создаем содержимое тултипа
 		const content = messages.map((message) => `<div class="calendar-tooltip__item">${message}</div>`).join("");
-		tooltip.innerHTML = `
-      <div class="calendar-tooltip__content">${content}</div>
-    `;
+		tooltip.innerHTML = `<div class="calendar-tooltip__content">${content}</div>`;
 
 		// Добавляем тултип в элемент дня
 		dayElem.style.position = "relative";
 		dayElem.appendChild(tooltip);
 
-		// Обработчик закрытия
-		// const closeBtn = tooltip.querySelector(".calendar-tooltip__close");
-		// if (closeBtn) {
-		//   closeBtn.addEventListener('click', (e) => {
-		//     e.stopPropagation();
-		//     tooltip.remove();
-		//   });
-		// }
-
-		// Позиционируем тултип
 		positionTooltip(tooltip, dayElem);
 	}
 
@@ -146,19 +130,6 @@
 		// Определяем, где лучше разместить тултип
 		let top = -tooltipRect.height - 10; // По умолчанию сверху
 		let left = -(tooltipRect.width / 2) + dayRect.width / 2; // По центру
-
-		// Проверяем, не выходит ли тултип за границы контейнера
-		//if (dayRect.top - tooltipRect.height < containerRect.top) {
-		//  top = dayRect.height + 10; // Размещаем снизу
-		//}
-
-		//if (dayRect.left + left < containerRect.left) {
-		//  left = containerRect.left - dayRect.left + 10; // Сдвигаем вправо
-		//}
-		//
-		//if (dayRect.left + left + tooltipRect.width > containerRect.right) {
-		//  left = containerRect.right - dayRect.left - tooltipRect.width - 10; // Сдвигаем влево
-		//}
 
 		tooltip.style.top = `${top}px`;
 		tooltip.style.left = `${left}px`;

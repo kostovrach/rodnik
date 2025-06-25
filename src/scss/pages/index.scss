@@ -16,12 +16,12 @@
 		filter: brightness(80%);
 	}
 	&__container {
-		height: 100lvh;
+		min-height: 100lvh;
 		min-height: fit-content;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		gap: rem(64);
+		gap: rem(40);
 		padding-top: rem(128);
 		padding-bottom: rem(128);
 		@include content-width();
@@ -83,16 +83,19 @@
 	&__inputbox {
 		flex-grow: 1;
 		flex-shrink: 1;
+		min-height: rem(70);
 		position: relative;
 		display: grid;
 		grid-template-columns: 90% auto;
 		border-radius: $border-radius;
 		padding: rem(12) rem(32);
 		border: rem(1.25) solid $c-FFFFFF;
-		&:hover {
-			background-color: rgba($c-999999, 0.2);
-			backdrop-filter: blur(10px);
-			border-color: transparent;
+		@media (pointer: fine) {
+			&:hover {
+				background-color: rgba($c-999999, 0.2);
+				backdrop-filter: blur(10px);
+				border-color: transparent;
+			}
 		}
 		&--date {
 			flex-basis: rem(200);

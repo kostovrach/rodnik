@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('../components/head.html', { "title": "Rodnik - Часты вопросы" })
+	@@include('../components/head.html', { "title": "Rodnik - Мероприятия" })
 	<body>
 		@@include('../components/header.html')
 		<main id="start">
@@ -11,7 +11,7 @@
 				<div class="events-hero__container">
 					<div class="events-hero__titlebox">
 						<h1 class="events-hero__title">ПРОВЕДЕНИЕ МЕРОПРИЯТИЙ</h1>
-						<button class="events-hero__button">Забронировать локацию<i class="events-hero__button--icon icon-arrow-long"></i></button>
+						<button class="events-hero__button" data-location-open>Забронировать локацию<i class="events-hero__button--icon icon-arrow-long"></i></button>
 					</div>
 				</div>
 			</section>
@@ -155,6 +155,72 @@
 					<div class="events-schedule__titlebox">
 						<h2 class="events-schedule__title">Календарь мероприятий</h2>
 						<p class="events-schedule__subtitle">Вы приехали отдохнуть вдвоем? Отмечаете праздник в компании? У вас корпоративное мероприятие? Мы&nbsp;обеспечим комфортное размещение любой компании! У нас есть удобные коттеджи, рассчитанные на&nbsp;различное количество гостей.</p>
+					</div>
+				</div>
+			</section>
+			<section class="events-events card-slider-block">
+				<div class="events-events__container">
+					<div class="events-events__titlebox">
+						<h2 class="events-events__title"><span class="events-events__title--accent">Все мероприятия</h2>
+						<ul class="events-events__nav">
+							<li class="events-events__nav-button events-events__nav-button--prev swiper-button-prev card-slider-button card-slider-button--prev"><i class="icon-arrow-long"></i></li>
+							<li class="events-events__nav-button events-events__nav-button--next swiper-button-next card-slider-button card-slider-button--next"><i class="icon-arrow-long"></i></li>
+						</ul>
+					</div>
+					<div class="events-events__body">
+						<div class="events-events__slider card-slider swiper">
+							<div class="events-events__slider-wrapper card-slider-wrapper swiper-wrapper">
+								<a class="events-events__slide swiper-slide" href="event-page.html">
+									<picture class="events-events__slide-image-container">
+										<img class="events-events__slide-image" src="assets/img/content/events/event.jpg" alt="#" />
+									</picture>
+									<h3 class="events-events__slide-title">Баня архетипа императрицы</h3>
+									<p class="events-events__slide-desc">Новые гости, которые впервые посещают вашу базу, могут получить 10% скидку на аренду домика, если они подпишутся на вашу рассылку новостей.</p>
+									<time class="events-events__slide-date" datetime="2025-05-01">01.05.2025</time>
+								</a>
+								<a class="events-events__slide swiper-slide" href="event-page.html">
+									<picture class="events-events__slide-image-container">
+										<img class="events-events__slide-image" src="assets/img/content/events/event1.jpg" alt="#" />
+									</picture>
+									<h3 class="events-events__slide-title">Женственность и мягкость. Принятие и доверие</h3>
+									<p class="events-events__slide-desc">При бронировании домика вместе с услугами по организации рыбалки (например, прокат снастей и&nbsp;лодок) и дополнительные услуги, такие как шашлыки на природе или экскурсии по окрестностям. При покупке пакета предоставьте скидку на общую стоимость.</p>
+									<time class="events-events__slide-date" datetime="2025-05-16">16.05.2025</time>
+								</a>
+								<a class="events-events__slide swiper-slide" href="event-page.html">
+									<picture class="events-events__slide-image-container">
+										<img class="events-events__slide-image" src="assets/img/content/events/event2.jpg" alt="#" />
+									</picture>
+									<h3 class="events-events__slide-title">Баня архетипа императрицы</h3>
+									<p class="events-events__slide-desc">Новые гости, которые впервые посещают вашу базу, могут получить 10% скидку на аренду домика, если они подпишутся на вашу рассылку новостей.</p>
+									<time class="events-events__slide-date" datetime="2025-06-03">03.06.2025</time>
+								</a>
+								<a class="events-events__slide swiper-slide" href="event-page.html">
+									<picture class="events-events__slide-image-container">
+										<img class="events-events__slide-image" src="assets/img/content/events/event.jpg" alt="#" />
+									</picture>
+									<h3 class="events-events__slide-title">Баня архетипа императрицы</h3>
+									<p class="events-events__slide-desc">Новые гости, которые впервые посещают вашу базу, могут получить 10% скидку на аренду домика, если они подпишутся на вашу рассылку новостей.</p>
+									<time class="events-events__slide-date" datetime="2025-05-01">01.05.2025</time>
+								</a>
+								<a class="events-events__slide swiper-slide" href="event-page.html">
+									<picture class="events-events__slide-image-container">
+										<img class="events-events__slide-image" src="assets/img/content/events/event1.jpg" alt="#" />
+									</picture>
+									<h3 class="events-events__slide-title">Женственность и мягкость. Принятие и доверие</h3>
+									<p class="events-events__slide-desc">При бронировании домика вместе с услугами по организации рыбалки (например, прокат снастей и&nbsp;лодок) и дополнительные услуги, такие как шашлыки на природе или экскурсии по окрестностям. При покупке пакета предоставьте скидку на общую стоимость.</p>
+									<time class="events-events__slide-date" datetime="2025-05-16">16.05.2025</time>
+								</a>
+								<a class="events-events__slide swiper-slide" href="event-page.html">
+									<picture class="events-events__slide-image-container">
+										<img class="events-events__slide-image" src="assets/img/content/events/event2.jpg" alt="#" />
+									</picture>
+									<h3 class="events-events__slide-title">Баня архетипа императрицы</h3>
+									<p class="events-events__slide-desc">Новые гости, которые впервые посещают вашу базу, могут получить 10% скидку на аренду домика, если они подпишутся на вашу рассылку новостей.</p>
+									<time class="events-events__slide-date" datetime="2025-06-03">03.06.2025</time>
+								</a>
+							</div>
+						</div>
+						<div class="events-events__slider-scrollbar card-slider-scrollbar swiper-scrollbar"></div>
 					</div>
 				</div>
 			</section>

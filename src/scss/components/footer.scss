@@ -15,6 +15,12 @@
 		height: 8rem;
 		background-color: inherit;
 	}
+	&.smooth::before {
+		z-index: 2;
+		height: 2rem;
+		top: -2rem;
+		border-radius: $block-border-radius $block-border-radius 0 0;
+	}
 	&__button-top {
 		cursor: pointer;
 		position: absolute;

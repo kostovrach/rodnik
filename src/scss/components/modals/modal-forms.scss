@@ -83,6 +83,9 @@
 			&--custom {
 				grid-column: span 2;
 			}
+			&--full-name {
+				grid-column: span 2;
+			}
 			&--date {
 				.modal-form__form-input--date-icon {
 					position: absolute;
@@ -94,6 +97,7 @@
 					opacity: 0.2;
 				}
 				.modal-form__form-input {
+					min-height: rem(60);
 					&[type="date"] {
 						&::-webkit-calendar-picker-indicator {
 							cursor: pointer;
