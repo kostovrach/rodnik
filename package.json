@@ -15,6 +15,7 @@
   "devDependencies": {
     "@fancyapps/ui": "^5.0.36",
     "browser-sync": "^3.0.4",
+    "dayjs": "^1.11.13",
     "del": "^8.0.0",
     "fast-glob": "^3.3.3",
     "gulp": "^5.0.0",
@@ -25,6 +26,7 @@
     "gulp-sass": "^6.0.1",
     "gulp-terser": "^2.1.0",
     "gulp-ttf2woff2": "^5.0.0",
+    "litepicker": "^2.0.12",
     "sass": "^1.89.1",
     "swiper": "^11.2.8"
   }

@@ -6,11 +6,11 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.min.css">
 	<link rel="stylesheet" href="./assets/fonts/icon-font/style.css">
-	<title>Rodnik - Аренда номеров</title>
+	<title>Rodnik - Часты вопросы</title>
 </head>
 
 	<body>
-		<header class="header  js-sticky">
+		<header class="header fill js-sticky">
 	<div class="header__container">
 		<a href="index.html">
 			<picture class="header__logo-container header__logo-container--main">
@@ -23,8 +23,8 @@
 		<ul class="header__nav" role="navigation">
 			<li class="header__nav-item" data-services-open tabindex="0"><button>Услуги</button><i class="header__nav-item--icon icon-check-mark"></i></li>
 			<li class="header__nav-item "><a href="about.html">Про отель</a></li>
-			<li class="header__nav-item current"><a href="booking.html">Проживание</a></li>
-			<li class="header__nav-item "><a href="price.html">Цены</a></li>
+			<li class="header__nav-item "><a href="booking.html">Проживание</a></li>
+			<li class="header__nav-item current"><a href="price.html">Цены</a></li>
 			<li class="header__nav-item "><a href="contacts.html">Контакты</a></li>
 			<li class="header__nav-item header__nav-item--more" tabindex="0">
 				Ещё
@@ -292,283 +292,380 @@
 
 
 		<main id="start">
-			<section class="booking-hero">
-				<picture class="booking-hero__background-image-container">
-					<img class="booking-hero__background-image" src="assets/img/backgrounds/houses.jpg" alt="" />
-				</picture>
-				<div class="booking-hero__container">
-					<div class="booking-hero__titlebox">
-						<h1 class="booking-hero__title">Аренда номеров</h1>
-					</div>
-				</div>
-			</section>
-			<section class="booking-booking">
-				<div class="booking-booking__container">
-					<div class="booking-booking__titlebox">
-						<h2 class="booking-booking__title">Отдых и рыбалка в Клявлинском Форелевом Хозяйстве — это незабываемый отдых на природе. Наш передовой и отлично оборудованный питомник выращивает лучшую рыбу, которая доступна для ловли.</h2>
-					</div>
-					<div class="booking-booking__filtering">
-						<div class="booking-booking__filters">
-							<p class="booking-booking__filters-title">Фильтры</p>
-							<ul class="booking-booking__filters-filterbox">
-								<li>
-									<label class="booking-booking__filters-filter">
-										<div class="booking-booking__filters-filter-checkbox">
-											<input class="booking-booking__filters-filter-checkbox-input" type="checkbox" value="Бильярдный зал" />
-										</div>
-										<span class="booking-booking__filters-filter-name">Бильярдный зал</span>
-										<span class="booking-booking__filters-filter-count"></span>
-									</label>
-								</li>
-								<li>
-									<label class="booking-booking__filters-filter">
-										<div class="booking-booking__filters-filter-checkbox">
-											<input class="booking-booking__filters-filter-checkbox-input" type="checkbox" value="Телевизор" />
-										</div>
-										<span class="booking-booking__filters-filter-name">Телевизор</span>
-										<span class="booking-booking__filters-filter-count"></span>
-									</label>
-								</li>
-								<li>
-									<label class="booking-booking__filters-filter">
-										<div class="booking-booking__filters-filter-checkbox">
-											<input class="booking-booking__filters-filter-checkbox-input" type="checkbox" value="WI-FI" />
-										</div>
-										<span class="booking-booking__filters-filter-name">WI-FI</span>
-										<span class="booking-booking__filters-filter-count"></span>
-									</label>
-								</li>
-								<li>
-									<label class="booking-booking__filters-filter">
-										<div class="booking-booking__filters-filter-checkbox">
-											<input class="booking-booking__filters-filter-checkbox-input" type="checkbox" value="Банкетный зал" />
-										</div>
-										<span class="booking-booking__filters-filter-name">Банкетный зал</span>
-										<span class="booking-booking__filters-filter-count"></span>
-									</label>
-								</li>
-								<li>
-									<label class="booking-booking__filters-filter">
-										<div class="booking-booking__filters-filter-checkbox">
-											<input class="booking-booking__filters-filter-checkbox-input" type="checkbox" value="Раздельный санузел" />
-										</div>
-										<span class="booking-booking__filters-filter-name">Раздельный санузел</span>
-										<span class="booking-booking__filters-filter-count"></span>
-									</label>
-								</li>
-								<li>
-									<label class="booking-booking__filters-filter">
-										<div class="booking-booking__filters-filter-checkbox">
-											<input class="booking-booking__filters-filter-checkbox-input" type="checkbox" value="Панорамные окна" />
-										</div>
-										<span class="booking-booking__filters-filter-name">Панорамные окна</span>
-										<span class="booking-booking__filters-filter-count"></span>
-									</label>
-								</li>
-								<li>
-									<label class="booking-booking__filters-filter">
-										<div class="booking-booking__filters-filter-checkbox">
-											<input class="booking-booking__filters-filter-checkbox-input" type="checkbox" value="Мангал" />
-										</div>
-										<span class="booking-booking__filters-filter-name">Мангал</span>
-										<span class="booking-booking__filters-filter-count"></span>
-									</label>
-								</li>
-							</ul>
+			<section class="price-price">
+				<div class="price-price__container">
+					<div class="price-price__titlebox">
+						<div class="price-price__titlebox-wrapper">
+							<h1 class="price-price__title">Цены</h1>
+							<p class="price-price__subtitle">
+								Мы предоставляем лучшие услуги по хорошим ценам. В данном разделе приведены цены на часто заказываемые услуги нашей базы отдыха КФХ «ALEKIANN».
+								<br />
+								Наличие и актуальные цены уточняйте у менеджера по телефону <a class="price-price__subtitle--link" href="tel:+7 (987) 654-32-10">+7 (987) 654-32-10</a>
+							</p>
+							<p class="price-price__hint">*В праздничные дни цены могут меняться</p>
+							<button class="price-price__button">Скачать прайс-лист .xlsx<i class="price-price__button--icon icon-arrow-long"></i></button>
 						</div>
-						<div class="booking-booking__price">
-							<div class="booking-booking__price-titlebox">
-								<div class="booking-booking__price-title">Выбор по цене</div>
-								<p class="booking-booking__price-subtitle">Стоимость аренды за сутки, &#8381;</p>
-							</div>
-							<div class="booking-booking__price-filterbox">
-								<div class="booking-booking__price-range-wrapper">
-									<div class="booking-booking__price-range-track"></div>
-									<div class="booking-booking__price-range">
-										<input class="booking-booking__price-range" type="range" id="booking-price-min" min="0" max="100000" value="0" />
-										<input class="booking-booking__price-range" type="range" id="booking-price-max" min="0" max="100000" value="100000" />
+					</div>
+					<div class="price-price__body">
+						<picture class="price-price__image-container">
+							<img class="price-price__image" src="assets/img/content/about/example1.jpg" alt="#" />
+						</picture>
+						<ul class="price-price__list js-spoiler-container">
+							<li class="price-price__item js-spoiler-item">
+								<i class="price-price__item-button icon-cross"></i>
+								<h2 class="price-price__item-title">Рыбалка</h2>
+								<div class="price-price__item-content js-spoiler-content">
+									<p class="price-price__item-text">Описание – краткая расшифровка часто задаваемого вопроса. Описывайте информацию, на которую не нашлось ответа на сайте или которую стоит уточнить. </p>
+									<div class="price-price__item-table">
+										<div class="price-price__item-table-wrapper">
+											<table class="price-price__item-table-table">
+												<thead class="price-price__item-table-head">
+													<tr class="price-price__item-table-row">
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Тип</th>
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Наименование</th>
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Цена в будни</th>
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Цена в выходные</th>
+													</tr>
+												</thead>
+												<tbody class="price-price__item-table-body">
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell">Готовка</td>
+														<td class="price-price__item-table-cell">Сетка</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Шампуры (10шт.)</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Казан</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">По запросу</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell">Мебель</td>
+														<td class="price-price__item-table-cell">Лежак</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Скамья</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Холодильник переносной</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">По запросу</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
 									</div>
 								</div>
-								<div class="booking-booking__price-values">
-									<span id="booking-price-min-val">0</span>
-									<span id="booking-price-max-val">100000</span>
+							</li>
+							<li class="price-price__item js-spoiler-item">
+								<i class="price-price__item-button icon-cross"></i>
+								<h2 class="price-price__item-title">Аксессуары барбекю</h2>
+								<div class="price-price__item-content js-spoiler-content">
+									<p class="price-price__item-text">Описание – краткая расшифровка часто задаваемого вопроса. Описывайте информацию, на которую не нашлось ответа на сайте или которую стоит уточнить. </p>
+									<div class="price-price__item-table">
+										<div class="price-price__item-table-wrapper">
+											<table class="price-price__item-table-table">
+												<thead class="price-price__item-table-head">
+													<tr class="price-price__item-table-row">
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Тип</th>
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Наименование</th>
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Цена в будни</th>
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Цена в выходные</th>
+													</tr>
+												</thead>
+												<tbody class="price-price__item-table-body">
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell">Готовка</td>
+														<td class="price-price__item-table-cell">Сетка</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Шампуры (10шт.)</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Казан</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">По запросу</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell">Мебель</td>
+														<td class="price-price__item-table-cell">Лежак</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Скамья</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Холодильник переносной</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">По запросу</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-					</div>
-					<div class="booking-booking__body">
-						<div class="booking-booking__item">
-							<div class="booking-booking__item-wrapper">
-								<picture class="booking-booking__item-image-container">
-									<img class="booking-booking__item-image" src="assets/img/content/booking/example.jpg" alt="#" />
-								</picture>
-								<div class="booking-booking__item-content">
-									<div class="booking-booking__item-price">от <span class="booking-booking__item-price--number">1500</span> &#8381;/день</div>
-									<h3 class="booking-booking__item-title">Цветные домики</h3>
-									<ul class="booking-booking__item-tagbox">
-										<li class="booking-booking__item-tag" data-tag="Wi-Fi"><i class="booking-booking__item-tag--icon icon-wifi"></i>Wi-Fi</li>
-										<li class="booking-booking__item-tag" data-tag="Банкетный зал"><i class="booking-booking__item-tag--icon icon-table"></i>Банкетный зал</li>
-										<li class="booking-booking__item-tag" data-tag="Раздельный санузел"><i class="booking-booking__item-tag--icon icon-shower"></i>Раздельный санузел</li>
-										<li class="booking-booking__item-tag"><i class="booking-booking__item-tag--icon icon-toilet"></i>5 санузлов</li>
-									</ul>
-									<ul class="booking-booking__item-buttonbox">
-										<li class="booking-booking__item-button booking-booking__item-button--booking" data-booking-open><button>Забронировать</button></li>
-										<li class="booking-booking__item-button booking-booking__item-button--more"><a href="booking.html">Подробнее</a><i class="icon-arrow-long"></i></li>
-									</ul>
+							</li>
+							<li class="price-price__item js-spoiler-item">
+								<i class="price-price__item-button icon-cross"></i>
+								<h2 class="price-price__item-title">Баня</h2>
+								<div class="price-price__item-content js-spoiler-content">
+									<p class="price-price__item-text">Описание – краткая расшифровка часто задаваемого вопроса. Описывайте информацию, на которую не нашлось ответа на сайте или которую стоит уточнить. </p>
+									<div class="price-price__item-table">
+										<div class="price-price__item-table-wrapper">
+											<table class="price-price__item-table-table">
+												<thead class="price-price__item-table-head">
+													<tr class="price-price__item-table-row">
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Тип</th>
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Наименование</th>
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Цена в будни</th>
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Цена в выходные</th>
+													</tr>
+												</thead>
+												<tbody class="price-price__item-table-body">
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell">Готовка</td>
+														<td class="price-price__item-table-cell">Сетка</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Шампуры (10шт.)</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Казан</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">По запросу</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell">Мебель</td>
+														<td class="price-price__item-table-cell">Лежак</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Скамья</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Холодильник переносной</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">По запросу</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-						<div class="booking-booking__item">
-							<div class="booking-booking__item-wrapper">
-								<picture class="booking-booking__item-image-container">
-									<img class="booking-booking__item-image" src="assets/img/content/booking/example1.jpg" alt="#" />
-								</picture>
-								<div class="booking-booking__item-content">
-									<div class="booking-booking__item-price">от <span class="booking-booking__item-price--number">3800</span> &#8381;/день</div>
-									<h3 class="booking-booking__item-title">Боярские палаты</h3>
-									<ul class="booking-booking__item-tagbox">
-										<li class="booking-booking__item-tag" data-tag="Бильярдный зал"><i class="booking-booking__item-tag--icon icon-billiard"></i>Бильярдный зал</li>
-										<li class="booking-booking__item-tag" data-tag="Телевизор"><i class="booking-booking__item-tag--icon icon-screen-play"></i>Телевизор</li>
-										<li class="booking-booking__item-tag" data-tag="Wi-Fi"><i class="booking-booking__item-tag--icon icon-wifi"></i>Wi-Fi</li>
-										<li class="booking-booking__item-tag" data-tag="Банкетный зал"><i class="booking-booking__item-tag--icon icon-table"></i>Банкетный зал</li>
-										<li class="booking-booking__item-tag"><i class="booking-booking__item-tag--icon icon-toilet"></i>5 санузлов</li>
-									</ul>
-									<ul class="booking-booking__item-buttonbox">
-										<li class="booking-booking__item-button booking-booking__item-button--booking" data-booking-open><button>Забронировать</button></li>
-										<li class="booking-booking__item-button booking-booking__item-button--more"><a href="booking.html">Подробнее</a><i class="icon-arrow-long"></i></li>
-									</ul>
+							</li>
+							<li class="price-price__item js-spoiler-item">
+								<i class="price-price__item-button icon-cross"></i>
+								<h2 class="price-price__item-title">Бассейн</h2>
+								<div class="price-price__item-content js-spoiler-content">
+									<p class="price-price__item-text">Описание – краткая расшифровка часто задаваемого вопроса. Описывайте информацию, на которую не нашлось ответа на сайте или которую стоит уточнить. </p>
+									<div class="price-price__item-table">
+										<div class="price-price__item-table-wrapper">
+											<table class="price-price__item-table-table">
+												<thead class="price-price__item-table-head">
+													<tr class="price-price__item-table-row">
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Тип</th>
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Наименование</th>
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Цена в будни</th>
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Цена в выходные</th>
+													</tr>
+												</thead>
+												<tbody class="price-price__item-table-body">
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell">Готовка</td>
+														<td class="price-price__item-table-cell">Сетка</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Шампуры (10шт.)</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Казан</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">По запросу</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell">Мебель</td>
+														<td class="price-price__item-table-cell">Лежак</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Скамья</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Холодильник переносной</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">По запросу</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-						<div class="booking-booking__item">
-							<div class="booking-booking__item-wrapper">
-								<picture class="booking-booking__item-image-container">
-									<img class="booking-booking__item-image" src="assets/img/content/booking/example2.jpg" alt="#" />
-								</picture>
-								<div class="booking-booking__item-content">
-									<div class="booking-booking__item-price">от <span class="booking-booking__item-price--number">10 950</span> &#8381;/день</div>
-									<h3 class="booking-booking__item-title">Хозяйский домик</h3>
-									<ul class="booking-booking__item-tagbox">
-										<li class="booking-booking__item-tag" data-tag="Телевизор"><i class="booking-booking__item-tag--icon icon-screen-play"></i>Телевизор</li>
-										<li class="booking-booking__item-tag" data-tag="Wi-Fi"><i class="booking-booking__item-tag--icon icon-wifi"></i>Wi-Fi</li>
-										<li class="booking-booking__item-tag" data-tag="Банкетный зал"><i class="booking-booking__item-tag--icon icon-table"></i>Банкетный зал</li>
-										<li class="booking-booking__item-tag" data-tag="Сауна"><i class="booking-booking__item-tag--icon icon-table"></i>Сауна</li>
-										<li class="booking-booking__item-tag"><i class="booking-booking__item-tag--icon icon-toilet"></i>5 санузлов</li>
-									</ul>
-									<ul class="booking-booking__item-buttonbox">
-										<li class="booking-booking__item-button booking-booking__item-button--booking" data-booking-open><button>Забронировать</button></li>
-										<li class="booking-booking__item-button booking-booking__item-button--more"><a href="booking.html">Подробнее</a><i class="icon-arrow-long"></i></li>
-									</ul>
+							</li>
+							<li class="price-price__item js-spoiler-item">
+								<i class="price-price__item-button icon-cross"></i>
+								<h2 class="price-price__item-title">Продажа рыбы</h2>
+								<div class="price-price__item-content js-spoiler-content">
+									<p class="price-price__item-text">Описание – краткая расшифровка часто задаваемого вопроса. Описывайте информацию, на которую не нашлось ответа на сайте или которую стоит уточнить. </p>
+									<div class="price-price__item-table">
+										<div class="price-price__item-table-wrapper">
+											<table class="price-price__item-table-table">
+												<thead class="price-price__item-table-head">
+													<tr class="price-price__item-table-row">
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Тип</th>
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Наименование</th>
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Цена в будни</th>
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Цена в выходные</th>
+													</tr>
+												</thead>
+												<tbody class="price-price__item-table-body">
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell">Готовка</td>
+														<td class="price-price__item-table-cell">Сетка</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Шампуры (10шт.)</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Казан</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">По запросу</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell">Мебель</td>
+														<td class="price-price__item-table-cell">Лежак</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Скамья</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Холодильник переносной</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">По запросу</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-						<div class="booking-booking__item">
-							<div class="booking-booking__item-wrapper">
-								<picture class="booking-booking__item-image-container">
-									<img class="booking-booking__item-image" src="assets/img/content/booking/example1.jpg" alt="#" />
-								</picture>
-								<div class="booking-booking__item-content">
-									<div class="booking-booking__item-price">от <span class="booking-booking__item-price--number">3800</span> &#8381;/день</div>
-									<h3 class="booking-booking__item-title">Боярские палаты</h3>
-									<ul class="booking-booking__item-tagbox">
-										<li class="booking-booking__item-tag" data-tag="Телевизор"><i class="booking-booking__item-tag--icon icon-screen-play"></i>Телевизор</li>
-										<li class="booking-booking__item-tag" data-tag="Wi-Fi"><i class="booking-booking__item-tag--icon icon-wifi"></i>Wi-Fi</li>
-										<li class="booking-booking__item-tag" data-tag="Мангал"><i class="booking-booking__item-tag--icon icon-table"></i>Мангал</li>
-										<li class="booking-booking__item-tag"><i class="booking-booking__item-tag--icon icon-toilet"></i>5 санузлов</li>
-									</ul>
-									<ul class="booking-booking__item-buttonbox">
-										<li class="booking-booking__item-button booking-booking__item-button--booking" data-booking-open><button>Забронировать</button></li>
-										<li class="booking-booking__item-button booking-booking__item-button--more"><a href="booking.html">Подробнее</a><i class="icon-arrow-long"></i></li>
-									</ul>
+							</li>
+							<li class="price-price__item js-spoiler-item">
+								<i class="price-price__item-button icon-cross"></i>
+								<h2 class="price-price__item-title">Горнолыжная трасса</h2>
+								<div class="price-price__item-content js-spoiler-content">
+									<p class="price-price__item-text">Описание – краткая расшифровка часто задаваемого вопроса. Описывайте информацию, на которую не нашлось ответа на сайте или которую стоит уточнить. </p>
+									<div class="price-price__item-table">
+										<div class="price-price__item-table-wrapper">
+											<table class="price-price__item-table-table">
+												<thead class="price-price__item-table-head">
+													<tr class="price-price__item-table-row">
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Тип</th>
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Наименование</th>
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Цена в будни</th>
+														<th class="price-price__item-table-cell price-price__item-table-cell--head">Цена в выходные</th>
+													</tr>
+												</thead>
+												<tbody class="price-price__item-table-body">
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell">Готовка</td>
+														<td class="price-price__item-table-cell">Сетка</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Шампуры (10шт.)</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Казан</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">По запросу</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell">Мебель</td>
+														<td class="price-price__item-table-cell">Лежак</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Скамья</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">300 ₽/сутки</td>
+													</tr>
+													<tr class="price-price__item-table-row">
+														<td class="price-price__item-table-cell"></td>
+														<td class="price-price__item-table-cell">Холодильник переносной</td>
+														<td class="price-price__item-table-cell">200 ₽/сутки</td>
+														<td class="price-price__item-table-cell">По запросу</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-						<div class="booking-booking__item">
-							<div class="booking-booking__item-wrapper">
-								<picture class="booking-booking__item-image-container">
-									<img class="booking-booking__item-image" src="assets/img/content/booking/example.jpg" alt="#" />
-								</picture>
-								<div class="booking-booking__item-content">
-									<div class="booking-booking__item-price">от <span class="booking-booking__item-price--number">1500</span> &#8381;/день</div>
-									<h3 class="booking-booking__item-title">Цветные домики</h3>
-									<ul class="booking-booking__item-tagbox">
-										<li class="booking-booking__item-tag" data-tag="Wi-Fi"><i class="booking-booking__item-tag--icon icon-wifi"></i>Wi-Fi</li>
-										<li class="booking-booking__item-tag" data-tag="Мангал"><i class="booking-booking__item-tag--icon icon-table"></i>Мангал</li>
-										<li class="booking-booking__item-tag" data-tag="Раздельный санузел"><i class="booking-booking__item-tag--icon icon-shower"></i>Раздельный санузел</li>
-										<li class="booking-booking__item-tag"><i class="booking-booking__item-tag--icon icon-toilet"></i>5 санузлов</li>
-									</ul>
-									<ul class="booking-booking__item-buttonbox">
-										<li class="booking-booking__item-button booking-booking__item-button--booking" data-booking-open><button>Забронировать</button></li>
-										<li class="booking-booking__item-button booking-booking__item-button--more"><a href="booking.html">Подробнее</a><i class="icon-arrow-long"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="booking-booking__item">
-							<div class="booking-booking__item-wrapper">
-								<picture class="booking-booking__item-image-container">
-									<img class="booking-booking__item-image" src="assets/img/content/booking/example2.jpg" alt="#" />
-								</picture>
-								<div class="booking-booking__item-content">
-									<div class="booking-booking__item-price">от <span class="booking-booking__item-price--number">10 950</span> &#8381;/день</div>
-									<h3 class="booking-booking__item-title">Хозяйский домик</h3>
-									<ul class="booking-booking__item-tagbox">
-										<li class="booking-booking__item-tag" data-tag="Панорамные окна"><i class="booking-booking__item-tag--icon icon-screen-play"></i>Панорамные окна</li>
-										<li class="booking-booking__item-tag" data-tag="Wi-Fi"><i class="booking-booking__item-tag--icon icon-wifi"></i>Wi-Fi</li>
-										<li class="booking-booking__item-tag" data-tag="Банкетный зал"><i class="booking-booking__item-tag--icon icon-table"></i>Банкетный зал</li>
-										<li class="booking-booking__item-tag" data-tag="Сауна"><i class="booking-booking__item-tag--icon icon-table"></i>Сауна</li>
-										<li class="booking-booking__item-tag"><i class="booking-booking__item-tag--icon icon-toilet"></i>5 санузлов</li>
-									</ul>
-									<ul class="booking-booking__item-buttonbox">
-										<li class="booking-booking__item-button booking-booking__item-button--booking" data-booking-open><button>Забронировать</button></li>
-										<li class="booking-booking__item-button booking-booking__item-button--more"><a href="booking.html">Подробнее</a><i class="icon-arrow-long"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="booking-booking__item">
-							<div class="booking-booking__item-wrapper">
-								<picture class="booking-booking__item-image-container">
-									<img class="booking-booking__item-image" src="assets/img/content/booking/example.jpg" alt="#" />
-								</picture>
-								<div class="booking-booking__item-content">
-									<div class="booking-booking__item-price">от <span class="booking-booking__item-price--number">1500</span> &#8381;/день</div>
-									<h3 class="booking-booking__item-title">Цветные домики</h3>
-									<ul class="booking-booking__item-tagbox">
-										<li class="booking-booking__item-tag" data-tag="Wi-Fi"><i class="booking-booking__item-tag--icon icon-wifi"></i>Wi-Fi</li>
-										<li class="booking-booking__item-tag" data-tag="Банкетный зал"><i class="booking-booking__item-tag--icon icon-table"></i>Банкетный зал</li>
-										<li class="booking-booking__item-tag" data-tag="Раздельный санузел"><i class="booking-booking__item-tag--icon icon-shower"></i>Раздельный санузел</li>
-										<li class="booking-booking__item-tag"><i class="booking-booking__item-tag--icon icon-toilet"></i>5 санузлов</li>
-									</ul>
-									<ul class="booking-booking__item-buttonbox">
-										<li class="booking-booking__item-button booking-booking__item-button--booking" data-booking-open><button>Забронировать</button></li>
-										<li class="booking-booking__item-button booking-booking__item-button--more"><a href="booking.html">Подробнее</a><i class="icon-arrow-long"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="booking-booking__item">
-							<div class="booking-booking__item-wrapper">
-								<picture class="booking-booking__item-image-container">
-									<img class="booking-booking__item-image" src="assets/img/content/booking/example1.jpg" alt="#" />
-								</picture>
-								<div class="booking-booking__item-content">
-									<div class="booking-booking__item-price">от <span class="booking-booking__item-price--number">3800</span> &#8381;/день</div>
-									<h3 class="booking-booking__item-title">Боярские палаты</h3>
-									<ul class="booking-booking__item-tagbox">
-										<li class="booking-booking__item-tag" data-tag="Бильярдный зал"><i class="booking-booking__item-tag--icon icon-billiard"></i>Бильярдный зал</li>
-										<li class="booking-booking__item-tag" data-tag="Телевизор"><i class="booking-booking__item-tag--icon icon-screen-play"></i>Телевизор</li>
-										<li class="booking-booking__item-tag" data-tag="Wi-Fi"><i class="booking-booking__item-tag--icon icon-wifi"></i>Wi-Fi</li>
-										<li class="booking-booking__item-tag" data-tag="Банкетный зал"><i class="booking-booking__item-tag--icon icon-table"></i>Банкетный зал</li>
-										<li class="booking-booking__item-tag"><i class="booking-booking__item-tag--icon icon-toilet"></i>5 санузлов</li>
-									</ul>
-									<ul class="booking-booking__item-buttonbox">
-										<li class="booking-booking__item-button booking-booking__item-button--booking" data-booking-open><button>Забронировать</button></li>
-										<li class="booking-booking__item-button booking-booking__item-button--more"><a href="booking.html">Подробнее</a><i class="icon-arrow-long"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</section>

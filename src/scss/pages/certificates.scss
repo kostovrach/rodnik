@@ -11,6 +11,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: rem(16);
+		max-width: 70ch;
 	}
 	&__title {
 		font-size: lineScale(48, 32, 480, 1440);
@@ -41,6 +42,7 @@
 				display: flex;
 				flex-direction: column;
 				gap: rem(48);
+				padding: rem(32);
 				& > h2 {
 					font-size: lineScale(32, 24, 480, 1440);
 					line-height: 1;
@@ -128,10 +130,24 @@
 		}
 		&__body {
 			& > li {
-				display: flex;
-				flex-direction: column-reverse;
+				display: initial;
 				border-radius: $border-radius;
+				& > div {
+					padding: 0;
+				}
+                & > picture {
+                    display: none;
+                }
 			}
 		}
 	}
 }
+// @media (max-height: 890px) {
+// 	.certificates-certificates {
+// 		&__body {
+// 			& > li > picture {
+// 				display: none;
+// 			}
+// 		}
+// 	}
+// }

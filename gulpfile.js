@@ -41,7 +41,9 @@ const paths = {
   scripts: {
     src: [
       'node_modules/swiper/swiper-bundle.js', 
-      'node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js', 
+      'node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js',
+      'node_modules/litepicker/dist/bundle.js',
+      'node_modules/dayjs/dayjs.min.js',
       'src/js/**/*.js', 
       '!src/js/main.min.js'
     ],
@@ -54,7 +56,8 @@ const paths = {
       '!src/components/**/*.html',
       '!src/pages/**/*.html',
       'src/css/style.min.css',
-      'src/js/main.min.js'
+      'src/js/main.min.js',
+      'src/js/**/*.json'
     ],
     assets: 'src/assets/**/*'
   }
