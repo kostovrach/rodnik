@@ -1,4 +1,6 @@
 (function () {
+	if (!document.querySelector('.about-feedback')) return;
+
 	let reviewsData = [];
 
 	async function loadReviewsData() {
