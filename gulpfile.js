@@ -44,6 +44,7 @@ const paths = {
       'node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js',
       'node_modules/litepicker/dist/bundle.js',
       'node_modules/dayjs/dayjs.min.js',
+      'src/js/libs/pannellum.js',
       'src/js/**/*.js', 
       '!src/js/main.min.js'
     ],

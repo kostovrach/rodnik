@@ -43,6 +43,15 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'Travels';
+	font-display: swap;
+	src: url("../assets/fonts/travels_variable.woff2") format("woff2"), 
+         url("../assets/fonts/travels_variable.woff") format("woff");
+	font-weight: 400 900;
+	font-style: normal;
+}
+
 html,
 body {
     font-family: 'Gotham', sans-serif;

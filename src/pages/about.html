@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		@@include('../components/head.html', { "title": "Rodnik - О нас" })
+	</head>
+	<body>
+		@@include('../components/header.html', { "type": "fill", "page": "about" })
+		<main id="start">
+			<section class="about-hero">
+				<div class="about-hero__container">
+					<div class="about-hero__titlebox">
+						<h1 class="about-hero__title">ЭКО <span class="about-hero__title--accent">RRODNIK</span> — ЛУЧШЕЕ МЕСТО ДЛЯ&nbsp;ОТДЫХА</h1>
+						<p class="about-hero__subtitle">У нас есть все, что нужно для отдыха: баня с бассейном, беседки с мангалами, детская площадка, футбольное поле, прокат велосипедов и другого спортивного снаряжения</p>
+					</div>
+					<div class="about-hero__video-container player">
+						<video class="about-hero__video player-video" muted loop playsinline autoplay>
+							<source src="assets/videos/main-background.mp4" type="video/mp4" />
+						</video>
+						<i class="about-hero__video-button player-button icon-pause" role="button"></i>
+					</div>
+				</div>
+			</section>
+			<section class="about-about">
+				<div class="about-about__container">
+					<div class="about-about__titlebox">
+						<h2 class="about-about__title">Про ЭКО Родник</h2>
+						<p class="about-about__desc">
+							Эко-отель «RRodnik» — это база <img class="about-about__desc--image" src="assets/img/emojis/emoji-fishing.png" alt="#Emoji" /> отдыха, созданная комфортного пребывания для вашего на природе. <img class="about-about__desc--image" src="assets/img/emojis/emoji-bamboo.png" alt="#Emoji" /> У&nbsp;нас доступны атмосферные локации с обилием зелени и света,
+							<img class="about-about__desc--image" src="assets/img/emojis/emoji-jacket.png" alt="#Emoji" /> уютные беседки, и места для рыбалки.
+						</p>
+					</div>
+					<ul class="about-about__metrics">
+						<li class="about-about__metrics-item">
+							<span class="about-about__metrics-name">Вместимость турбазы</span>
+							<span class="about-about__metrics-number">150+</span>
+							<span class="about-about__metrics-unit">Человек</span>
+						</li>
+						<li class="about-about__metrics-item">
+							<span class="about-about__metrics-name">Проводим каждый год</span>
+							<span class="about-about__metrics-number">~65</span>
+							<span class="about-about__metrics-unit">Мероприятий</span>
+						</li>
+						<li class="about-about__metrics-item">
+							<span class="about-about__metrics-name">От домиков до р. Волга</span>
+							<span class="about-about__metrics-number"> <50</span>
+							<span class="about-about__metrics-unit">Метров</span>
+						</li>
+						<li class="about-about__metrics-item">
+							<span class="about-about__metrics-name">За все время у нас отдыхало </span>
+							<span class="about-about__metrics-number">150K</span>
+							<span class="about-about__metrics-unit">Гостей</span>
+						</li>
+					</ul>
+					<div id="about-about-map" class="about-about__map"></div>
+					<div class="about-about__info">
+						<h3 class="about-about__info-title">ТЕРРИТОРИЯ ТУРБАЗЫ</h3>
+						<span class="about-about__info-accent">75 000 м&#178;</span>
+						<p class="about-about__info-subtitle">На нашей территории найдется всё что нужно для&nbsp;отдыха: пляж, места для рыбалки, кемпинг&nbsp;и&nbsp;т.д.</p>
+					</div>
+				</div>
+			</section>
+			<section class="about-gallery">
+				<div class="about-gallery__container">
+					<div class="about-gallery__slider swiper">
+						<div class="about-gallery__slider-wrapper swiper-wrapper">
+							<div class="about-gallery__slide swiper-slide">
+								<a class="about-gallery__slide-image-container" data-swiper-parallax="-600" data-swiper-parallax-duration="1000" data-fancybox="about-gallery" href="assets/img/content/advant/example1.jpg">
+									<img class="about-gallery__slide-image" src="assets/img/content/advant/example1.jpg" alt="#" />
+								</a>
+								<p class="about-gallery__slide-desc" data-swiper-parallax="1200" data-swiper-parallax-duration="900" data-swiper-parallax-opacity="0.2">Описание – основной смысл. Используйте 1-2 предложения в 1-3 строчки</p>
+							</div>
+							<div class="about-gallery__slide swiper-slide">
+								<a class="about-gallery__slide-image-container" data-swiper-parallax="-600" data-swiper-parallax-duration="1000" data-fancybox="about-gallery" href="assets/img/content/advant/example3.jpg">
+									<img class="about-gallery__slide-image" src="assets/img/content/advant/example3.jpg" alt="#" />
+								</a>
+								<p class="about-gallery__slide-desc" data-swiper-parallax="1200" data-swiper-parallax-duration="900" data-swiper-parallax-opacity="0.2">Описание – основной смысл. Используйте 1-2 предложения в 1-3 строчки</p>
+							</div>
+							<div class="about-gallery__slide swiper-slide">
+								<a class="about-gallery__slide-image-container" data-swiper-parallax="-600" data-swiper-parallax-duration="1000" data-fancybox="about-gallery" href="assets/img/content/advant/example.jpg">
+									<img class="about-gallery__slide-image" src="assets/img/content/advant/example.jpg" alt="#" />
+								</a>
+								<p class="about-gallery__slide-desc" data-swiper-parallax="1200" data-swiper-parallax-duration="900" data-swiper-parallax-opacity="0.2">Описание – основной смысл. Используйте 1-2 предложения в 1-3 строчки</p>
+							</div>
+							<div class="about-gallery__slide swiper-slide">
+								<a class="about-gallery__slide-image-container" data-swiper-parallax="-600" data-swiper-parallax-duration="1000" data-fancybox="about-gallery" href="assets/img/content/advant/example2.jpg">
+									<img class="about-gallery__slide-image" src="assets/img/content/advant/example2.jpg" alt="#" />
+								</a>
+								<p class="about-gallery__slide-desc" data-swiper-parallax="1200" data-swiper-parallax-duration="900" data-swiper-parallax-opacity="0.2">Описание – основной смысл. Используйте 1-2 предложения в 1-3 строчки</p>
+							</div>
+						</div>
+					</div>
+					<div class="about-gallery__footer">
+						<button class="about-gallery__button about-gallery__button--prev swiper-button-prev icon-arrow-long"></button>
+						<ul class="about-gallery__counter">
+							<li class="about-gallery__counter-current"></li>
+							<li class="about-gallery__counter-separator">/</li>
+							<li class="about-gallery__counter-total"></li>
+						</ul>
+						<button class="about-gallery__button about-gallery__button--next swiper-button-next icon-arrow-long"></button>
+					</div>
+				</div>
+			</section>
+			<section class="about-services">
+				<div class="about-services__container">
+					<div class="about-services__titlebox">
+						<div class="about-services__titlebox-wrapper">
+							<h2 class="about-services__title">Что включает проживание на турбазе?</h2>
+							<p class="about-services__subtitle">Мы предоставляем лучшие услуги по хорошим ценам. В&nbsp;данном разделе приведены цены на часто заказываемые услуги нашей базы отдыха КФХ «ALEKIANN».</p>
+							<p class="about-services__subtitle">Наличие и актуальные цены уточняйте у менеджера по&nbsp;телефона <a class="about-services__subtitle--link" href="tel:+7 (987) 654-32-10">+7 (987) 654-32-10</a></p>
+						</div>
+					</div>
+					<div class="about-services__body">
+						<ul class="about-services__list js-spoiler-container">
+							<li class="about-services__item js-spoiler-item">
+								<i class="about-services__item-button icon-cross"></i>
+								<h2 class="about-services__item-title">Питание</h2>
+								<div class="about-services__item-conent js-spoiler-content">
+									<p class="about-services__item-text">Описание – краткая расшифровка часто задаваемого вопроса. Описывайте информацию, на которую не нашлось ответа на сайте или которую стоит уточнить.</p>
+									<picture class="about-services__item-image-container">
+										<img class="about-services__item-image" src="assets/img/content/advant/example1.jpg" alt="#" />
+									</picture>
+								</div>
+							</li>
+							<li class="about-services__item js-spoiler-item">
+								<i class="about-services__item-button icon-cross"></i>
+								<h2 class="about-services__item-title">Бассейн под открытым небом</h2>
+								<div class="about-services__item-conent js-spoiler-content">
+									<p class="about-services__item-text">Описание – краткая расшифровка часто задаваемого вопроса. Описывайте информацию, на которую не нашлось ответа на сайте или которую стоит уточнить.</p>
+									<picture class="about-services__item-image-container">
+										<img class="about-services__item-image" src="assets/img/content/advant/example1.jpg" alt="#" />
+									</picture>
+								</div>
+							</li>
+							<li class="about-services__item js-spoiler-item">
+								<i class="about-services__item-button icon-cross"></i>
+								<h2 class="about-services__item-title">Бесплатное участие в мероприятиях*</h2>
+								<div class="about-services__item-conent js-spoiler-content">
+									<p class="about-services__item-text">Описание – краткая расшифровка часто задаваемого вопроса. Описывайте информацию, на которую не нашлось ответа на сайте или которую стоит уточнить.</p>
+									<picture class="about-services__item-image-container">
+										<img class="about-services__item-image" src="assets/img/content/advant/example1.jpg" alt="#" />
+									</picture>
+								</div>
+							</li>
+							<li class="about-services__item js-spoiler-item">
+								<i class="about-services__item-button icon-cross"></i>
+								<h2 class="about-services__item-title">Медицинская помощь в экстренных случаях</h2>
+								<div class="about-services__item-conent js-spoiler-content">
+									<p class="about-services__item-text">Описание – краткая расшифровка часто задаваемого вопроса. Описывайте информацию, на которую не нашлось ответа на сайте или которую стоит уточнить.</p>
+									<picture class="about-services__item-image-container">
+										<img class="about-services__item-image" src="assets/img/content/advant/example1.jpg" alt="#" />
+									</picture>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="about-trip">
+				<div class="about-trip__container">
+					<div class="about-trip__titebox">
+						<h2 class="about-trip__title">3D-тур</h2>
+					</div>
+					<div id="about-panorama" class="about-trip__panorama"></div>
+				</div>
+			</section>
+			<section class="about-feedback">
+				<div class="about-feedback__container">
+					<div class="about-feedback__titlebox">
+						<h2 class="about-feedback__title">Отзывы</h2>
+                        <button class="about-feedback__button" data-feedback-open>Оставить отзыв<i class="about-feedback__button--icon icon-arrow-long"></i></button>
+					</div>
+					<div class="about-feedback__body">
+						<div class="about-feedback__slider-container">
+							<div class="about-feedback__slider swiper" id="about-slider1">
+								<div class="about-feedback__slider-wrapper swiper-wrapper" id="about-wrapper1"></div>
+							</div>
+						</div>
+
+						<div class="about-feedback__slider-container">
+							<div class="about-feedback__slider swiper" id="about-slider2">
+								<div class="about-feedback__slider-wrapper swiper-wrapper" id="about-wrapper2"></div>
+							</div>
+						</div>
+
+						<div class="about-feedback__slider-container">
+							<div class="about-feedback__slider swiper" id="about-slider3">
+								<div class="about-feedback__slider-wrapper swiper-wrapper" id="about-wrapper3"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			@@include("../components/question-block.html", {
+				"title": "Остались вопросы?",
+				"desc": "Менеджеры компании с радостью ответят на ваши вопросы и&nbsp;подготовят индивидуальное предложение",
+				"button": "Задать вопрос",
+				"button-type": "data-question-open"
+			})
+		</main>
+		@@include("../components/footer.html")
+	</body>
+</html>

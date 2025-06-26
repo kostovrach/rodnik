@@ -2,7 +2,6 @@
 	let events = {};
 	let picker = null;
 
-	// Загружаем данные о событиях
 	fetch("./js/schedule.json")
 		.then((response) => response.json())
 		.then((data) => {
