@@ -652,7 +652,7 @@
 				background-color: transparent;
 			}
 			.index-about__item-text {
-				font-size: rem(18);
+				font-size: lineScale(16,12,480,1440);
 				font-weight: $fw-medium;
 				color: inherit;
 			}

@@ -296,7 +296,7 @@
 		gap: rem(32);
 	}
 	&__title {
-		font-size: lineScale(48,24,480,1440);
+		font-size: lineScale(48, 24, 480, 1440);
 		line-height: 1;
 		font-weight: $fw-bold;
 	}
@@ -574,10 +574,10 @@
 @media (max-width: 1240px) {
 	.events-conditions {
 		&__item {
-			&:nth-child(6n+4) {
+			&:nth-child(6n + 4) {
 				grid-column: span 3;
 			}
-			&:nth-child(6n+5) {
+			&:nth-child(6n + 5) {
 				grid-column: span 2;
 			}
 		}
@@ -614,6 +614,9 @@
 		&__container {
 			display: flex;
 			flex-direction: column-reverse;
+		}
+		.day-item {
+			pointer-events: none;
 		}
 	}
 }

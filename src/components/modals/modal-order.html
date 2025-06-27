@@ -1,0 +1,49 @@
+<dialog id="modal-order" class="modal-form">
+	<div class="modal-form__container">
+		<div class="modal-form__button-close icon-cross"></div>
+		<div class="modal-form__titlebox">
+			<p class="modal-form__title">Оформление заказа</p>
+			<p class="modal-form__subtitle">Заказ будет подтверждён по СМС. Ссылка на скачивание сертификата придет на указанную почту и в смс. Дополнительные вопросы вы можете задать в комментариях к заказу.</p>
+			<p class="modal-form__subtitle">Для оплаты доступны платежные системы МИР, VISA, MasterCard</p>
+            <ul class="modal-form__payment-info">
+                <li class="modal-form__payment-info-item modal-form__payment-info-item--mir icon-mir"></li>
+                <li class="modal-form__payment-info-item modal-form__payment-info-item--visa icon-visa"></li>
+                <li class="modal-form__payment-info-item modal-form__payment-info-item--mastercard icon-mastercard"></li>
+            </ul>
+		</div>
+		<form class="modal-form__form modal-form__form--booking" action="" method="post">
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-booking-name">Имя</label>
+				<input id="modal-booking-name" class="modal-form__form-input" type="text" placeholder="Ваше имя" required />
+			</div>
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-booking-second-name">Фамилия</label>
+				<input id="modal-booking-second-name" class="modal-form__form-input" type="text" placeholder="Ваша Фамилия" required />
+			</div>
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-booking-tel">Телефон</label>
+				<input id="modal-booking-tel" class="modal-form__form-input" data-input-tel type="tel" required />
+			</div>
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-booking-mail">E-mail</label>
+				<input id="modal-booking-mail" class="modal-form__form-input" type="email" placeholder="E-mail" required />
+			</div>
+			<ul class="modal-form__form-services"></ul>
+			<div class="modal-form__form-services-select select" tabindex="0" role="combobox">
+				<input class="modal-form__form-services-input select__input" type="text" placeholder="Дополнительные услуги" readonly tabindex="-1" />
+				<i class="modal-form__form-services-icon icon-check-mark"></i>
+				<label for="booking-selected-services" class="modal-form__form-services-label">Выбор сертификата</label>
+				<ul class="modal-form__form-services-dropdown select__dropdown">
+					<li class="modal-form__form-services-dropdown-item select__item readonly" role="option" tabindex="0" data-value="fishing" data-label="1 день рыбалки с карпами" data-price="500">1 день рыбалки с карпами</li>
+					<li class="modal-form__form-services-dropdown-item select__item readonly" role="option" tabindex="0" data-value="bathhouse" data-label="2 часа бани" data-price="1500">2 часа бани</li>
+					<li class="modal-form__form-services-dropdown-item select__item readonly" role="option" tabindex="0" data-value="fishing2" data-label="1 день рыбалки с форелью" data-price="500">1 день рыбалки с форелью</li>
+					<li class="modal-form__form-services-dropdown-item select__item readonly" role="option" tabindex="0" data-value="transfer" data-label="Трансфер до отеля" data-price="2000">Трансфер до отеля</li>
+				</ul>
+				<input id="booking-selected-services" type="hidden" name="booking-services" value="" />
+			</div>
+            <button class="modal-form__form-button" type="submit">Оплатить</button>
+			<div class="modal-form__form-privacy">Оформляя заказ, вы соглашаетесь<button class="modal-form__form-privacy-button" data-privacy-open>c политикой конфиденциальности</button></div>
+			
+		</form>
+	</div>
+</dialog>

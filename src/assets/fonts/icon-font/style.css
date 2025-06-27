@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?999x01');
-  src:  url('fonts/icomoon.eot?999x01#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?999x01') format('truetype'),
-    url('fonts/icomoon.woff?999x01') format('woff'),
-    url('fonts/icomoon.svg?999x01#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?71tk5x');
+  src:  url('fonts/icomoon.eot?71tk5x#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?71tk5x') format('truetype'),
+    url('fonts/icomoon.woff?71tk5x') format('woff'),
+    url('fonts/icomoon.svg?71tk5x#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,41 +25,50 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-docs:before {
-  content: "\e91d";
-}
-.icon-web:before {
+.icon-mail:before {
   content: "\e91c";
 }
-.icon-pause:before {
-  content: "\e91b";
-}
-.icon-rate-star:before {
-  content: "\e91a";
-}
-.icon-cross:before {
-  content: "\e919";
-}
-.icon-telegram:before {
-  content: "\e916";
-}
-.icon-instagram:before {
-  content: "\e917";
-}
-.icon-vk:before {
-  content: "\e918";
-}
-.icon-mail:before {
-  content: "\e904";
-}
 .icon-clock:before {
-  content: "\e907";
+  content: "\e91d";
 }
 .icon-tel:before {
-  content: "\e914";
+  content: "\e91e";
 }
 .icon-map-mark:before {
+  content: "\e91f";
+}
+.icon-telegram:before {
+  content: "\e919";
+}
+.icon-instagram:before {
+  content: "\e91a";
+}
+.icon-vk:before {
+  content: "\e91b";
+}
+.icon-docs:before {
+  content: "\e906";
+}
+.icon-play:before {
+  content: "\e918";
+}
+.icon-pause:before {
+  content: "\e917";
+}
+.icon-rate-star:before {
+  content: "\e916";
+}
+.icon-cross:before {
   content: "\e915";
+}
+.icon-visa:before {
+  content: "\e907";
+}
+.icon-mastercard:before {
+  content: "\e914";
+}
+.icon-mir:before {
+  content: "\e904";
 }
 .icon-check-mark:before {
   content: "\e903";
@@ -72,9 +81,6 @@
 }
 .icon-pine:before {
   content: "\e905";
-}
-.icon-play:before {
-  content: "\e906";
 }
 .icon-star:before {
   content: "\e908";

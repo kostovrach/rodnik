@@ -61,6 +61,21 @@
 		font-size: lineScale(16, 14, 480, 1440);
 		font-weight: $fw-medium;
 	}
+	&__payment-info {
+		display: flex;
+		align-items: center;
+		gap: rem(16);
+		&-item {
+			width: fit-content;
+			font-size: rem(64);
+			&--mir {
+				font-size: rem(24);
+			}
+			&--visa {
+				font-size: rem(72);
+			}
+		}
+	}
 	&__form {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -69,6 +84,7 @@
 			gap: rem(32);
 		}
 		&-inputbox {
+			height: fit-content;
 			position: relative;
 			display: flex;
 			flex-direction: column;
@@ -84,6 +100,9 @@
 				grid-column: span 2;
 			}
 			&--full-name {
+				grid-column: span 2;
+			}
+			&--registration {
 				grid-column: span 2;
 			}
 			&--date {
