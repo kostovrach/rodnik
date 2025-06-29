@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		@@include('../components/head.html', { "title": "Rodnik - О нас" })
-	</head>
+	@@include('../components/head.html', { "title": "Rodnik - О нас" })
 	<body>
 		@@include('../components/header.html', { "type": "fill", "page": "about" })
 		<main id="start">
@@ -167,7 +165,7 @@
 				<div class="about-feedback__container">
 					<div class="about-feedback__titlebox">
 						<h2 class="about-feedback__title">Отзывы</h2>
-                        <button class="about-feedback__button" data-feedback-open>Оставить отзыв<i class="about-feedback__button--icon icon-arrow-long"></i></button>
+						<button class="about-feedback__button" data-feedback-open>Оставить отзыв<i class="about-feedback__button--icon icon-arrow-long"></i></button>
 					</div>
 					<div class="about-feedback__body">
 						<div class="about-feedback__slider-container">
@@ -190,12 +188,7 @@
 					</div>
 				</div>
 			</section>
-			@@include("../components/question-block.html", {
-				"title": "Остались вопросы?",
-				"desc": "Менеджеры компании с радостью ответят на ваши вопросы и&nbsp;подготовят индивидуальное предложение",
-				"button": "Задать вопрос",
-				"button-type": "data-question-open"
-			})
+			@@include("../components/question-block.html", { "title": "Остались вопросы?", "desc": "Менеджеры компании с радостью ответят на ваши вопросы и&nbsp;подготовят индивидуальное предложение", "button": "Задать вопрос", "button-type": "data-question-open" })
 		</main>
 		@@include("../components/footer.html")
 	</body>

@@ -65,4 +65,6 @@
 	initModal("#modal-booking", "data-booking-open", ".modal-form__button-close");
 	initModal("#modal-question", "data-question-open", ".modal-form__button-close");
 	initModal("#modal-location", "data-location-open", ".modal-form__button-close");
+	initModal("#modal-registration", "data-registration-open", ".modal-form__button-close");
+	initModal("#modal-order", "data-order-open", ".modal-form__button-close");
 })();
