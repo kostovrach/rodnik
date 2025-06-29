@@ -303,6 +303,7 @@
 	.modal-form {
 		min-height: 100lvh;
 		border-radius: 0;
+		padding: rem(64) 0;
 		&__button-close {
 			top: 4rem;
 		}
