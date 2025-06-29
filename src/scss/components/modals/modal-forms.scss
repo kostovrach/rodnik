@@ -296,11 +296,14 @@
 		&__container {
 			display: flex;
 			flex-direction: column;
+			pointer-events: none;
 		}
 	}
 }
 @media (max-width: 768px) {
 	.modal-form {
+		min-height: 100lvh;
+		border-radius: 0;
 		&__form {
 			display: flex;
 			flex-direction: column;

@@ -14,5 +14,8 @@
 		Carousel: {
 			infinite: false,
 		},
+		Video: {
+			autoplay: false,
+		},
 	});
 })();

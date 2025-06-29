@@ -2,36 +2,80 @@
   const containers = document.querySelectorAll(".js-spoiler-container");
   if (!containers.length) return;
 
+  const spoilerData = new WeakMap();
+
   containers.forEach((container) => {
     const items = container.querySelectorAll(".js-spoiler-item");
-    items.forEach((item) => {
+    items.forEach(item => {
       const content = item.querySelector(".js-spoiler-content");
-      item.addEventListener("click", function () {
-        const isActive = this.classList.toggle("active");
+      if (content) {
+        spoilerData.set(item, { content, isAnimating: false });
+      }
+    });
 
-        if (!content) return;
+    container.addEventListener("click", handleSpoilerClick);
+  });
 
-        if (isActive) {
+  function handleSpoilerClick(e) {
+    const item = e.target.closest(".js-spoiler-item");
+    const data = spoilerData.get(item);
+    
+    if (!data || data.isAnimating) return;
 
-          content.style.height = content.scrollHeight + "px";
-          content.style.opacity = "1";
+    e.preventDefault();
+    
+    const { content } = data;
+    const isActive = item.classList.contains("active");
+    
+    data.isAnimating = true;
+    
+    if (isActive) {
+      collapseWithAnimation(item, content, data);
+    } else {
+      expandWithAnimation(item, content, data);
+    }
+  }
 
-          content.addEventListener("transitionend", function handler(e) {
-            if (e.propertyName === "height") {
-              content.style.height = "auto";
-              content.removeEventListener("transitionend", handler);
-            }
-          });
-        } else {
+  function expandWithAnimation(item, content, data) {
+    item.classList.add("active");
+    
+    const startHeight = content.offsetHeight;
+    const endHeight = content.scrollHeight;
+    
+    const animation = content.animate([
+      { height: startHeight + "px", opacity: "0" },
+      { height: endHeight + "px", opacity: "1" }
+    ], {
+      duration: 300,
+      easing: "linear",
+      fill: "forwards"
+    });
 
-          content.style.height = content.scrollHeight + "px";
+    animation.addEventListener("finish", () => {
+      content.style.height = "auto";
+      data.isAnimating = false;
+    });
+  }
 
-          requestAnimationFrame(() => {
-            content.style.height = "0";
-            content.style.opacity = "0";
-          });
-        }
+  function collapseWithAnimation(item, content, data) {
+    const startHeight = content.offsetHeight;
+    content.style.height = startHeight + "px";
+    
+    requestAnimationFrame(() => {
+      const animation = content.animate([
+        { height: startHeight + "px", opacity: "1" },
+        { height: "0px", opacity: "0" }
+      ], {
+        duration: 300,
+        easing: "linear",
+        fill: "forwards"
+      });
+
+      animation.addEventListener("finish", () => {
+        item.classList.remove("active");
+        content.style.height = "";
+        data.isAnimating = false;
       });
     });
-  });
+  }
 })();

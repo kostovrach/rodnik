@@ -24,6 +24,7 @@
 	});
 
 	Fancybox.bind('[data-fancybox="room-gallery"]', {
+		Toolbar: false,
 		Video: {
 			autoplay: false,
 		},
