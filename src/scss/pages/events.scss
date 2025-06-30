@@ -597,6 +597,9 @@
 			display: flex;
 			flex-direction: column;
 		}
+		&__slide {
+			max-width: rem(320);
+		}
 	}
 	.events-conditions {
 		&__item {
@@ -617,6 +620,11 @@
 		}
 		.day-item {
 			pointer-events: none;
+		}
+	}
+	.events-events {
+		&__slide {
+			max-width: rem(320);
 		}
 	}
 }

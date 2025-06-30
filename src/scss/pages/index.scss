@@ -1170,6 +1170,16 @@
 	}
 }
 @media (max-width: 768px) {
+	.index-stocks {
+		&__slide {
+			max-width: rem(320);
+		}
+	}
+	.index-booking {
+		&__slide {
+			max-width: rem(320);
+		}
+	}
 	.index-advant {
 		&__desc--image {
 			display: none;
