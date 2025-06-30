@@ -198,8 +198,8 @@
 </dialog>
  
 <dialog id="modal-booking" class="modal-form">
+	<div class="modal-form__button-close icon-cross"></div>
 	<div class="modal-form__container">
-		<div class="modal-form__button-close icon-cross"></div>
 		<div class="modal-form__titlebox">
 			<p class="modal-form__title">Бронирование</p>
 			<p class="modal-form__subtitle">Менеджеры компании с радостью ответят на ваши вопросы и&nbsp;произведут расчет стоимости услуг и подготовят индивидуальное коммерческое предложение.</p>
@@ -261,9 +261,8 @@
 				<label class="modal-form__form-label" for="modal-booking-comment">Комментарий</label>
 				<textarea id="modal-booking-comment" class="modal-form__form-input modal-form__form-input--custom" placeholder="Дополнительная информация (опционально)"></textarea>
 			</div>
-            <button class="modal-form__form-button" type="submit">Забронировать</button>
+			<button class="modal-form__form-button" type="submit">Забронировать</button>
 			<div class="modal-form__form-privacy">Отправляя сообщение, вы соглашаетесь<button class="modal-form__form-privacy-button" data-privacy-open>c политикой конфиденциальности</button></div>
-			
 		</form>
 	</div>
 </dialog>
@@ -295,8 +294,8 @@
 </dialog>
 
 <dialog id="modal-location" class="modal-form">
-	<div class="modal-form__container">
 		<div class="modal-form__button-close icon-cross"></div>
+	<div class="modal-form__container">
 		<div class="modal-form__titlebox">
 			<p class="modal-form__title">Аренда площадки</p>
 			<p class="modal-form__subtitle">Наша цель&nbsp;— предложить посетителям беспрецедентный клиентский опыт и&nbsp;самые яркие впечатления.</p>
@@ -408,17 +407,17 @@
 </dialog>
 
 <dialog id="modal-order" class="modal-form">
+	<div class="modal-form__button-close icon-cross"></div>
 	<div class="modal-form__container">
-		<div class="modal-form__button-close icon-cross"></div>
 		<div class="modal-form__titlebox">
 			<p class="modal-form__title">Оформление заказа</p>
 			<p class="modal-form__subtitle">Заказ будет подтверждён по СМС. Ссылка на скачивание сертификата придет на указанную почту и в смс. Дополнительные вопросы вы можете задать в комментариях к заказу.</p>
 			<p class="modal-form__subtitle">Для оплаты доступны платежные системы МИР, VISA, MasterCard</p>
-            <ul class="modal-form__payment-info">
-                <li class="modal-form__payment-info-item modal-form__payment-info-item--mir icon-mir"></li>
-                <li class="modal-form__payment-info-item modal-form__payment-info-item--visa icon-visa"></li>
-                <li class="modal-form__payment-info-item modal-form__payment-info-item--mastercard icon-mastercard"></li>
-            </ul>
+			<ul class="modal-form__payment-info">
+				<li class="modal-form__payment-info-item modal-form__payment-info-item--mir icon-mir"></li>
+				<li class="modal-form__payment-info-item modal-form__payment-info-item--visa icon-visa"></li>
+				<li class="modal-form__payment-info-item modal-form__payment-info-item--mastercard icon-mastercard"></li>
+			</ul>
 		</div>
 		<form class="modal-form__form modal-form__form--booking" action="" method="post">
 			<div class="modal-form__form-inputbox">
@@ -450,9 +449,8 @@
 				</ul>
 				<input id="booking-selected-services" type="hidden" name="booking-services" value="" />
 			</div>
-            <button class="modal-form__form-button" type="submit">Оплатить</button>
+			<button class="modal-form__form-button" type="submit">Оплатить</button>
 			<div class="modal-form__form-privacy">Оформляя заказ, вы соглашаетесь<button class="modal-form__form-privacy-button" data-privacy-open>c политикой конфиденциальности</button></div>
-			
 		</form>
 	</div>
 </dialog>
