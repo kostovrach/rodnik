@@ -54,14 +54,16 @@ const paths = {
     dest: 'build/',
     copy: [
       'src/**/*.html',
-      'src/favicon.ico',
       '!src/components/**/*.html',
       '!src/pages/**/*.html',
       'src/css/style.min.css',
       'src/js/main.min.js',
       'src/js/**/*.json'
     ],
-    assets: 'src/assets/**/*'
+    assets: [
+      'src/assets/**/*',
+      'src/*.ico',
+    ]
   }
 };
 
