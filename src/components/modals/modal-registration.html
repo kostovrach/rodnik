@@ -1,15 +1,15 @@
-<dialog id="modal-registration" class="modal-form">
+<dialog id="modal-registration" class="modal-form hide-scrollbar">
 	<div class="modal-form__container">
 		<div class="modal-form__button-close icon-cross"></div>
 		<div class="modal-form__titlebox">
 			<p class="modal-form__title">Регистрация участника</p>
 			<p class="modal-form__subtitle">Запись на мероприятие «Баня архетипа императрицы» предусматривает предоплату 25% от стоимости входного билета</p>
 			<p class="modal-form__subtitle">Для оплаты доступны платежные системы МИР, VISA, MasterCard</p>
-            <ul class="modal-form__payment-info">
-                <li class="modal-form__payment-info-item modal-form__payment-info-item--mir icon-mir"></li>
-                <li class="modal-form__payment-info-item modal-form__payment-info-item--visa icon-visa"></li>
-                <li class="modal-form__payment-info-item modal-form__payment-info-item--mastercard icon-mastercard"></li>
-            </ul>
+			<ul class="modal-form__payment-info">
+				<li class="modal-form__payment-info-item modal-form__payment-info-item--mir icon-mir"></li>
+				<li class="modal-form__payment-info-item modal-form__payment-info-item--visa icon-visa"></li>
+				<li class="modal-form__payment-info-item modal-form__payment-info-item--mastercard icon-mastercard"></li>
+			</ul>
 		</div>
 		<form class="modal-form__form modal-form__form--booking" action="" method="post">
 			<div class="modal-form__form-inputbox">
@@ -30,9 +30,18 @@
 					<li class="modal-form__form-input--select-preson-item select__item" role="option" tabindex="0">3 человека</li>
 				</ul>
 			</div>
-            <button class="modal-form__form-button" type="submit">Оплатить 250 &#8381;</button>
-			<div class="modal-form__form-privacy">Отправляя сообщение, вы соглашаетесь<button class="modal-form__form-privacy-button" data-privacy-open>c политикой конфиденциальности</button></div>
+			<button class="modal-form__form-button" type="submit">Оплатить 250 &#8381;</button>
 
+			<div class="modal-form__form-agreement">
+				<div class="_checkbox">
+					<input id="modal-registration-agreement" type="checkbox" checked />
+					<label for="modal-registration-agreement">Согласен c <button data-privacy-open>политикой конфиденциальности</button></label>
+				</div>
+				<div class="_checkbox">
+					<input id="modal-registration-mailing" type="checkbox" checked />
+					<label for="modal-registration-mailing">Согласен на получение <button data-privacy-open>рекламной рассылки</button></label>
+				</div>
+			</div>
 		</form>
 	</div>
 </dialog>

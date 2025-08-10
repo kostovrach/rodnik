@@ -53,6 +53,7 @@
 }
 @mixin button-main($background-color: $c-FFFFFF, $background-color-hover: $c-12C146, $font-size: rem(14), $padding: rem(8) rem(48), $color: $c-12C146, $color-hover: $c-FFFFFF, $border-color: $c-12C146, $width: fit-content, $before-bg: $c-12C146) {
 	cursor: pointer;
+	box-sizing: border-box;
 	position: relative;
 	width: $width;
 	font-size: $font-size;

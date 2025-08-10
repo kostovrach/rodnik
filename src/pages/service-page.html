@@ -180,7 +180,17 @@
 							<input id="booking-selected-services" type="hidden" name="booking-services" value="" />
 						</div>
 						<button class="modal-form__form-button" type="submit">Забронировать</button>
-						<div class="modal-form__form-privacy">Отправляя сообщение, вы соглашаетесь<button class="modal-form__form-privacy-button" data-privacy-open>c политикой конфиденциальности</button></div>
+
+						<div class="modal-form__form-agreement">
+							<div class="_checkbox">
+								<input id="service-agreement" type="checkbox" checked />
+								<label for="service-agreement">Согласен c <button data-privacy-open>политикой конфиденциальности</button></label>
+							</div>
+							<div class="_checkbox">
+								<input id="service-mailing" type="checkbox" checked />
+								<label for="service-mailing">Согласен на получение <button data-privacy-open>рекламной рассылки</button></label>
+							</div>
+						</div>
 					</form>
 				</div>
 			</section>

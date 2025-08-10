@@ -160,7 +160,7 @@
 	</div>
 </dialog>
  
-<dialog id="modal-feedback" class="modal-form">
+<dialog id="modal-feedback" class="modal-form hide-scrollbar">
 	<button class="modal-form__button-close icon-cross"></button>
 	<div class="modal-form__container">
 		<div class="modal-form__titlebox">
@@ -192,12 +192,22 @@
 				</div>
 			</div>
 			<button class="modal-form__form-button" type="submit">Отправить отзыв</button>
-			<div class="modal-form__form-privacy">Отправляя сообщение, вы соглашаетесь<button class="modal-form__form-privacy-button" data-privacy-open>c политикой конфиденциальности</button></div>
+
+			<div class="modal-form__form-agreement">
+				<div class="_checkbox">
+					<input id="modal-feedback-agreement" type="checkbox" checked />
+					<label for="modal-feedback-agreement">Согласен c <button data-privacy-open>политикой конфиденциальности</button></label>
+				</div>
+				<div class="_checkbox">
+					<input id="modal-feedback-mailing" type="checkbox" checked />
+					<label for="modal-feedback-mailing">Согласен на получение <button data-privacy-open>рекламной рассылки</button></label>
+				</div>
+			</div>
 		</form>
 	</div>
 </dialog>
  
-<dialog id="modal-booking" class="modal-form">
+<dialog id="modal-booking" class="modal-form hide-scrollbar">
 	<div class="modal-form__button-close icon-cross"></div>
 	<div class="modal-form__container">
 		<div class="modal-form__titlebox">
@@ -262,12 +272,22 @@
 				<textarea id="modal-booking-comment" class="modal-form__form-input modal-form__form-input--custom" placeholder="Дополнительная информация (опционально)"></textarea>
 			</div>
 			<button class="modal-form__form-button" type="submit">Забронировать</button>
-			<div class="modal-form__form-privacy">Отправляя сообщение, вы соглашаетесь<button class="modal-form__form-privacy-button" data-privacy-open>c политикой конфиденциальности</button></div>
+
+			<div class="modal-form__form-agreement">
+				<div class="_checkbox">
+					<input id="modal-booking-agreement" type="checkbox" checked />
+					<label for="modal-booking-agreement">Согласен c <button data-privacy-open>политикой конфиденциальности</button></label>
+				</div>
+				<div class="_checkbox">
+					<input id="modal-booking-mailing" type="checkbox" checked />
+					<label for="modal-booking-mailing">Согласен на получение <button data-privacy-open>рекламной рассылки</button></label>
+				</div>
+			</div>
 		</form>
 	</div>
 </dialog>
  
-<dialog id="modal-question" class="modal-form">
+<dialog id="modal-question" class="modal-form hide-scrollbar">
 	<button class="modal-form__button-close icon-cross"></button>
 	<div class="modal-form__container">
 		<div class="modal-form__titlebox">
@@ -288,13 +308,22 @@
 				<textarea id="modal-question-comment" class="modal-form__form-input modal-form__form-input--custom" placeholder="Опишите какие трудности у вас возникли" required></textarea>
 			</div>
 			<button class="modal-form__form-button" type="submit">Отправить вопрос</button>
-			<div class="modal-form__form-privacy">Отправляя сообщение, вы соглашаетесь<button class="modal-form__form-privacy-button" data-privacy-open>c политикой конфиденциальности</button></div>
+			<div class="modal-form__form-agreement">
+				<div class="_checkbox">
+					<input id="modal-question-agreement" type="checkbox" checked />
+					<label for="modal-question-agreement">Согласен c <button data-privacy-open>политикой конфиденциальности</button></label>
+				</div>
+				<div class="_checkbox">
+					<input id="modal-question-mailing" type="checkbox" checked />
+					<label for="modal-question-mailing">Согласен на получение <button data-privacy-open>рекламной рассылки</button></label>
+				</div>
+			</div>
 		</form>
 	</div>
 </dialog>
 
-<dialog id="modal-location" class="modal-form">
-		<div class="modal-form__button-close icon-cross"></div>
+<dialog id="modal-location" class="modal-form hide-scrollbar">
+	<div class="modal-form__button-close icon-cross"></div>
 	<div class="modal-form__container">
 		<div class="modal-form__titlebox">
 			<p class="modal-form__title">Аренда площадки</p>
@@ -362,23 +391,33 @@
 				<textarea id="modal-location-comment" class="modal-form__form-input modal-form__form-input--custom" placeholder="Дополнительная информация (опционально)"></textarea>
 			</div>
 			<button class="modal-form__form-button" type="submit">Забронировать</button>
-			<div class="modal-form__form-privacy">Отправляя сообщение, вы соглашаетесь<button class="modal-form__form-privacy-button" data-privacy-open>c политикой конфиденциальности</button></div>
+
+			<div class="modal-form__form-agreement">
+				<div class="_checkbox">
+					<input id="modal-location-agreement" type="checkbox" checked />
+					<label for="modal-location-agreement">Согласен c <button data-privacy-open>политикой конфиденциальности</button></label>
+				</div>
+				<div class="_checkbox">
+					<input id="modal-location-mailing" type="checkbox" checked />
+					<label for="modal-location-mailing">Согласен на получение <button data-privacy-open>рекламной рассылки</button></label>
+				</div>
+			</div>
 		</form>
 	</div>
 </dialog>
 
-<dialog id="modal-registration" class="modal-form">
+<dialog id="modal-registration" class="modal-form hide-scrollbar">
 	<div class="modal-form__container">
 		<div class="modal-form__button-close icon-cross"></div>
 		<div class="modal-form__titlebox">
 			<p class="modal-form__title">Регистрация участника</p>
 			<p class="modal-form__subtitle">Запись на мероприятие «Баня архетипа императрицы» предусматривает предоплату 25% от стоимости входного билета</p>
 			<p class="modal-form__subtitle">Для оплаты доступны платежные системы МИР, VISA, MasterCard</p>
-            <ul class="modal-form__payment-info">
-                <li class="modal-form__payment-info-item modal-form__payment-info-item--mir icon-mir"></li>
-                <li class="modal-form__payment-info-item modal-form__payment-info-item--visa icon-visa"></li>
-                <li class="modal-form__payment-info-item modal-form__payment-info-item--mastercard icon-mastercard"></li>
-            </ul>
+			<ul class="modal-form__payment-info">
+				<li class="modal-form__payment-info-item modal-form__payment-info-item--mir icon-mir"></li>
+				<li class="modal-form__payment-info-item modal-form__payment-info-item--visa icon-visa"></li>
+				<li class="modal-form__payment-info-item modal-form__payment-info-item--mastercard icon-mastercard"></li>
+			</ul>
 		</div>
 		<form class="modal-form__form modal-form__form--booking" action="" method="post">
 			<div class="modal-form__form-inputbox">
@@ -399,14 +438,23 @@
 					<li class="modal-form__form-input--select-preson-item select__item" role="option" tabindex="0">3 человека</li>
 				</ul>
 			</div>
-            <button class="modal-form__form-button" type="submit">Оплатить 250 &#8381;</button>
-			<div class="modal-form__form-privacy">Отправляя сообщение, вы соглашаетесь<button class="modal-form__form-privacy-button" data-privacy-open>c политикой конфиденциальности</button></div>
+			<button class="modal-form__form-button" type="submit">Оплатить 250 &#8381;</button>
 
+			<div class="modal-form__form-agreement">
+				<div class="_checkbox">
+					<input id="modal-registration-agreement" type="checkbox" checked />
+					<label for="modal-registration-agreement">Согласен c <button data-privacy-open>политикой конфиденциальности</button></label>
+				</div>
+				<div class="_checkbox">
+					<input id="modal-registration-mailing" type="checkbox" checked />
+					<label for="modal-registration-mailing">Согласен на получение <button data-privacy-open>рекламной рассылки</button></label>
+				</div>
+			</div>
 		</form>
 	</div>
 </dialog>
 
-<dialog id="modal-order" class="modal-form">
+<dialog id="modal-order" class="modal-form hide-scrollbar">
 	<div class="modal-form__button-close icon-cross"></div>
 	<div class="modal-form__container">
 		<div class="modal-form__titlebox">
@@ -450,7 +498,17 @@
 				<input id="booking-selected-services" type="hidden" name="booking-services" value="" />
 			</div>
 			<button class="modal-form__form-button" type="submit">Оплатить</button>
-			<div class="modal-form__form-privacy">Оформляя заказ, вы соглашаетесь<button class="modal-form__form-privacy-button" data-privacy-open>c политикой конфиденциальности</button></div>
+
+			<div class="modal-form__form-agreement">
+				<div class="_checkbox">
+					<input id="modal-order-agreement" type="checkbox" checked />
+					<label for="modal-order-agreement">Согласен c <button data-privacy-open>политикой конфиденциальности</button></label>
+				</div>
+				<div class="_checkbox">
+					<input id="modal-order-mailing" type="checkbox" checked />
+					<label for="modal-order-mailing">Согласен на получение <button data-privacy-open>рекламной рассылки</button></label>
+				</div>
+			</div>
 		</form>
 	</div>
 </dialog>
@@ -633,7 +691,17 @@
 							<input id="booking-selected-services" type="hidden" name="booking-services" value="" />
 						</div>
 						<button class="modal-form__form-button" type="submit">Забронировать</button>
-						<div class="modal-form__form-privacy">Отправляя сообщение, вы соглашаетесь<button class="modal-form__form-privacy-button" data-privacy-open>c политикой конфиденциальности</button></div>
+
+						<div class="modal-form__form-agreement">
+							<div class="_checkbox">
+								<input id="service-agreement" type="checkbox" checked />
+								<label for="service-agreement">Согласен c <button data-privacy-open>политикой конфиденциальности</button></label>
+							</div>
+							<div class="_checkbox">
+								<input id="service-mailing" type="checkbox" checked />
+								<label for="service-mailing">Согласен на получение <button data-privacy-open>рекламной рассылки</button></label>
+							</div>
+						</div>
 					</form>
 				</div>
 			</section>

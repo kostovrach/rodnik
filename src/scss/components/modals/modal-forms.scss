@@ -1,4 +1,4 @@
-@use "../../utils/abstracts" as *;
+@use '../../utils/abstracts' as *;
 
 .modal-form {
 	max-height: 100%;
@@ -12,6 +12,7 @@
 	background-color: $c-1C1C1E;
 	border-radius: $border-radius;
 	overflow-y: auto;
+	overflow-x: clip;
 	transition: $duration;
 	&[open] {
 		pointer-events: auto;
@@ -117,7 +118,7 @@
 				}
 				.modal-form__form-input {
 					min-height: rem(60);
-					&[type="date"] {
+					&[type='date'] {
 						&::-webkit-calendar-picker-indicator {
 							cursor: pointer;
 							width: 100%;
@@ -274,16 +275,21 @@
 			}
 		}
 		&-button {
+			grid-column: span 2;
 			height: fit-content;
-			@include button-main($background-color: $c-1C1C1E, $padding: rem(12) rem(32), $color: $c-FFFFFF, $font-size: rem(18));
+			@include flex-center();
+			@include button-main($width: 100%, $background-color: $c-1C1C1E, $padding: rem(12) rem(32), $color: $c-FFFFFF, $font-size: rem(18));
 		}
-		&-privacy {
-			align-self: center;
+		&-agreement {
+			grid-column: span 2;
+			display: flex;
+			gap: rem(16);
 			font-size: rem(12);
 			line-height: 150%;
 			color: $c-C1C2C3;
 			font-weight: $fw-medium;
-			&-button {
+			label > button,
+			a {
 				cursor: pointer;
 				color: $c-12C146;
 				@include hover-underline($c-12C146);
@@ -315,8 +321,8 @@
 				padding: rem(12) 0;
 				text-align: center;
 			}
-			&-privacy {
-				text-align: center;
+			&-agreement {
+				flex-direction: column;
 			}
 		}
 	}

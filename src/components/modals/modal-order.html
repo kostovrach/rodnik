@@ -1,4 +1,4 @@
-<dialog id="modal-order" class="modal-form">
+<dialog id="modal-order" class="modal-form hide-scrollbar">
 	<div class="modal-form__button-close icon-cross"></div>
 	<div class="modal-form__container">
 		<div class="modal-form__titlebox">
@@ -42,7 +42,17 @@
 				<input id="booking-selected-services" type="hidden" name="booking-services" value="" />
 			</div>
 			<button class="modal-form__form-button" type="submit">Оплатить</button>
-			<div class="modal-form__form-privacy">Оформляя заказ, вы соглашаетесь<button class="modal-form__form-privacy-button" data-privacy-open>c политикой конфиденциальности</button></div>
+
+			<div class="modal-form__form-agreement">
+				<div class="_checkbox">
+					<input id="modal-order-agreement" type="checkbox" checked />
+					<label for="modal-order-agreement">Согласен c <button data-privacy-open>политикой конфиденциальности</button></label>
+				</div>
+				<div class="_checkbox">
+					<input id="modal-order-mailing" type="checkbox" checked />
+					<label for="modal-order-mailing">Согласен на получение <button data-privacy-open>рекламной рассылки</button></label>
+				</div>
+			</div>
 		</form>
 	</div>
 </dialog>

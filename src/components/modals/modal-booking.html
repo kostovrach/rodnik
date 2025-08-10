@@ -1,4 +1,4 @@
-<dialog id="modal-booking" class="modal-form">
+<dialog id="modal-booking" class="modal-form hide-scrollbar">
 	<div class="modal-form__button-close icon-cross"></div>
 	<div class="modal-form__container">
 		<div class="modal-form__titlebox">
@@ -63,7 +63,17 @@
 				<textarea id="modal-booking-comment" class="modal-form__form-input modal-form__form-input--custom" placeholder="Дополнительная информация (опционально)"></textarea>
 			</div>
 			<button class="modal-form__form-button" type="submit">Забронировать</button>
-			<div class="modal-form__form-privacy">Отправляя сообщение, вы соглашаетесь<button class="modal-form__form-privacy-button" data-privacy-open>c политикой конфиденциальности</button></div>
+
+			<div class="modal-form__form-agreement">
+				<div class="_checkbox">
+					<input id="modal-booking-agreement" type="checkbox" checked />
+					<label for="modal-booking-agreement">Согласен c <button data-privacy-open>политикой конфиденциальности</button></label>
+				</div>
+				<div class="_checkbox">
+					<input id="modal-booking-mailing" type="checkbox" checked />
+					<label for="modal-booking-mailing">Согласен на получение <button data-privacy-open>рекламной рассылки</button></label>
+				</div>
+			</div>
 		</form>
 	</div>
 </dialog>
