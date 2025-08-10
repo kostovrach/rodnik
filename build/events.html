@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.min.css">
+	<link rel="stylesheet" href="./assets/fonts/icon-font/style.css">
+	<title>Rodnik - Мероприятия</title>
+</head>
+
+	<body>
+		<header class="header  js-sticky">
+	<div class="header__container">
+		<a href="index.html">
+			<picture class="header__logo-container header__logo-container--main">
+				<img class="header__logo" src="assets/icons/logo/logo-main.svg" alt="#Логотип" />
+			</picture>
+			<picture class="header__logo-container header__logo-container--contrast">
+				<img class="header__logo" src="assets/icons/logo/logo-contrast.svg" alt="#Логотип" />
+			</picture>
+		</a>
+		<ul class="header__nav" role="navigation">
+			<li class="header__nav-item" data-services-open tabindex="0"><button>Услуги</button><i class="header__nav-item--icon icon-check-mark"></i></li>
+			<li class="header__nav-item "><a href="about.html">Про отель</a></li>
+			<li class="header__nav-item "><a href="booking.html">Проживание</a></li>
+			<li class="header__nav-item "><a href="price.html">Цены</a></li>
+			<li class="header__nav-item "><a href="contacts.html">Контакты</a></li>
+			<li class="header__nav-item header__nav-item--more" tabindex="0">
+				Ещё
+				<i class="header__nav-item--icon icon-check-mark"></i>
+				<ul class="header__nav-item--more-list">
+					<li class="header__nav-item--more-list-item"><a href="stocks.html">Акции</a></li>
+					<li class="header__nav-item--more-list-item"><a href="faq.html">Вопросы</a></li>
+					<li class="header__nav-item--more-list-item" data-feedback-open><button>Оставить отзыв</button></li>
+					<li class="header__nav-item--more-list-item"><a href="certificates.html">Подарочные сертификаты</a></li>
+				</ul>
+			</li>
+		</ul>
+		<ul class="header__connection">
+			<li class="header__connection-item header__connection-item--tel"><a href="tel:+7 (999) 846-17-09">+7 (999) 846-17-09</a></li>
+			<li class="header__connection-item header__connection-item--button" data-booking-open><buttonn>Забронировать</buttonn></li>
+		</ul>
+		<div class="burger" data-menu-open role="button">
+    <span></span>
+</div>
+	</div>
+	<dialog id="menu" class="menu">
+	<div class="menu__container">
+		<div class="menu__button-close icon-cross" data-menu-close></div>
+        <ul class="menu__nav">
+            <li class="menu__nav-item"><button data-services-open>Услуги</button><i class="menu__nav-item--icon icon-check-mark"></i></li>
+            <li class="menu__nav-item"><a href="about.html">Про отель</a></li>
+            <li class="menu__nav-item"><a href="booking.html">Проживание</a></li>
+            <li class="menu__nav-item"><a href="price.html">Цены</a></li>
+            <li class="menu__nav-item"><a href="contacts.html">Контакты</a></li>
+            <li class="menu__nav-item"><a href="stocks.html">Акции</a></li>
+            <li class="menu__nav-item"><a href="faq.html">Вопросы</a></li>
+            <li class="menu__nav-item"><button data-feedback-open>Оставить отзыв</button></li>
+            <li class="menu__nav-item"><a href="certificates.html">Подарочные сертификаты</a></li>
+        </ul>
+		<ul class="menu__connection">
+			<li class="menu__connection-item menu__connection-item--tel"><a href="tel:+7 (999) 846-17-09">+7 (999) 846-17-09</a></li>
+			<li class="menu__connection-item menu__connection-item--button"><button data-booking-open>Забронировать</button></li>
+		</ul>
+	</div>
+</dialog>
+</header>
+<dialog id="modal-privacy" class="modal-privacy">
+	<button class="modal-privacy__button-close icon-cross"></button>
+	<div class="modal-privacy__container">
+		<div class="modal-privacy__titlebox">
+			<div class="modal-privacy__title">Политика конфиденциальности</div>
+			<time class="modal-privacy__date" datetime="2025-02-27">Последнее обновление: 27.02.25</time>
+			<ul class="modal-privacy__subtitle">
+				<li class="modal-privacy__subtitle-item">Добро пожаловать на rodnik.ru!</li>
+				<li class="modal-privacy__subtitle-item">Ваша конфиденциальность важна для нас. В этой Политике конфиденциальности объясняется, как мы собираем, используем и защищаем вашу личную информацию, когда вы посещаете сайт, взаимодействуете с&nbsp;нашими услугами или связываетесь с&nbsp;нами.</li>
+				<li class="modal-privacy__subtitle-item">Используя наш веб-сайт и услуги, вы соглашаетесь с&nbsp;практикой, описанной в&nbsp;настоящей Политике конфиденциальности.</li>
+			</ul>
+		</div>
+		<ul class="modal-privacy__list">
+			<li class="modal-privacy__item">
+				<p class="modal-privacy__item-title">Презентация</p>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Наши обязательства</li>
+					<li class="modal-privacy__subitem-text">В Инспекции имущества Канады мы обязуемся защищать вашу личную информацию и уважать вашу конфиденциальность. Настоящая Политика конфиденциальности объясняет, как мы собираем, используем, раскрываем и защищаем вашу информацию, когда вы используете наши услуги по проверке имущества.</li>
+				</ul>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Обязательства пользователей</li>
+					<li class="modal-privacy__subitem-text">Мы можем собирать личную информацию, такую как ваше имя, адрес электронной почты, номер телефона, адрес собственности, а также другую соответствующую информацию, которую вы добровольно предоставляете нам при выборе использования наших услуг по проверке собственности.</li>
+				</ul>
+			</li>
+			<li class="modal-privacy__item">
+				<p class="modal-privacy__item-title">Сбор вашей информации</p>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Личные данные</li>
+					<li class="modal-privacy__subitem-text">Мы можем собирать личную информацию, такую как ваше имя, адрес электронной почты, номер телефона, адрес собственности, а также другую соответствующую информацию, которую вы добровольно предоставляете нам при выборе использования наших услуг по проверке собственности.</li>
+				</ul>
+			</li>
+			<li class="modal-privacy__item">
+				<p class="modal-privacy__item-title">Использовать вашу информацию</p>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Предоставление услуг</li>
+					<li class="modal-privacy__subitem-text">Мы используем вашу информацию для предоставления услуг по проверке имущества, ответа на ваши запросы и управления нашими договорными отношениями с вами.</li>
+				</ul>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Консультации</li>
+					<li class="modal-privacy__subitem-text">Мы используем вашу информацию для предоставления услуг по проверке имущества, ответа на ваши запросы и управления нашими договорными отношениями с вами.</li>
+					<li class="modal-privacy__subsubitem">
+						<p class="modal-privacy__subsubitem-title">Использовать вашу информацию</p>
+						<p class="modal-privacy__subsubitem-text">В Инспекции имущества Канады мы обязуемся защищать вашу личную информацию и уважать вашу конфиденциальность. Настоящая Политика конфиденциальности объясняет, как мы собираем, используем, раскрываем и защищаем вашу информацию, когда вы используете наши услуги по проверке имущества.</p>
+						<p class="modal-privacy__subsubitem-text">Мы можем собирать личную информацию, такую как ваше имя, адрес электронной почты, номер телефона, адрес собственности, а также другую соответствующую информацию, которую вы добровольно предоставляете нам при выборе использования наших услуг по проверке собственности.</p>
+					</li>
+					<li class="modal-privacy__subsubitem">
+						<p class="modal-privacy__subsubitem-title">Ремонт</p>
+						<p class="modal-privacy__subsubitem-text">Мы используем вашу информацию для предоставления услуг по проверке имущества, ответа на ваши запросы и управления нашими договорными отношениями с вами.</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</dialog>
+ 
+<dialog id="modal-services" class="modal-services">
+	<div class="modal-services__container">
+		<button class="modal-services__button-close icon-cross"></button>
+		<div class="modal-services__title">Услуги</div>
+		<ul class="modal-services__list">
+			<li class="modal-services__item">
+				<a class="modal-services__item-text" href="service-page.html">Банкетный зал</a>
+				<picture class="modal-services__item-image-container">
+					<img class="modal-services__item-image" src="assets/img/content/services/example1.jpg" alt="#" />
+				</picture>
+			</li>
+			<li class="modal-services__item">
+				<a class="modal-services__item-text" href="service-page.html">Рыбалка</a>
+				<picture class="modal-services__item-image-container">
+					<img class="modal-services__item-image" src="assets/img/content/services/example2.jpg" alt="#" />
+				</picture>
+			</li>
+			<li class="modal-services__item">
+				<a class="modal-services__item-text" href="service-page.html">Бассейн</a>
+				<picture class="modal-services__item-image-container">
+					<img class="modal-services__item-image" src="assets/img/content/services/example3.jpg" alt="#" />
+				</picture>
+			</li>
+			<li class="modal-services__item">
+				<a class="modal-services__item-text" href="service-page.html">Тюбинговая трасса</a>
+				<picture class="modal-services__item-image-container">
+					<img class="modal-services__item-image" src="assets/img/content/services/example4.jpg" alt="#" />
+				</picture>
+			</li>
+			<li class="modal-services__item">
+				<a class="modal-services__item-text" href="service-page.html">Ресторан «Царская рыба»</a>
+				<picture class="modal-services__item-image-container">
+					<img class="modal-services__item-image" src="assets/img/content/services/example5.jpg" alt="#" />
+				</picture>
+			</li>
+		</ul>
+	</div>
+</dialog>
+ 
+<dialog id="modal-feedback" class="modal-form hide-scrollbar">
+	<button class="modal-form__button-close icon-cross"></button>
+	<div class="modal-form__container">
+		<div class="modal-form__titlebox">
+			<p class="modal-form__title">Оставьте отзыв о&nbsp;нашей работе!</p>
+			<p class="modal-form__subtitle">Если вы уже побывали в нас в гостях, можете рассказать для&nbsp;других посетителей о своем опыте пребывания на базе отдыха «Родник»</p>
+		</div>
+		<form action="" method="post" class="modal-form__form">
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-feedback-name">Имя</label>
+				<input id="modal-feedback-name" class="modal-form__form-input" type="text" placeholder="Как к вам обращаться?" />
+			</div>
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-feedback-email">E-mail</label>
+				<input id="modal-feedback-email" class="modal-form__form-input" type="email" placeholder="Ваш E-mail" required />
+			</div>
+			<div class="modal-form__form-inputbox modal-form__form-inputbox--custom">
+				<label class="modal-form__form-label" for="modal-feedback-comment">Ваш отзыв</label>
+				<textarea id="modal-feedback-comment" class="modal-form__form-input modal-form__form-input--custom" placeholder="Поделитесь впечатлениями"></textarea>
+			</div>
+			<div class="modal-form__form-review">
+				<p class="modal-form__form-review-title">На сколько вы удовлетворены обслуживанием?</p>
+				<div class="modal-form__form-review-rate" data-selected="0">
+					<input type="hidden" name="rating" value="0" />
+					<span class="modal-form__form-review-rate-item icon-rate-star" data-value="1"></span>
+					<span class="modal-form__form-review-rate-item icon-rate-star" data-value="2"></span>
+					<span class="modal-form__form-review-rate-item icon-rate-star" data-value="3"></span>
+					<span class="modal-form__form-review-rate-item icon-rate-star" data-value="4"></span>
+					<span class="modal-form__form-review-rate-item icon-rate-star" data-value="5"></span>
+				</div>
+			</div>
+			<button class="modal-form__form-button" type="submit">Отправить отзыв</button>
+
+			<div class="modal-form__form-agreement">
+				<div class="_checkbox">
+					<input id="modal-feedback-agreement" type="checkbox" checked />
+					<label for="modal-feedback-agreement">Согласен c <button data-privacy-open>политикой конфиденциальности</button></label>
+				</div>
+				<div class="_checkbox">
+					<input id="modal-feedback-mailing" type="checkbox" checked />
+					<label for="modal-feedback-mailing">Согласен на получение <button data-privacy-open>рекламной рассылки</button></label>
+				</div>
+			</div>
+		</form>
+	</div>
+</dialog>
+ 
+<dialog id="modal-booking" class="modal-form hide-scrollbar">
+	<div class="modal-form__button-close icon-cross"></div>
+	<div class="modal-form__container">
+		<div class="modal-form__titlebox">
+			<p class="modal-form__title">Бронирование</p>
+			<p class="modal-form__subtitle">Менеджеры компании с радостью ответят на ваши вопросы и&nbsp;произведут расчет стоимости услуг и подготовят индивидуальное коммерческое предложение.</p>
+		</div>
+		<form class="modal-form__form modal-form__form--booking" action="" method="post">
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-booking-name">Имя</label>
+				<input id="modal-booking-name" class="modal-form__form-input" type="text" placeholder="Как к вам обращаться?" required />
+			</div>
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-booking-tel">Телефон</label>
+				<input id="modal-booking-tel" class="modal-form__form-input" data-input-tel type="tel" required />
+			</div>
+			<div class="modal-form__form-inputbox modal-form__form-inputbox--date">
+				<div class="modal-form__form-input--date-icon icon-check-mark"></div>
+				<label class="modal-form__form-label" for="modal-booking-checkin">Дата заезда</label>
+				<input id="modal-booking-checkin" class="modal-form__form-input" type="date" required />
+			</div>
+			<div class="modal-form__form-inputbox modal-form__form-inputbox--date">
+				<div class="modal-form__form-input--date-icon icon-check-mark"></div>
+				<label class="modal-form__form-label" for="modal-booking-checkout">Дата выезда</label>
+				<input id="modal-booking-checkout" class="modal-form__form-input" type="date" required />
+			</div>
+
+			<div class="modal-form__form-inputbox--select modal-form__form-inputbox--select--person select" tabindex="0" role="combobox">
+				<input id="modal-booking-person" class="modal-form__form-input--select modal-form__form-input--select-person-input select__input" type="text" placeholder="1 человек" tabindex="-1" readonly />
+				<i class="modal-form__form-input--select-icon modal-form__form-input--select-preson-icon select__icon icon-check-mark"></i>
+				<ul class="modal-form__form-input--select-preson-dropdown select__dropdown" role="listbox">
+					<li class="modal-form__form-input--select-preson-item select__item" role="option" tabindex="0">1 человек</li>
+					<li class="modal-form__form-input--select-preson-item select__item" role="option" tabindex="0">2 человека</li>
+					<li class="modal-form__form-input--select-preson-item select__item" role="option" tabindex="0">3 человека</li>
+				</ul>
+			</div>
+			<div class="modal-form__form-inputbox--select modal-form__form-inputbox--select--house select" tabindex="0" role="combobox">
+				<input id="modal-booking-house" class="modal-form__form-input--select modal-form__form-input--select-house-input select__input" type="text" placeholder="Выберите домик" tabindex="-1" readonly />
+				<i class="modal-form__form-input--select-icon modal-form__form-input--select-house-icon select__icon icon-check-mark"></i>
+				<ul class="modal-form__form-input--select-house-dropdown select__dropdown" role="listbox">
+					<li class="modal-form__form-input--select-house-item select__item" role="option" tabindex="0">Не выбрано</li>
+					<li class="modal-form__form-input--select-house-item select__item" role="option" tabindex="0">Цветной домик</li>
+					<li class="modal-form__form-input--select-house-item select__item" role="option" tabindex="0">Хозяйский домик</li>
+					<li class="modal-form__form-input--select-house-item select__item" role="option" tabindex="0">Боярская палата</li>
+				</ul>
+			</div>
+			<ul class="modal-form__form-services"></ul>
+			<div class="modal-form__form-services-select select" tabindex="0" role="combobox">
+				<input class="modal-form__form-services-input select__input" type="text" placeholder="Дополнительные услуги" readonly tabindex="-1" />
+				<i class="modal-form__form-services-icon icon-check-mark"></i>
+				<label for="booking-selected-services" class="modal-form__form-services-label">Дополнительные услуги</label>
+				<ul class="modal-form__form-services-dropdown select__dropdown">
+					<li class="modal-form__form-services-dropdown-item select__item readonly" role="option" tabindex="0" data-value="food" data-label="Питание" data-price="500">Питание - 500&#8381;</li>
+					<li class="modal-form__form-services-dropdown-item select__item readonly" role="option" tabindex="0" data-value="cleaning" data-label="Уборка номера" data-price="1500">Уборка номера - 1500&#8381;</li>
+					<li class="modal-form__form-services-dropdown-item select__item readonly" role="option" tabindex="0" data-value="bed" data-label="Доп. спальное место" data-price="500">Доп. спальное место - 500&#8381;</li>
+					<li class="modal-form__form-services-dropdown-item select__item readonly" role="option" tabindex="0" data-value="transfer" data-label="Трансфер до отеля" data-price="2000">Трансфер до отеля - 2000&#8381;</li>
+				</ul>
+				<input id="booking-selected-services" type="hidden" name="booking-services" value="" />
+			</div>
+
+			<div class="modal-form__form-inputbox modal-form__form-inputbox--custom">
+				<label class="modal-form__form-label" for="modal-booking-comment">Комментарий</label>
+				<textarea id="modal-booking-comment" class="modal-form__form-input modal-form__form-input--custom" placeholder="Дополнительная информация (опционально)"></textarea>
+			</div>
+			<button class="modal-form__form-button" type="submit">Забронировать</button>
+
+			<div class="modal-form__form-agreement">
+				<div class="_checkbox">
+					<input id="modal-booking-agreement" type="checkbox" checked />
+					<label for="modal-booking-agreement">Согласен c <button data-privacy-open>политикой конфиденциальности</button></label>
+				</div>
+				<div class="_checkbox">
+					<input id="modal-booking-mailing" type="checkbox" checked />
+					<label for="modal-booking-mailing">Согласен на получение <button data-privacy-open>рекламной рассылки</button></label>
+				</div>
+			</div>
+		</form>
+	</div>
+</dialog>
+ 
+<dialog id="modal-question" class="modal-form hide-scrollbar">
+	<button class="modal-form__button-close icon-cross"></button>
+	<div class="modal-form__container">
+		<div class="modal-form__titlebox">
+			<p class="modal-form__title">Не нашли ответа на свой вопрос?</p>
+			<p class="modal-form__subtitle">Задайте его нам — мы всегда рады поговорить об отдыхе, природе и&nbsp;рыбалке</p>
+		</div>
+		<form action="" method="post" class="modal-form__form">
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-question-name">Имя</label>
+				<input id="modal-question-name" class="modal-form__form-input" type="text" placeholder="Как к вам обращаться?" />
+			</div>
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-question-email">E-mail</label>
+				<input id="modal-question-email" class="modal-form__form-input" type="email" placeholder="Ваш E-mail" required />
+			</div>
+			<div class="modal-form__form-inputbox modal-form__form-inputbox--custom">
+				<label class="modal-form__form-label" for="modal-question-comment">Ваш вопрос</label>
+				<textarea id="modal-question-comment" class="modal-form__form-input modal-form__form-input--custom" placeholder="Опишите какие трудности у вас возникли" required></textarea>
+			</div>
+			<button class="modal-form__form-button" type="submit">Отправить вопрос</button>
+			<div class="modal-form__form-agreement">
+				<div class="_checkbox">
+					<input id="modal-question-agreement" type="checkbox" checked />
+					<label for="modal-question-agreement">Согласен c <button data-privacy-open>политикой конфиденциальности</button></label>
+				</div>
+				<div class="_checkbox">
+					<input id="modal-question-mailing" type="checkbox" checked />
+					<label for="modal-question-mailing">Согласен на получение <button data-privacy-open>рекламной рассылки</button></label>
+				</div>
+			</div>
+		</form>
+	</div>
+</dialog>
+
+<dialog id="modal-location" class="modal-form hide-scrollbar">
+	<div class="modal-form__button-close icon-cross"></div>
+	<div class="modal-form__container">
+		<div class="modal-form__titlebox">
+			<p class="modal-form__title">Аренда площадки</p>
+			<p class="modal-form__subtitle">Наша цель&nbsp;— предложить посетителям беспрецедентный клиентский опыт и&nbsp;самые яркие впечатления.</p>
+			<p class="modal-form__subtitle">Поэтому уже&nbsp;сейчас мы начинаем формировать пул стратегических партнеров, которые станут гармоничной частью новой точки притяжения на карте Москвы.</p>
+		</div>
+		<form class="modal-form__form modal-form__form--location" action="" method="post">
+			<div class="modal-form__form-inputbox modal-form__form-inputbox--full-name">
+				<label class="modal-form__form-label" for="modal-location-name">ФИО</label>
+				<input id="modal-location-name" class="modal-form__form-input" type="text" placeholder="Как к вам обращаться?" required />
+			</div>
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-location-tel">Телефон</label>
+				<input id="modal-location-tel" class="modal-form__form-input" data-input-tel type="tel" required />
+			</div>
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-location-mail">E-mail</label>
+				<input id="modal-location-mail" class="modal-form__form-input" type="mail" required />
+			</div>
+			<div class="modal-form__form-inputbox modal-form__form-inputbox--date">
+				<div class="modal-form__form-input--date-icon icon-check-mark"></div>
+				<label class="modal-form__form-label" for="modal-location-checkin">Дата начала</label>
+				<input id="modal-location-checkin" class="modal-form__form-input" type="date" required />
+			</div>
+			<div class="modal-form__form-inputbox modal-form__form-inputbox--date">
+				<div class="modal-form__form-input--date-icon icon-check-mark"></div>
+				<label class="modal-form__form-label" for="modal-location-checkout">Дата окончания</label>
+				<input id="modal-location-checkout" class="modal-form__form-input" type="date" required />
+			</div>
+			<div class="modal-form__form-inputbox--select modal-form__form-inputbox--select--house select" tabindex="0" role="combobox">
+				<input id="modal-location-house" class="modal-form__form-input--select modal-form__form-input--select-house-input select__input" type="text" placeholder="Площадка" tabindex="-1" readonly />
+				<i class="modal-form__form-input--select-icon modal-form__form-input--select-house-icon select__icon icon-check-mark"></i>
+				<ul class="modal-form__form-input--select-house-dropdown select__dropdown" role="listbox">
+					<li class="modal-form__form-input--select-house-item select__item" role="option" tabindex="0">Актовый зал в блоке №1</li>
+					<li class="modal-form__form-input--select-house-item select__item" role="option" tabindex="0">Мини-зал в блоке №2</li>
+					<li class="modal-form__form-input--select-house-item select__item" role="option" tabindex="0">Большой зал в блоке №1</li>
+					<li class="modal-form__form-input--select-house-item select__item" role="option" tabindex="0">Спортивный зал в блоке №4</li>
+				</ul>
+			</div>
+			<div class="modal-form__form-inputbox--select modal-form__form-inputbox--select--person select" tabindex="0" role="combobox">
+				<input id="modal-location-person" class="modal-form__form-input--select modal-form__form-input--select-person-input select__input" type="text" placeholder="Количество человек" tabindex="-1" readonly />
+				<i class="modal-form__form-input--select-icon modal-form__form-input--select-preson-icon select__icon icon-check-mark"></i>
+				<ul class="modal-form__form-input--select-preson-dropdown select__dropdown" role="listbox">
+					<li class="modal-form__form-input--select-preson-item select__item" role="option" tabindex="0">1 человек</li>
+					<li class="modal-form__form-input--select-preson-item select__item" role="option" tabindex="0">2 человека</li>
+					<li class="modal-form__form-input--select-preson-item select__item" role="option" tabindex="0">3 человека</li>
+				</ul>
+			</div>
+			<ul class="modal-form__form-services"></ul>
+			<div class="modal-form__form-services-select select" tabindex="0" role="combobox">
+				<input class="modal-form__form-services-input select__input" type="text" placeholder="Дополнительные услуги" readonly tabindex="-1" />
+				<i class="modal-form__form-services-icon icon-check-mark"></i>
+				<label for="location-selected-services" class="modal-form__form-services-label">Дополнительные услуги</label>
+				<ul class="modal-form__form-services-dropdown select__dropdown">
+					<li class="modal-form__form-services-dropdown-item select__item readonly" role="option" tabindex="0" data-value="food" data-label="Питание" data-price="500">Питание - 500&#8381;</li>
+					<li class="modal-form__form-services-dropdown-item select__item readonly" role="option" tabindex="0" data-value="cleaning" data-label="Уборка номера" data-price="1500">Уборка номера - 1500&#8381;</li>
+					<li class="modal-form__form-services-dropdown-item select__item readonly" role="option" tabindex="0" data-value="bed" data-label="Доп. спальное место" data-price="500">Доп. спальное место - 500&#8381;</li>
+					<li class="modal-form__form-services-dropdown-item select__item readonly" role="option" tabindex="0" data-value="transfer" data-label="Трансфер до отеля" data-price="2000">Трансфер до отеля - 2000&#8381;</li>
+				</ul>
+				<input id="location-selected-services" type="hidden" name="location-services" value="" />
+			</div>
+
+			<div class="modal-form__form-inputbox modal-form__form-inputbox--custom">
+				<label class="modal-form__form-label" for="modal-location-comment">Цели мероприятия</label>
+				<textarea id="modal-location-comment" class="modal-form__form-input modal-form__form-input--custom" placeholder="Дополнительная информация (опционально)"></textarea>
+			</div>
+			<button class="modal-form__form-button" type="submit">Забронировать</button>
+
+			<div class="modal-form__form-agreement">
+				<div class="_checkbox">
+					<input id="modal-location-agreement" type="checkbox" checked />
+					<label for="modal-location-agreement">Согласен c <button data-privacy-open>политикой конфиденциальности</button></label>
+				</div>
+				<div class="_checkbox">
+					<input id="modal-location-mailing" type="checkbox" checked />
+					<label for="modal-location-mailing">Согласен на получение <button data-privacy-open>рекламной рассылки</button></label>
+				</div>
+			</div>
+		</form>
+	</div>
+</dialog>
+
+<dialog id="modal-registration" class="modal-form hide-scrollbar">
+	<div class="modal-form__container">
+		<div class="modal-form__button-close icon-cross"></div>
+		<div class="modal-form__titlebox">
+			<p class="modal-form__title">Регистрация участника</p>
+			<p class="modal-form__subtitle">Запись на мероприятие «Баня архетипа императрицы» предусматривает предоплату 25% от стоимости входного билета</p>
+			<p class="modal-form__subtitle">Для оплаты доступны платежные системы МИР, VISA, MasterCard</p>
+			<ul class="modal-form__payment-info">
+				<li class="modal-form__payment-info-item modal-form__payment-info-item--mir icon-mir"></li>
+				<li class="modal-form__payment-info-item modal-form__payment-info-item--visa icon-visa"></li>
+				<li class="modal-form__payment-info-item modal-form__payment-info-item--mastercard icon-mastercard"></li>
+			</ul>
+		</div>
+		<form class="modal-form__form modal-form__form--booking" action="" method="post">
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-registration-name">Имя</label>
+				<input id="modal-registration-name" class="modal-form__form-input" type="text" placeholder="Как к вам обращаться?" required />
+			</div>
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-registration-tel">Телефон</label>
+				<input id="modal-registration-tel" class="modal-form__form-input" data-input-tel type="tel" required />
+			</div>
+
+			<div class="modal-form__form-inputbox--select modal-form__form-inputbox--select--person modal-form__form-inputbox--registration select" tabindex="0" role="combobox">
+				<input id="modal-registration-person" class="modal-form__form-input--select modal-form__form-input--select-person-input select__input" type="text" placeholder="Количество людей" tabindex="-1" readonly />
+				<i class="modal-form__form-input--select-icon modal-form__form-input--select-preson-icon select__icon icon-check-mark"></i>
+				<ul class="modal-form__form-input--select-preson-dropdown select__dropdown" role="listbox">
+					<li class="modal-form__form-input--select-preson-item select__item" role="option" tabindex="0">1 человек</li>
+					<li class="modal-form__form-input--select-preson-item select__item" role="option" tabindex="0">2 человека</li>
+					<li class="modal-form__form-input--select-preson-item select__item" role="option" tabindex="0">3 человека</li>
+				</ul>
+			</div>
+			<button class="modal-form__form-button" type="submit">Оплатить 250 &#8381;</button>
+
+			<div class="modal-form__form-agreement">
+				<div class="_checkbox">
+					<input id="modal-registration-agreement" type="checkbox" checked />
+					<label for="modal-registration-agreement">Согласен c <button data-privacy-open>политикой конфиденциальности</button></label>
+				</div>
+				<div class="_checkbox">
+					<input id="modal-registration-mailing" type="checkbox" checked />
+					<label for="modal-registration-mailing">Согласен на получение <button data-privacy-open>рекламной рассылки</button></label>
+				</div>
+			</div>
+		</form>
+	</div>
+</dialog>
+
+<dialog id="modal-order" class="modal-form hide-scrollbar">
+	<div class="modal-form__button-close icon-cross"></div>
+	<div class="modal-form__container">
+		<div class="modal-form__titlebox">
+			<p class="modal-form__title">Оформление заказа</p>
+			<p class="modal-form__subtitle">Заказ будет подтверждён по СМС. Ссылка на скачивание сертификата придет на указанную почту и в смс. Дополнительные вопросы вы можете задать в комментариях к заказу.</p>
+			<p class="modal-form__subtitle">Для оплаты доступны платежные системы МИР, VISA, MasterCard</p>
+			<ul class="modal-form__payment-info">
+				<li class="modal-form__payment-info-item modal-form__payment-info-item--mir icon-mir"></li>
+				<li class="modal-form__payment-info-item modal-form__payment-info-item--visa icon-visa"></li>
+				<li class="modal-form__payment-info-item modal-form__payment-info-item--mastercard icon-mastercard"></li>
+			</ul>
+		</div>
+		<form class="modal-form__form modal-form__form--booking" action="" method="post">
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-booking-name">Имя</label>
+				<input id="modal-booking-name" class="modal-form__form-input" type="text" placeholder="Ваше имя" required />
+			</div>
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-booking-second-name">Фамилия</label>
+				<input id="modal-booking-second-name" class="modal-form__form-input" type="text" placeholder="Ваша Фамилия" required />
+			</div>
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-booking-tel">Телефон</label>
+				<input id="modal-booking-tel" class="modal-form__form-input" data-input-tel type="tel" required />
+			</div>
+			<div class="modal-form__form-inputbox">
+				<label class="modal-form__form-label" for="modal-booking-mail">E-mail</label>
+				<input id="modal-booking-mail" class="modal-form__form-input" type="email" placeholder="E-mail" required />
+			</div>
+			<ul class="modal-form__form-services"></ul>
+			<div class="modal-form__form-services-select select" tabindex="0" role="combobox">
+				<input class="modal-form__form-services-input select__input" type="text" placeholder="Дополнительные услуги" readonly tabindex="-1" />
+				<i class="modal-form__form-services-icon icon-check-mark"></i>
+				<label for="booking-selected-services" class="modal-form__form-services-label">Выбор сертификата</label>
+				<ul class="modal-form__form-services-dropdown select__dropdown">
+					<li class="modal-form__form-services-dropdown-item select__item readonly" role="option" tabindex="0" data-value="fishing" data-label="1 день рыбалки с карпами" data-price="500">1 день рыбалки с карпами</li>
+					<li class="modal-form__form-services-dropdown-item select__item readonly" role="option" tabindex="0" data-value="bathhouse" data-label="2 часа бани" data-price="1500">2 часа бани</li>
+					<li class="modal-form__form-services-dropdown-item select__item readonly" role="option" tabindex="0" data-value="fishing2" data-label="1 день рыбалки с форелью" data-price="500">1 день рыбалки с форелью</li>
+					<li class="modal-form__form-services-dropdown-item select__item readonly" role="option" tabindex="0" data-value="transfer" data-label="Трансфер до отеля" data-price="2000">Трансфер до отеля</li>
+				</ul>
+				<input id="booking-selected-services" type="hidden" name="booking-services" value="" />
+			</div>
+			<button class="modal-form__form-button" type="submit">Оплатить</button>
+
+			<div class="modal-form__form-agreement">
+				<div class="_checkbox">
+					<input id="modal-order-agreement" type="checkbox" checked />
+					<label for="modal-order-agreement">Согласен c <button data-privacy-open>политикой конфиденциальности</button></label>
+				</div>
+				<div class="_checkbox">
+					<input id="modal-order-mailing" type="checkbox" checked />
+					<label for="modal-order-mailing">Согласен на получение <button data-privacy-open>рекламной рассылки</button></label>
+				</div>
+			</div>
+		</form>
+	</div>
+</dialog>
+
+
+		<main id="start">
+			<section class="events-hero">
+				<picture class="events-hero__image-container">
+					<img class="events-hero__image" src="assets/img/content/events/heroscreen.jpg" alt="#" />
+				</picture>
+				<div class="events-hero__container">
+					<div class="events-hero__titlebox">
+						<h1 class="events-hero__title">ПРОВЕДЕНИЕ МЕРОПРИЯТИЙ</h1>
+						<button class="events-hero__button" data-location-open>Забронировать локацию<i class="events-hero__button--icon icon-arrow-long"></i></button>
+					</div>
+				</div>
+			</section>
+			<section class="events-venues card-slider-block">
+				<div class="events-venues__container">
+					<div class="events-venues__titlebox">
+						<h2 class="events-venues__title"><span class="events-venues__title--accent">7 площадок</span> вместимостью до&nbsp;500 человек</h2>
+						<p class="events-venues__subtitle">Вы можете забронировать общие залы не только для&nbsp;проведения спортивных мероприятий, но&nbsp;и&nbsp;для&nbsp;проведения банкетов, конференций и&nbsp;других собраний</p>
+						<ul class="events-venues__nav">
+							<li class="events-venues__nav-button events-venues__nav-button--prev swiper-button-prev card-slider-button card-slider-button--prev"><i class="icon-arrow-long"></i></li>
+							<li class="events-venues__nav-button events-venues__nav-button--next swiper-button-next card-slider-button card-slider-button--next"><i class="icon-arrow-long"></i></li>
+						</ul>
+					</div>
+					<div class="events-venues__body">
+						<div class="events-venues__slider card-slider swiper">
+							<div class="events-venues__slider-wrapper card-slider-wrapper swiper-wrapper">
+								<div class="events-venues__slide swiper-slide">
+									<picture class="events-venues__slide-image-container">
+										<img class="events-venues__slide-image" src="assets/img/content/events/venues.jpg" alt="#" />
+									</picture>
+									<h3 class="events-venues__slide-title">Актовый зал в блоке №1</h3>
+								</div>
+								<div class="events-venues__slide swiper-slide">
+									<picture class="events-venues__slide-image-container">
+										<img class="events-venues__slide-image" src="assets/img/content/events/venues1.jpg" alt="#" />
+									</picture>
+									<h3 class="events-venues__slide-title">Мини-зал в блоке №2</h3>
+								</div>
+								<div class="events-venues__slide swiper-slide">
+									<picture class="events-venues__slide-image-container">
+										<img class="events-venues__slide-image" src="assets/img/content/events/venues2.jpg" alt="#" />
+									</picture>
+									<h3 class="events-venues__slide-title">Спортивный зал в блоке №3</h3>
+								</div>
+								<div class="events-venues__slide swiper-slide">
+									<picture class="events-venues__slide-image-container">
+										<img class="events-venues__slide-image" src="assets/img/content/events/venues.jpg" alt="#" />
+									</picture>
+									<h3 class="events-venues__slide-title">Актовый зал в блоке №1</h3>
+								</div>
+								<div class="events-venues__slide swiper-slide">
+									<picture class="events-venues__slide-image-container">
+										<img class="events-venues__slide-image" src="assets/img/content/events/venues1.jpg" alt="#" />
+									</picture>
+									<h3 class="events-venues__slide-title">Мини-зал в блоке №2</h3>
+								</div>
+								<div class="events-venues__slide swiper-slide">
+									<picture class="events-venues__slide-image-container">
+										<img class="events-venues__slide-image" src="assets/img/content/events/venues2.jpg" alt="#" />
+									</picture>
+									<h3 class="events-venues__slide-title">Спортивный зал в блоке №3</h3>
+								</div>
+							</div>
+						</div>
+						<div class="events-venues__slider-scrollbar card-slider-scrollbar swiper-scrollbar"></div>
+					</div>
+				</div>
+			</section>
+			<section class="events-conditions">
+				<div class="events-conditions__container">
+					<ul class="events-conditions__content">
+						<li class="events-conditions__item events-conditions__item--hero">
+							<div class="events-conditions__item-titlebox">
+								<h2 class="events-conditions__item-title">Условия проведения мероприятий</h2>
+								<p class="events-conditions__item-text">Блок про возможности аренды помещений и площадок спортивного комплекса – основной смысл. Используйте 1-2 предложения в 1-3 строчки, если выравнивание по центру. При большем количестве текста используйте другой тип выравнивания контента</p>
+							</div>
+							<picture class="events-conditions__item-image-circle-container">
+								<img class="events-conditions__item-image-circle" src="assets/img/content/stocks/cover1.jpg" alt="#" />
+							</picture>
+						</li>
+						<li class="events-conditions__item">
+							<picture class="events-conditions__item-image-container">
+								<img class="events-conditions__item-image" src="assets/img/content/events/example1.jpg" alt="#" />
+							</picture>
+						</li>
+						<li class="events-conditions__item">
+							<h3 class="events-conditions__item-title--accent">Что предоставляет аренда</h3>
+							<p class="events-conditions__item-text">Это многофункциональный спортивный комплекс, в&nbsp;котором созданы прекрасные условия для занятий различными видами спорта. Деятельность Комплекса осуществляется по двум направлениям: Государственное Задание (бесплатные) и Оказание платных услуг.</p>
+							<ul class="events-conditions__item-list">
+								<li class="events-conditions__item-list-item--title">Конференц-зал — 3500 ₽/ч</li>
+								<li class="events-conditions__item-list-item">Площадь: 250 квадратных метров</li>
+								<li class="events-conditions__item-list-item">Подходит для командных тренировок и турниров</li>
+								<li class="events-conditions__item-list-item">Оснащение: профессиональные тренажеры, специальное покрытие, звуковая система</li>
+							</ul>
+							<ul class="events-conditions__item-list">
+								<li class="events-conditions__item-list-item--title">Залы для групповых тренировок — 1200 ₽/ч</li>
+								<li class="events-conditions__item-list-item">Площадь: 80 квадратных метров</li>
+								<li class="events-conditions__item-list-item">Занятия: йога, пилатес, аэробика</li>
+								<li class="events-conditions__item-list-item">Оснащение: отопление, кондиционер</li>
+							</ul>
+							<ul class="events-conditions__item-list">
+								<li class="events-conditions__item-list-item--title">Бассейн — 5800 ₽/ч</li>
+								<li class="events-conditions__item-list-item">Размеры: 100 метров х 6 дорожек</li>
+								<li class="events-conditions__item-list-item">Идеален для личных тренировок и небольших семинаров</li>
+							</ul>
+						</li>
+						<li class="events-conditions__item">
+							<h3 class="events-conditions__item-title--accent">Условия</h3>
+							<p class="events-conditions__item-text">Арендаторы могут воспользоваться гибкими условиями аренды, которые подойдут как для короткосрочных, так и для долгосрочных объектов. Мы предлагаем возможность аренды залов как по индивидуальному графику, так и по стандартному расписанию.</p>
+							<ul class="events-conditions__item-list">
+								<li class="events-conditions__item-list-item">Короткосрочные и долгосрочные договора</li>
+								<li class="events-conditions__item-list-item">Возможность аренды на выходные и праздники</li>
+								<li class="events-conditions__item-list-item">Минимальная аренда: 1 час</li>
+								<li class="events-conditions__item-list-item">Пакеты на 5, 10 и более часов</li>
+							</ul>
+						</li>
+						<li class="events-conditions__item">
+							<h3 class="events-conditions__item-title--accent">Ответственность</h3>
+							<p class="events-conditions__item-text">
+								Мы несем ответственность за&nbsp;техническое состояние залов и оборудования, однако арендаторы обязуются следить за сохранностью имущества и соблюдать правила поведения на территории спорткомплекса. При повреждениях или утрате оборудования арендатор несет ответственность за возмещение убытков в соответствии с&nbsp;установленными тарифами.
+							</p>
+							<p class="events-conditions__item-text">Спорткомплекс не отвечает за личные вещи участников мероприятий, поэтому арендаторам следует позаботиться о их безопасности.</p>
+						</li>
+						<li class="events-conditions__item">
+							<picture class="events-conditions__item-image-container">
+								<img class="events-conditions__item-image" src="assets/img/content/events/example2.jpg" alt="#" />
+							</picture>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="events-about">
+				<div class="events-about__container">
+					<h2 class="events-about__title">философия нашего отдыха</h2>
+					<p class="events-about__desc">
+						Эко-отель «RRodnik» — это база
+						<img class="events-about__desc--image" src="assets/img/emojis/emoji-fishing.png" alt="#Emoji" />
+						отдыха, созданная комфортного пребывания для вашего на природе.
+						<img class="events-about__desc--image" src="assets/img/emojis/emoji-bamboo.png" alt="#Emoji" />
+						У&nbsp;нас доступны атмосферные локации с обилием зелени и света,
+						<img class="events-about__desc--image" src="assets/img/emojis/emoji-jacket.png" alt="#Emoji" />
+						уютные беседки, и места для рыбалки.
+					</p>
+				</div>
+			</section>
+			<section class="events-schedule">
+				<div class="events-schedule__container">
+					<div class="events-schedule__calendar-wrapper">
+						<div id="events-schedule" class="events-schedule__calendar"></div>
+					</div>
+					<div class="events-schedule__titlebox">
+						<h2 class="events-schedule__title">Календарь мероприятий</h2>
+						<p class="events-schedule__subtitle">Вы приехали отдохнуть вдвоем? Отмечаете праздник в компании? У вас корпоративное мероприятие? Мы&nbsp;обеспечим комфортное размещение любой компании! У нас есть удобные коттеджи, рассчитанные на&nbsp;различное количество гостей.</p>
+					</div>
+				</div>
+			</section>
+			<section class="events-events card-slider-block">
+				<div class="events-events__container">
+					<div class="events-events__titlebox">
+						<h2 class="events-events__title"><span class="events-events__title--accent">Все мероприятия</h2>
+						<ul class="events-events__nav">
+							<li class="events-events__nav-button events-events__nav-button--prev swiper-button-prev card-slider-button card-slider-button--prev"><i class="icon-arrow-long"></i></li>
+							<li class="events-events__nav-button events-events__nav-button--next swiper-button-next card-slider-button card-slider-button--next"><i class="icon-arrow-long"></i></li>
+						</ul>
+					</div>
+					<div class="events-events__body">
+						<div class="events-events__slider card-slider swiper">
+							<div class="events-events__slider-wrapper card-slider-wrapper swiper-wrapper">
+								<a class="events-events__slide swiper-slide" href="event-page.html">
+									<picture class="events-events__slide-image-container">
+										<img class="events-events__slide-image" src="assets/img/content/events/event.jpg" alt="#" />
+									</picture>
+									<h3 class="events-events__slide-title">Баня архетипа императрицы</h3>
+									<p class="events-events__slide-desc">Новые гости, которые впервые посещают вашу базу, могут получить 10% скидку на аренду домика, если они подпишутся на вашу рассылку новостей.</p>
+									<time class="events-events__slide-date" datetime="2025-05-01">01.05.2025</time>
+								</a>
+								<a class="events-events__slide swiper-slide" href="event-page.html">
+									<picture class="events-events__slide-image-container">
+										<img class="events-events__slide-image" src="assets/img/content/events/event1.jpg" alt="#" />
+									</picture>
+									<h3 class="events-events__slide-title">Женственность и мягкость. Принятие и доверие</h3>
+									<p class="events-events__slide-desc">При бронировании домика вместе с услугами по организации рыбалки (например, прокат снастей и&nbsp;лодок) и дополнительные услуги, такие как шашлыки на природе или экскурсии по окрестностям. При покупке пакета предоставьте скидку на общую стоимость.</p>
+									<time class="events-events__slide-date" datetime="2025-05-16">16.05.2025</time>
+								</a>
+								<a class="events-events__slide swiper-slide" href="event-page.html">
+									<picture class="events-events__slide-image-container">
+										<img class="events-events__slide-image" src="assets/img/content/events/event2.jpg" alt="#" />
+									</picture>
+									<h3 class="events-events__slide-title">Баня архетипа императрицы</h3>
+									<p class="events-events__slide-desc">Новые гости, которые впервые посещают вашу базу, могут получить 10% скидку на аренду домика, если они подпишутся на вашу рассылку новостей.</p>
+									<time class="events-events__slide-date" datetime="2025-06-03">03.06.2025</time>
+								</a>
+								<a class="events-events__slide swiper-slide" href="event-page.html">
+									<picture class="events-events__slide-image-container">
+										<img class="events-events__slide-image" src="assets/img/content/events/event.jpg" alt="#" />
+									</picture>
+									<h3 class="events-events__slide-title">Баня архетипа императрицы</h3>
+									<p class="events-events__slide-desc">Новые гости, которые впервые посещают вашу базу, могут получить 10% скидку на аренду домика, если они подпишутся на вашу рассылку новостей.</p>
+									<time class="events-events__slide-date" datetime="2025-05-01">01.05.2025</time>
+								</a>
+								<a class="events-events__slide swiper-slide" href="event-page.html">
+									<picture class="events-events__slide-image-container">
+										<img class="events-events__slide-image" src="assets/img/content/events/event1.jpg" alt="#" />
+									</picture>
+									<h3 class="events-events__slide-title">Женственность и мягкость. Принятие и доверие</h3>
+									<p class="events-events__slide-desc">При бронировании домика вместе с услугами по организации рыбалки (например, прокат снастей и&nbsp;лодок) и дополнительные услуги, такие как шашлыки на природе или экскурсии по окрестностям. При покупке пакета предоставьте скидку на общую стоимость.</p>
+									<time class="events-events__slide-date" datetime="2025-05-16">16.05.2025</time>
+								</a>
+								<a class="events-events__slide swiper-slide" href="event-page.html">
+									<picture class="events-events__slide-image-container">
+										<img class="events-events__slide-image" src="assets/img/content/events/event2.jpg" alt="#" />
+									</picture>
+									<h3 class="events-events__slide-title">Баня архетипа императрицы</h3>
+									<p class="events-events__slide-desc">Новые гости, которые впервые посещают вашу базу, могут получить 10% скидку на аренду домика, если они подпишутся на вашу рассылку новостей.</p>
+									<time class="events-events__slide-date" datetime="2025-06-03">03.06.2025</time>
+								</a>
+							</div>
+						</div>
+						<div class="events-events__slider-scrollbar card-slider-scrollbar swiper-scrollbar"></div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer ">
+	<a class="footer__button-top icon-pine-double" href="#start"></a>
+	<div class="footer__container">
+		<div class="footer__body">
+			<form class="footer__form" action="" method="post">
+				<p class="footer__form-title">Подпишитесь на наши акции и&nbsp;новости</p>
+				<div class="footer__form-input-wrapper">
+					<div class="footer__form-inputbox">
+						<label class="footer__form-label" for="input-name">Электронная почта</label>
+						<input id="input-name" class="footer__form-input" type="email" placeholder="name@yandex.ru" required />
+					</div>
+					<button class="footer__form-button icon-arrow" type="submit"></button>
+				</div>
+			</form>
+			<div class="footer__links">
+				<ul class="footer__list">
+					<li class="footer__list-item--title">КАРТА САЙТА</li>
+					<li class="footer__list-item"><a href="index.html">Главная</a></li>
+					<li class="footer__list-item"><a href="stocks.html">Акции</a></li>
+					<li class="footer__list-item"><a href="events.html">Мероприятия</a></li>
+					<li class="footer__list-item"><a href="about.html">Про отель</a></li>
+					<li class="footer__list-item"><a href="booking.html">Проживание</a></li>
+					<li class="footer__list-item"><a href="certificates.html">Сертификаты</a></li>
+					<li class="footer__list-item"><a href="price.html">Цены</a></li>
+					<li class="footer__list-item"><a href="contacts.html">Контакты</a></li>
+				</ul>
+				<ul class="footer__list">
+					<li class="footer__list-item--title">УСЛУГИ</li>
+					<li class="footer__list-item"><a href="service-page.html">Аренда беседок</a></li>
+					<li class="footer__list-item"><a href="service-page.html">Банкетный зал</a></li>
+					<li class="footer__list-item"><a href="service-page.html">Баня</a></li>
+					<li class="footer__list-item"><a href="service-page.html">Бассейн</a></li>
+					<li class="footer__list-item"><a href="service-page.html">Горнолыжная трасса</a></li>
+					<li class="footer__list-item"><a href="service-page.html">Кафе</a></li>
+					<li class="footer__list-item"><a href="service-page.html">Продажа рыбы</a></li>
+					<li class="footer__list-item"><a href="service-page.html">Рыбалка</a></li>
+				</ul>
+				<ul class="footer__list">
+					<li class="footer__list-item--title">ПОМОЩЬ</li>
+					<li class="footer__list-item"><a href="faq.html">Вопросы и ответы</a></li>
+					<li class="footer__list-item" data-feedback-open><button>Оставить отзыв</button></li>
+					<li class="footer__list-item" data-privacy-open><button>Политика конфиденциальности</button></li>
+					<li class="footer__list-item" data-privacy-open><button>Пользовательское соглашение</button></li>
+				</ul>
+				<ul class="footer__list">
+					<li class="footer__list-item--title">КОНТАКТЫ</li>
+					<li class="footer__list-item--info"><i class="footer__list-item--info-icon icon-map-mark"></i>Самара, ул. Пушкина, д. Колотушкина 15а, офис 22</li>
+					<li class="footer__list-item--info"><i class="footer__list-item--info-icon icon-tel"></i><a href="tel:+7 (846) 654-78-12">8 (846) 654-78-12</a></li>
+					<li class="footer__list-item--info"><i class="footer__list-item--info-icon icon-clock"></i>9:30 – 22:00</li>
+					<li class="footer__list-item--info"><i class="footer__list-item--info-icon icon-mail"></i><a href="mailto:hello@rodnik.ru">hello@rodnik.ru</a></li>
+				</ul>
+			</div>
+			<div class="footer__company">
+				<a class="footer__company-logo" href="index.html">
+					<picture class="footer__company-logo-container">
+						<img class="footer__company-logo-image" src="assets/icons/logo/logo-main.svg" alt="#Логотип" />
+					</picture>
+				</a>
+				<div class="footer__company-connection">
+					<p class="footer__company-connection-desc">Следите за нами в соцсетях</p>
+					<a class="footer__company-connection-icon footer__company-connection-icon--vk icon-vk" href="#"></a>
+					<a class="footer__company-connection-icon footer__company-connection-icon--telegram icon-telegram" href="#"></a>
+					<a class="footer__company-connection-icon footer__company-connection-icon--instagram icon-instagram" href="#"></a>
+				</div>
+				<div class="footer__company-copy">&copy; 2024 Rodnik. Все права защищены</div>
+			</div>
+		</div>
+		<div class="footer__label">
+			<div class="footer__label-container">
+				<ul class="footer__label-studio">
+					<li class="footer__label-studio-item--text">Разработка и поддержка сайта:</li>
+					<li class="footer__label-studio-item--image-wrapper">
+						<a href="https://intheplace.ru" target="_blank">
+							<picture class="footer__label-studio-item--image">
+								<img src="assets/icons/root/theplace.svg" alt="ThePlace" />
+							</picture>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=466c57d0-00c9-424e-9e19-9ba284de093e&lang=ru_RU" type="text/javascript"></script>
+<script src="./js/main.min.js"></script>
+
+	</body>
+</html>
